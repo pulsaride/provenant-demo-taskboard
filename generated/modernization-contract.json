@@ -1,0 +1,5303 @@
+{
+  "constructor_injection": {
+    "classes": [
+      {
+        "class": "com.github.hantsy.ee8sample.Bootstrap",
+        "file": "src/main/java/com/github/hantsy/ee8sample/Bootstrap.java",
+        "node_sig": "bc531387b943ec7139c2940cb0c2efa77ca007b4c995ebb534ee2697bcdd2fdf",
+        "parameters": [
+          {
+            "name": "log",
+            "type": "Logger"
+          },
+          {
+            "name": "taskRepository",
+            "type": "TaskRepository"
+          }
+        ],
+        "reason": null,
+        "status": "moved"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.service.TaskService",
+        "file": "src/main/java/com/github/hantsy/ee8sample/service/TaskService.java",
+        "node_sig": "ad6a7dee2e679ae6f74d1706b91992cf7d438a7ed1e5bb499ff0c5dd87ab2811",
+        "parameters": [
+          {
+            "name": "tasks",
+            "type": "TaskRepository"
+          }
+        ],
+        "reason": null,
+        "status": "moved"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.service.UserService",
+        "file": "src/main/java/com/github/hantsy/ee8sample/service/UserService.java",
+        "node_sig": "fbb3d2e7972352b3502b7a23bb4d26b34b743ef05d54d808facabcb8cf4def3d",
+        "parameters": [
+          {
+            "name": "loginTokens",
+            "type": "LoginTokenRepository"
+          },
+          {
+            "name": "users",
+            "type": "UserRepository"
+          }
+        ],
+        "reason": null,
+        "status": "moved"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.web.EditTaskAction",
+        "file": "src/main/java/com/github/hantsy/ee8sample/web/EditTaskAction.java",
+        "node_sig": "331a853c69b950f09b28597f11a695d33ca63377144358c91e03acb1ff1168fa",
+        "parameters": [
+          {
+            "name": "taskService",
+            "type": "TaskService"
+          }
+        ],
+        "reason": null,
+        "status": "moved"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.web.TaskHome",
+        "file": "src/main/java/com/github/hantsy/ee8sample/web/TaskHome.java",
+        "node_sig": "c2e9839895fb456262aa99ca06e4223b13b26d6d00284a630d874448530e4c23",
+        "parameters": [
+          {
+            "name": "taskService",
+            "type": "TaskService"
+          }
+        ],
+        "reason": null,
+        "status": "moved"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.web.ViewTaskDetailsAction",
+        "file": "src/main/java/com/github/hantsy/ee8sample/web/ViewTaskDetailsAction.java",
+        "node_sig": "4d968408b28277c28fae0f4f5787900c80ef59e6e998e4997976716f2500ad34",
+        "parameters": [
+          {
+            "name": "taskRepository",
+            "type": "TaskRepository"
+          }
+        ],
+        "reason": null,
+        "status": "moved"
+      }
+    ],
+    "outside_the_proof": [
+      "reflection",
+      "xml_bean_definitions",
+      "faces_config_beans",
+      "hand_written_tests"
+    ],
+    "test_construction": "pass_dependencies_to_constructor"
+  },
+  "contract_path": "modernization-contract.json",
+  "delegated": [
+    "test_generation",
+    "observability",
+    "exception_policy",
+    "framework_idiom",
+    "static_analysis_findings",
+    "security_findings",
+    "deployment",
+    "class_decomposition",
+    "architecture",
+    "naming"
+  ],
+  "delegation": {
+    "frozen": {
+      "database": {
+        "ddl_and_migrations": "not_emitted",
+        "forbidden_changes": [
+          "rename",
+          "add",
+          "drop",
+          "alter"
+        ],
+        "frozen": true,
+        "gate": {
+          "ddl_auto": "validate"
+        },
+        "objects": [
+          "table",
+          "column",
+          "sequence",
+          "index",
+          "constraint"
+        ]
+      },
+      "external_name_kinds": [
+        "rest_path",
+        "json_property_name",
+        "angular_route",
+        "message_key",
+        "configuration_key",
+        "database_object",
+        "sql_text"
+      ]
+    },
+    "on_systemic": "report",
+    "patching": {
+      "anchor": "node_sig",
+      "on_stale_anchor": "surface"
+    },
+    "refactoring": {
+      "architecture": {
+        "cross_layer_move": "report_as_finding",
+        "placement": "respect_engine_placement",
+        "profile": "layered",
+        "required_tests": [],
+        "scope": "within_layer"
+      },
+      "class_decomposition": {
+        "behaviour": "observable_behaviour_unchanged",
+        "scope": "within_layer"
+      },
+      "naming": {
+        "applied_by": "ast_based_rename_map",
+        "external_names": "preserved",
+        "internal_name_kinds": [
+          "local_variable",
+          "parameter",
+          "private_member",
+          "internal_class"
+        ],
+        "internal_names": "free",
+        "pinned_by": {
+          "database_column": "@Column",
+          "database_table": "@Table",
+          "json_property_name": "@JsonProperty",
+          "rest_path": "@RequestMapping"
+        },
+        "public_java_names": "renamable_when_external_names_pinned",
+        "text_replace": "forbidden",
+        "traceability": "node_sig_mapping"
+      }
+    },
+    "systemic_threshold": 2
+  },
+  "files": [
+    {
+      "bytes": 2148,
+      "fragments": [
+        {
+          "line_end": 52,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "project-readme",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "README.md",
+      "retained_regions": [],
+      "sha256": "f1d7b708a09a2cbb2bb9ecd20aae8835efbd0c10c1c08136a979d8c4fcaa24a1",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 39,
+      "fragments": [
+        {
+          "line_end": 4,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/.gitignore",
+      "retained_regions": [],
+      "sha256": "ebf912f41f8de8ce2c613bdb63f1cc7e85cd7fdf569c7a69432fcd80666b6b4b",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 1486,
+      "fragments": [
+        {
+          "line_end": 46,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/angular.json",
+      "retained_regions": [],
+      "sha256": "225c4436a8dd1b4d2552473a071ad005850cbb04fc7210dd6bd5ab4313b0a15b",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 461,
+      "fragments": [
+        {
+          "line_end": 12,
+          "line_start": 1,
+          "node_sigs": [
+            "b2c5fded7781f217f7912480f4b6e0f8e0f6d03ce00774883ed19b0141b90b58"
+          ],
+          "rule_id": "legacy-binary-resource-manifest",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/legacy-assets.json",
+      "retained_regions": [],
+      "sha256": "87f31676a5c3373883c676d4db576fc2d20010be4ad10797b4c4a31c83893317",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 690,
+      "fragments": [
+        {
+          "line_end": 29,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/package.json",
+      "retained_regions": [],
+      "sha256": "fba4d0a3fe468eb63c2c8def7b80c20c44bff2bd3e5891151171eed043bc9958",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 79,
+      "fragments": [
+        {
+          "line_end": 6,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/proxy.conf.json",
+      "retained_regions": [],
+      "sha256": "2295c23feb8f9dbba4350bb2ee358a63df00b3ae59716fab61209fa151eca5ea",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 923,
+      "fragments": [
+        {
+          "line_end": 11,
+          "line_start": 1,
+          "node_sigs": [
+            "f26060e5ddf58757db3264502bf0b99b8d3a98b47b3420460ac7330aa13fedf6"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 16,
+          "line_start": 12,
+          "node_sigs": [
+            "e2c79e9d482fd4373489ac7064e1309699eb82cbc553565214c4f76cb4775d72"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 21,
+          "line_start": 17,
+          "node_sigs": [
+            "c5303f432ea0b0018cfc68b8a3a24f23c36d0cf5319ca87bd5b5a69d7dcc1b9d"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 22,
+          "line_start": 22,
+          "node_sigs": [
+            "f26060e5ddf58757db3264502bf0b99b8d3a98b47b3420460ac7330aa13fedf6"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/api/edit-task-action.api.ts",
+      "retained_regions": [],
+      "sha256": "477b6b07fcf21f118185fb3ac85638ce72df804e865296619c42f6a9d3204b41",
+      "tiers": {
+        "Isolated": 4
+      }
+    },
+    {
+      "bytes": 950,
+      "fragments": [
+        {
+          "line_end": 13,
+          "line_start": 2,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 15,
+          "line_start": 14,
+          "node_sigs": [
+            "5296192b47b61c8668d74f23eb3b260a34af7e3f86f58e7a9fe24e8915180be0"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 21,
+          "line_start": 16,
+          "node_sigs": [
+            "5ba6fcabe4e89dd10a674c8c4083ac2753b1cdd48589d03571459e9cc11f1e7e"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 27,
+          "line_start": 22,
+          "node_sigs": [
+            "3ef7e3d6484a615b29005e879b767a287141f4e290e296026d89c7e485dc6fb8"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 33,
+          "line_start": 28,
+          "node_sigs": [
+            "6ce15f1a8ad0e63c3a06310c6f688e6b0f6ce9d5a28fd44b6b95e3ef5304c0cc"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 41,
+          "line_start": 34,
+          "node_sigs": [
+            "c816e57b73cca2b3682d25a95232e5ae1fab847477c694524f540cc18fc10cef"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/api/models.ts",
+      "retained_regions": [],
+      "sha256": "24e358e65b928903a168ecc3482621a5b9c6f6d418d96ebaa1e3df236fbb14ad",
+      "tiers": {
+        "Isolated": 6
+      }
+    },
+    {
+      "bytes": 460,
+      "fragments": [
+        {
+          "line_end": 14,
+          "line_start": 1,
+          "node_sigs": [
+            "d8e5ee439f7f8df203e1f4446140f9524d96f89132d91931a94638d5d3b1029f"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/api/query.ts",
+      "retained_regions": [],
+      "sha256": "07467d7dbbc69d92e79b455049333e8266cdcb53b0123e58a44107e1fef98e37",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 1702,
+      "fragments": [
+        {
+          "line_end": 11,
+          "line_start": 1,
+          "node_sigs": [
+            "cc64cf74a5b2d01e2ccfa43426c9cbae9c35e8262cf32008366ea2b77d018008"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 16,
+          "line_start": 12,
+          "node_sigs": [
+            "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 21,
+          "line_start": 17,
+          "node_sigs": [
+            "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 26,
+          "line_start": 22,
+          "node_sigs": [
+            "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 31,
+          "line_start": 27,
+          "node_sigs": [
+            "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 36,
+          "line_start": 32,
+          "node_sigs": [
+            "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 41,
+          "line_start": 37,
+          "node_sigs": [
+            "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 42,
+          "line_start": 42,
+          "node_sigs": [
+            "cc64cf74a5b2d01e2ccfa43426c9cbae9c35e8262cf32008366ea2b77d018008"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/api/task-home.api.ts",
+      "retained_regions": [],
+      "sha256": "e80e02686419e60660c08bc1439be0f2446e097cc970e94ca5477631d42e2e44",
+      "tiers": {
+        "Isolated": 8
+      }
+    },
+    {
+      "bytes": 663,
+      "fragments": [
+        {
+          "line_end": 10,
+          "line_start": 1,
+          "node_sigs": [
+            "5aa65aef9f6046c659ea96d2e1649b1b1eef13813f220bbfdacf2ed2ee5f3215"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 15,
+          "line_start": 11,
+          "node_sigs": [
+            "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 16,
+          "line_start": 16,
+          "node_sigs": [
+            "5aa65aef9f6046c659ea96d2e1649b1b1eef13813f220bbfdacf2ed2ee5f3215"
+          ],
+          "rule_id": "tir-bean-endpoint-to-angular-api",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/api/view-task-action.api.ts",
+      "retained_regions": [],
+      "sha256": "5285ce66c7e5d1fe8d0a5b00a82014c1a53fc686d2c6ea5924d64eacc8b8f1df",
+      "tiers": {
+        "Isolated": 3
+      }
+    },
+    {
+      "bytes": 241,
+      "fragments": [
+        {
+          "line_end": 10,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/app.component.ts",
+      "retained_regions": [],
+      "sha256": "bede3aa41b8f0193fe2a481c05960bba94f6376244ed1daf38e0b10c66e978b1",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 464,
+      "fragments": [
+        {
+          "line_end": 10,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/app.config.ts",
+      "retained_regions": [],
+      "sha256": "4ce64754ec11ef932f10a0dfd225001e6a6ec9a900f8d9ddf4d8257ea309ee2d",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 742,
+      "fragments": [
+        {
+          "line_end": 16,
+          "line_start": 1,
+          "node_sigs": [
+            "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d",
+            "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c",
+            "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a",
+            "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89",
+            "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+          ],
+          "rule_id": "uir-screens-to-angular-routes",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/app.routes.ts",
+      "retained_regions": [],
+      "sha256": "401bf4d6d30e01a1f9d7d8edbfef3e28391ca446cb3cb10b1a86936e1b96ce17",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 602,
+      "fragments": [
+        {
+          "line_end": 16,
+          "line_start": 1,
+          "node_sigs": [
+            "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
+          ],
+          "rule_id": "tir-session-login-to-angular-auth",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/auth/auth.guard.ts",
+      "retained_regions": [],
+      "sha256": "be6da4187b24d5fafd859219d5930ee3be24bdac23b9edc52edf335f6b63c341",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 2718,
+      "fragments": [
+        {
+          "line_end": 85,
+          "line_start": 1,
+          "node_sigs": [
+            "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
+          ],
+          "rule_id": "tir-session-login-to-angular-auth",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/auth/auth.service.ts",
+      "retained_regions": [],
+      "sha256": "a34fe3a64b48f5d7d560063414c9194b69139ee577ce0921bf9285600b678980",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 692,
+      "fragments": [
+        {
+          "line_end": 18,
+          "line_start": 1,
+          "node_sigs": [
+            "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
+          ],
+          "rule_id": "tir-session-login-to-angular-auth",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/auth/session.interceptor.ts",
+      "retained_regions": [],
+      "sha256": "1ba4015236eb2933eb8974da6aa2ad6754c22e6432453f27d300e07c6ee98a48",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 262,
+      "fragments": [
+        {
+          "line_end": 7,
+          "line_start": 1,
+          "node_sigs": [
+            "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
+          ],
+          "rule_id": "tir-session-login-to-angular-auth",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/auth/xsrf.config.ts",
+      "retained_regions": [],
+      "sha256": "e4bd9facd9c4db0402cb75f6fc580e3207e6f80dcf3f56b8e0213f20d88d98e9",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 4931,
+      "fragments": [
+        {
+          "line_end": 81,
+          "line_start": 1,
+          "node_sigs": [
+            "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 115,
+          "line_start": 82,
+          "node_sigs": [
+            "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 121,
+          "line_start": 116,
+          "node_sigs": [
+            "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 122,
+          "line_start": 122,
+          "node_sigs": [
+            "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/details/details.component.ts",
+      "retained_regions": [],
+      "sha256": "1a5525801fbb2c96fcfe299ff007be722f47dca7a8124d8f87ef23324f6e0a9c",
+      "tiers": {
+        "Isolated": 4
+      }
+    },
+    {
+      "bytes": 3700,
+      "fragments": [
+        {
+          "line_end": 73,
+          "line_start": 1,
+          "node_sigs": [
+            "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 82,
+          "line_start": 74,
+          "node_sigs": [
+            "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 88,
+          "line_start": 83,
+          "node_sigs": [
+            "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 89,
+          "line_start": 89,
+          "node_sigs": [
+            "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/error/error.component.ts",
+      "retained_regions": [],
+      "sha256": "0b698ece785760b24234f37a6145b0f10b7f674d133ae1c0dff404e5371a7dd3",
+      "tiers": {
+        "Isolated": 4
+      }
+    },
+    {
+      "bytes": 6742,
+      "fragments": [
+        {
+          "line_end": 90,
+          "line_start": 1,
+          "node_sigs": [
+            "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 93,
+          "line_start": 91,
+          "node_sigs": [
+            "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 130,
+          "line_start": 94,
+          "node_sigs": [
+            "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 152,
+          "line_start": 131,
+          "node_sigs": [
+            "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 158,
+          "line_start": 153,
+          "node_sigs": [
+            "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 159,
+          "line_start": 159,
+          "node_sigs": [
+            "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/form/form.component.ts",
+      "retained_regions": [],
+      "sha256": "4eeb4f6561a5aea93ff7cad103c6ead7ba9b64f7895a35832356751932e5279d",
+      "tiers": {
+        "Isolated": 6
+      }
+    },
+    {
+      "bytes": 3264,
+      "fragments": [
+        {
+          "line_end": 83,
+          "line_start": 1,
+          "node_sigs": [
+            "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
+          ],
+          "rule_id": "tir-session-login-to-angular-auth",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/login/login.component.ts",
+      "retained_regions": [],
+      "sha256": "cf0e2ec7eb126c00a01e029579f81586da6ba55fe89b612e4b99c8aaa4875584",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 1742,
+      "fragments": [
+        {
+          "line_end": 51,
+          "line_start": 1,
+          "node_sigs": [
+            "72f0225b27a2aaa535ecccd2b2d1fbdc4751866a9b8fd8b7ad6805b81019ad32"
+          ],
+          "rule_id": "tir-faces-messages-to-angular-service",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/messages/faces-messages.service.ts",
+      "retained_regions": [],
+      "sha256": "cebe0ca5bbaadab5d0eb3c34d700eb64e7598bf7444dd5e6c1e7173a0b6eb311",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 2267,
+      "fragments": [
+        {
+          "line_end": 40,
+          "line_start": 1,
+          "node_sigs": [
+            "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 48,
+          "line_start": 41,
+          "node_sigs": [
+            "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 54,
+          "line_start": 49,
+          "node_sigs": [
+            "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 55,
+          "line_start": 55,
+          "node_sigs": [
+            "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/nav/nav.component.ts",
+      "retained_regions": [],
+      "sha256": "5589e5d02940078a7543885150a4b481c8a11a7f0164d3933e2683d4d9f6c29a",
+      "tiers": {
+        "Isolated": 4
+      }
+    },
+    {
+      "bytes": 9144,
+      "fragments": [
+        {
+          "line_end": 134,
+          "line_start": 1,
+          "node_sigs": [
+            "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 166,
+          "line_start": 135,
+          "node_sigs": [
+            "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 205,
+          "line_start": 167,
+          "node_sigs": [
+            "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 206,
+          "line_start": 206,
+          "node_sigs": [
+            "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/app/tasks/tasks.component.ts",
+      "retained_regions": [],
+      "sha256": "b312a0653a02ddde0ff7dbc6706d74fb71a86aca27528c055345d90d595f5c4a",
+      "tiers": {
+        "Isolated": 4
+      }
+    },
+    {
+      "bytes": 1296,
+      "fragments": [
+        {
+          "line_end": 17,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/index.html",
+      "retained_regions": [],
+      "sha256": "29062a48bf8fd0b55a4b1bf1fb6e669bab9e97c3124ba398d378cf24ba584e7e",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 706,
+      "fragments": [
+        {
+          "line_end": 37,
+          "line_start": 1,
+          "node_sigs": [
+            "10d83c64a02225154f4b7cbc5a70ac05b3f7ff6c66711cc873cb80702fe62f80"
+          ],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/legacy/css/login.css",
+      "retained_regions": [],
+      "sha256": "aa8989c3a7e429fb6e4004e4582e67d1cc4b0e0ef02ac2901d3d7d75ef461235",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 855,
+      "fragments": [
+        {
+          "line_end": 49,
+          "line_start": 1,
+          "node_sigs": [
+            "4aab9293c2688bc566f81ede45d65f2821c5e672e57a25c7b097493779da1df7"
+          ],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/legacy/css/main.css",
+      "retained_regions": [],
+      "sha256": "12e5e21bb0ea4b1ac6f52a05a8be25e7dc25448159d1ca14bcc28da391c7031d",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 6860,
+      "fragments": [
+        {
+          "line_end": 1,
+          "line_start": 1,
+          "node_sigs": [
+            "b2c5fded7781f217f7912480f4b6e0f8e0f6d03ce00774883ed19b0141b90b58"
+          ],
+          "rule_id": "legacy-binary-resource-verbatim",
+          "tier": "Retained"
+        }
+      ],
+      "kind": "binary",
+      "path": "frontend/src/legacy/images/tb.png",
+      "retained_regions": [
+        {
+          "line_end": 1,
+          "line_start": 1,
+          "rule_ids": [
+            "legacy-binary-resource-verbatim"
+          ]
+        }
+      ],
+      "sha256": "b7a473f6f52ba9dde5b0528e09e403a481c134e567955f2f06babfbbe6b06488",
+      "tiers": {
+        "Retained": 1
+      }
+    },
+    {
+      "bytes": 247,
+      "fragments": [
+        {
+          "line_end": 5,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/main.ts",
+      "retained_regions": [],
+      "sha256": "3a3eb3985ac6b42edf2b7c7fb68d5419c305cee0ef9ec511b49d11bc6870dfbc",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 107,
+      "fragments": [
+        {
+          "line_end": 3,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/src/styles.css",
+      "retained_regions": [],
+      "sha256": "060e1c475ce089dde0db80fa6ee7d0f1bf1dd36589d4f74c221db665f26990ab",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 160,
+      "fragments": [
+        {
+          "line_end": 6,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/tsconfig.app.json",
+      "retained_regions": [],
+      "sha256": "ab8820f036eaf80ed6add06e81fe25b8faa0159059e6dad57519dec07235f2cf",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 737,
+      "fragments": [
+        {
+          "line_end": 27,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/tsconfig.json",
+      "retained_regions": [],
+      "sha256": "93211eda42316198f31e7c20367a4a454500ee016e7ee845b99c3f7c33a01cfa",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 5792,
+      "fragments": [],
+      "kind": "text",
+      "path": "pom.xml",
+      "retained_regions": [],
+      "sha256": "495ed84be6a10fa0c89e301c0566e3c46135b241d474a118a5f0b14921c9b86a",
+      "tiers": {}
+    },
+    {
+      "bytes": 1151,
+      "fragments": [
+        {
+          "line_end": 15,
+          "line_start": 1,
+          "node_sigs": [
+            "bc531387b943ec7139c2940cb0c2efa77ca007b4c995ebb534ee2697bcdd2fdf"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 17,
+          "line_start": 16,
+          "node_sigs": [
+            "51848f5d6bd754e65e84405a3f0cc7b950b171eec862ed5881b24a09ca8033f1"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 19,
+          "line_start": 18,
+          "node_sigs": [
+            "868bf4846353eb9e0782f148952a8ec2de2f545e4cb994557d1cd485bb50a31e"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 24,
+          "line_start": 20,
+          "node_sigs": [
+            "51848f5d6bd754e65e84405a3f0cc7b950b171eec862ed5881b24a09ca8033f1",
+            "868bf4846353eb9e0782f148952a8ec2de2f545e4cb994557d1cd485bb50a31e",
+            "bc531387b943ec7139c2940cb0c2efa77ca007b4c995ebb534ee2697bcdd2fdf"
+          ],
+          "rule_id": "lir-field-injection-to-constructor",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 38,
+          "line_start": 25,
+          "node_sigs": [
+            "ba9e032d1aede4cb41ee3a9001e7a8beb30cc0e6bb572a60ed714a3c8a2569e7"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 39,
+          "line_start": 39,
+          "node_sigs": [
+            "bc531387b943ec7139c2940cb0c2efa77ca007b4c995ebb534ee2697bcdd2fdf"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/Bootstrap.java",
+      "retained_regions": [
+        {
+          "line_end": 38,
+          "line_start": 25,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "772cfb04d005754b8246273c8e0925f03a3808168c8220fe7f667ed08f3088e8",
+      "tiers": {
+        "Isolated": 5,
+        "Retained": 1
+      }
+    },
+    {
+      "bytes": 214,
+      "fragments": [
+        {
+          "line_end": 3,
+          "line_start": 1,
+          "node_sigs": [
+            "4f4002123477a2fe7df7100638f3b476903c5095333f67da55441ed34fb14e4f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 6,
+          "line_start": 4,
+          "node_sigs": [
+            "4f4002123477a2fe7df7100638f3b476903c5095333f67da55441ed34fb14e4f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 8,
+          "line_start": 7,
+          "node_sigs": [
+            "7c2016b24ed99bd08e2b3d876ce88013201ea97f5ac0a312c8ac0f7737bf93ce"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 10,
+          "line_start": 9,
+          "node_sigs": [
+            "e5be68af405390ac2b8188d9149048607413808b3ffffbe19d3d03484deb270b"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 11,
+          "line_start": 11,
+          "node_sigs": [
+            "4f4002123477a2fe7df7100638f3b476903c5095333f67da55441ed34fb14e4f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/Constants.java",
+      "retained_regions": [],
+      "sha256": "0edcbb44c94cfb014dea8568db98504edb8603f20b2f57538122f5a786d23c1a",
+      "tiers": {
+        "Isolated": 5
+      }
+    },
+    {
+      "bytes": 501,
+      "fragments": [
+        {
+          "line_end": 11,
+          "line_start": 1,
+          "node_sigs": [
+            "620d9460f9c4bb0f3094123bccb7ad583987cfd8683b05726e0c38d97f0926ed"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 16,
+          "line_start": 12,
+          "node_sigs": [
+            "6f9cfef5d986e126f7d4ab5938168abdac7e1f41da12725c74a9f6e903455325"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 17,
+          "line_start": 17,
+          "node_sigs": [
+            "620d9460f9c4bb0f3094123bccb7ad583987cfd8683b05726e0c38d97f0926ed"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/Resources.java",
+      "retained_regions": [],
+      "sha256": "ab2f11590d6f561fbf58ca646b66ea73715b799b3ba9cd144b7ba2473c071101",
+      "tiers": {
+        "Isolated": 3
+      }
+    },
+    {
+      "bytes": 337,
+      "fragments": [
+        {
+          "line_end": 12,
+          "line_start": 1,
+          "node_sigs": [
+            "61227ad0af56d490b8f6832d7bd72b66b67ed87220153659b3e480704be27504"
+          ],
+          "rule_id": "spring-boot-application-main",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/TaskboardApplication.java",
+      "retained_regions": [],
+      "sha256": "69fa44aa297dfc9d35e23e0142af88780b3d702c4e843c0be0f80e01c7b2d953",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 8503,
+      "fragments": [
+        {
+          "line_end": 32,
+          "line_start": 1,
+          "node_sigs": [
+            "e032ebe151f831c121643805267d60586f5bd974e22c51bbf8451ec8b23802c1"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 49,
+          "line_start": 33,
+          "node_sigs": [
+            "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 66,
+          "line_start": 50,
+          "node_sigs": [
+            "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 83,
+          "line_start": 67,
+          "node_sigs": [
+            "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 92,
+          "line_start": 84,
+          "node_sigs": [
+            "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 101,
+          "line_start": 93,
+          "node_sigs": [
+            "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 118,
+          "line_start": 102,
+          "node_sigs": [
+            "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 130,
+          "line_start": 119,
+          "node_sigs": [
+            "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 140,
+          "line_start": 131,
+          "node_sigs": [
+            "c5303f432ea0b0018cfc68b8a3a24f23c36d0cf5319ca87bd5b5a69d7dcc1b9d"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 151,
+          "line_start": 141,
+          "node_sigs": [
+            "e2c79e9d482fd4373489ac7064e1309699eb82cbc553565214c4f76cb4775d72"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 152,
+          "line_start": 152,
+          "node_sigs": [
+            "e032ebe151f831c121643805267d60586f5bd974e22c51bbf8451ec8b23802c1"
+          ],
+          "rule_id": "tir-endpoint-to-rest-controller",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
+      "retained_regions": [],
+      "sha256": "06f3c964da16fa79eba93650cab4ac6604c643d9d3cf70c720c5f0b951f58808",
+      "tiers": {
+        "Isolated": 11
+      }
+    },
+    {
+      "bytes": 1926,
+      "fragments": [
+        {
+          "line_end": 37,
+          "line_start": 1,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 39,
+          "line_start": 38,
+          "node_sigs": [
+            "92b51f9637c8cf725508fc134e9bde6998823742d90c0f5ec2a33957f8a22282"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 42,
+          "line_start": 40,
+          "node_sigs": [
+            "631d356518237079c9a515c823801f454d3386423303c48c446d587f3b8515e6"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 45,
+          "line_start": 43,
+          "node_sigs": [
+            "844bea18f75ed78afa89cb658bef221849427bdf8c8f8546033209c8c74a24c1"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 48,
+          "line_start": 46,
+          "node_sigs": [
+            "e44bf8bcd4ab50ff36f7e00eaf11c758dcbc172953212a4789440a69c3628cb5"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 51,
+          "line_start": 49,
+          "node_sigs": [
+            "fdb6e7a349f78a1e119b1b4d8039da81909f566864c4a3449baba9990fdb4d9c"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 54,
+          "line_start": 52,
+          "node_sigs": [
+            "e0e9b10b33a6819112a8659c344838a4891bf455f3c846a91fbb5dc93d86a060"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 58,
+          "line_start": 55,
+          "node_sigs": [
+            "cb0d86c52cca7e8ec77271237345a8d9b2c666403feee20838fd73e232a1c423"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 61,
+          "line_start": 59,
+          "node_sigs": [
+            "9ebd9b812ad3c1cb93ae6dbe0feae08213d26ecb04061def944e32208cd2dde3"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 70,
+          "line_start": 62,
+          "node_sigs": [
+            "02c0af4982e714fddc9e7eaae21088c0ecd74aae9a7a70e81a326c53fd91657c"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 77,
+          "line_start": 71,
+          "node_sigs": [
+            "846f9726e6380f807070a084071c7b318b412539f1d50350dfda6348e439b679"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 78,
+          "line_start": 78,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/domain/LoginToken.java",
+      "retained_regions": [
+        {
+          "line_end": 70,
+          "line_start": 62,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "8cae1dce88200cdda9947f5ce3944283499eef250c6ca63623f5891547040c0d",
+      "tiers": {
+        "Isolated": 11,
+        "Retained": 1
+      }
+    },
+    {
+      "bytes": 1640,
+      "fragments": [
+        {
+          "line_end": 26,
+          "line_start": 1,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 28,
+          "line_start": 27,
+          "node_sigs": [
+            "49fc86cbd678e9c5d6615e771a4465f57217062368b8b1b30f586ae06369aeb7"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 33,
+          "line_start": 29,
+          "node_sigs": [
+            "47c38a29ae1dc504445ffb32a68b7540d93dc24ac5adce79de92af62765dc1da"
+          ],
+          "rule_id": "initializer-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 41,
+          "line_start": 34,
+          "node_sigs": [
+            "4630c01aa8be09589dd76a30838effbe44cd27d91a0dd656c3edef4a5e0d55b3"
+          ],
+          "rule_id": "initializer-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 44,
+          "line_start": 42,
+          "node_sigs": [
+            "8e3e98f9c1d448c47cc90fd7f33ae768832e3d48f4e9f43c89c693dc09e406c7"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 47,
+          "line_start": 45,
+          "node_sigs": [
+            "0f50014de72288cf3469714873fb6fa953011f27ab2ca7b969df5c56abe8dc69"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 51,
+          "line_start": 48,
+          "node_sigs": [
+            "c383324d7525faa5699a39c0de18d220eb646163f78f8faf2a06463f93217d21"
+          ],
+          "rule_id": "initializer-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 58,
+          "line_start": 52,
+          "node_sigs": [
+            "5296192b47b61c8668d74f23eb3b260a34af7e3f86f58e7a9fe24e8915180be0"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 59,
+          "line_start": 59,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/domain/Task.java",
+      "retained_regions": [
+        {
+          "line_end": 41,
+          "line_start": 29,
+          "rule_ids": [
+            "initializer-retained-verbatim"
+          ]
+        },
+        {
+          "line_end": 51,
+          "line_start": 48,
+          "rule_ids": [
+            "initializer-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "c99d4203f858ed5c8ccda1d38e58a4ca43016d468faaefd42fe4eacfe55ece83",
+      "tiers": {
+        "Isolated": 6,
+        "Retained": 3
+      }
+    },
+    {
+      "bytes": 1851,
+      "fragments": [
+        {
+          "line_end": 45,
+          "line_start": 1,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 47,
+          "line_start": 46,
+          "node_sigs": [
+            "71aca2285e276028644128cdb23f759d8b0dcf5ec12d5e269b10931a007fdb59"
+          ],
+          "rule_id": "initializer-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 49,
+          "line_start": 48,
+          "node_sigs": [
+            "af3b165bc5ff26fe2d842b5cefd9f57e2e4145cd7500a543d2f56ce12e233e98"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 51,
+          "line_start": 50,
+          "node_sigs": [
+            "11e08503b5b7222bdef8c1c9e64df075d3810511a46e8b8a0597bfc72b4d1482"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 53,
+          "line_start": 52,
+          "node_sigs": [
+            "4f85c9a181c6a9481564b1f47c7477d57fc06c164b633492a3b8d095877b6d51"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 56,
+          "line_start": 54,
+          "node_sigs": [
+            "2400d2141538733b0f40ae764988a828e1c9f9fd2f2b5387efbb1b714f406864"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 59,
+          "line_start": 57,
+          "node_sigs": [
+            "4a799c44ed94c389249b8b95d35ab94675ddd53a23b11bd58ee7498d88663cac"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 60,
+          "line_start": 60,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/domain/User.java",
+      "retained_regions": [
+        {
+          "line_end": 47,
+          "line_start": 46,
+          "rule_ids": [
+            "initializer-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "697dc789ed67e5802210b547e7d6608d65b40612c4d53413bfe37928246ad690",
+      "tiers": {
+        "Isolated": 7,
+        "Retained": 1
+      }
+    },
+    {
+      "bytes": 659,
+      "fragments": [
+        {
+          "line_end": 13,
+          "line_start": 1,
+          "node_sigs": [
+            "591c217aa5c7cd9865e2c5bf5cc2ee7db2adc89b5d8359f05d6060620df4b47f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 15,
+          "line_start": 14,
+          "node_sigs": [
+            "2e294b4c140a396f2eafe0ccfd170397dd047bb8eeccfaad3a50dd6f5b898e6c"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 18,
+          "line_start": 16,
+          "node_sigs": [
+            "92856d6ed47130eed677c77b99a6a6ac12371fb344f40c4341d6161632bd4c72"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 21,
+          "line_start": 19,
+          "node_sigs": [
+            "8f168e21345dd40ff543176d186d7654faf1c914c3e0ca35ea2401d21d425c53"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 24,
+          "line_start": 22,
+          "node_sigs": [
+            "9f7126f3e72a9ad22af971dab342c7feab5e6df85fe8115cbaf7de83818ba239"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 27,
+          "line_start": 25,
+          "node_sigs": [
+            "21b79b429b4f7555013c16b0d36d3c871e5bc5561adabd3c58b1b73441f65671"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 28,
+          "line_start": 28,
+          "node_sigs": [
+            "591c217aa5c7cd9865e2c5bf5cc2ee7db2adc89b5d8359f05d6060620df4b47f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/domain/support/AbstractAuditableEntity.java",
+      "retained_regions": [],
+      "sha256": "4aa2af55f11f9443cad576c74ae0075004fee47f169b2380f4978a0776a046a0",
+      "tiers": {
+        "Isolated": 7
+      }
+    },
+    {
+      "bytes": 725,
+      "fragments": [
+        {
+          "line_end": 18,
+          "line_start": 1,
+          "node_sigs": [
+            "42eb80622ccb348dd03e2f5995d734e907016297d9fcca8abd61f1d1d198a387"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 20,
+          "line_start": 19,
+          "node_sigs": [
+            "27718c037b704d7d4698db13aa36e9e043be7d86417a2b9f7b5cf3511ea7edec"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 25,
+          "line_start": 21,
+          "node_sigs": [
+            "f7354a5626baf4f469617555dc104313d751d9dbe08f6fc999708bfe7d8396bd"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 29,
+          "line_start": 26,
+          "node_sigs": [
+            "bc97057ffb5173537caa3c928350e9d7aa1045a5d77cc5e1ff4d98d07bc2645c"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 30,
+          "line_start": 30,
+          "node_sigs": [
+            "42eb80622ccb348dd03e2f5995d734e907016297d9fcca8abd61f1d1d198a387"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/domain/support/AbstractEntity.java",
+      "retained_regions": [],
+      "sha256": "7d01279427a201945ba5265531c43dab757239713334580b356364fc59034049",
+      "tiers": {
+        "Isolated": 5
+      }
+    },
+    {
+      "bytes": 2172,
+      "fragments": [
+        {
+          "line_end": 16,
+          "line_start": 1,
+          "node_sigs": [
+            "aa8bd9f1a452d91a7fd80ef64d1d0ff1b1060aa506b5e5456ae5510c49d9faa2"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 18,
+          "line_start": 17,
+          "node_sigs": [
+            "5b39d286bfdf94a96f866d57ba6f6fe71c365d3aa48aea0e45c1413ba37e604a"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 24,
+          "line_start": 19,
+          "node_sigs": [
+            "51aca1a027304a0d9769d0c2078499730fc0b6eeb0064c94db3b19cabb4fd103"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 31,
+          "line_start": 25,
+          "node_sigs": [
+            "fb8b8aafb2be287ce1aefd3c15ee96448da06bb21f1d2a2154e7fccf147aaaab"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 41,
+          "line_start": 32,
+          "node_sigs": [
+            "58d6928ac61ca77fb1064239ab4828f55bf3f69792c933f5237c48367b410923"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 45,
+          "line_start": 42,
+          "node_sigs": [
+            "fe27abd15509670bf1d104b4d3bfc2cf1e21738ba78e4b5c845ee23cb3f4190e"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 50,
+          "line_start": 46,
+          "node_sigs": [
+            "6fe21d6e2377d2b0c05275f1a0fe09592a370ecc56c158d4b2332be60a3403f3"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 55,
+          "line_start": 51,
+          "node_sigs": [
+            "9bcb502a623d0d9d2341071bc948d51ebf8b7898b7a1d0b987b1237c0322e89f"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 62,
+          "line_start": 56,
+          "node_sigs": [
+            "621e5b878f5db65f559934bd1c3dc5aa6be7483621042b1d7e9840d30ea5d6bc"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 66,
+          "line_start": 63,
+          "node_sigs": [
+            "ab7d7fd4fb3417ad50225b270f5f26e91d37f5ac204a743d087df1237689c805"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 67,
+          "line_start": 67,
+          "node_sigs": [
+            "aa8bd9f1a452d91a7fd80ef64d1d0ff1b1060aa506b5e5456ae5510c49d9faa2"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/domain/support/AbstractRepository.java",
+      "retained_regions": [
+        {
+          "line_end": 24,
+          "line_start": 19,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        },
+        {
+          "line_end": 41,
+          "line_start": 32,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        },
+        {
+          "line_end": 55,
+          "line_start": 46,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "9857de0cf31637f12774b8f016e189d6d3a0120b8cd8211ee5c9e013248469ba",
+      "tiers": {
+        "Isolated": 7,
+        "Retained": 4
+      }
+    },
+    {
+      "bytes": 1195,
+      "fragments": [
+        {
+          "line_end": 9,
+          "line_start": 1,
+          "node_sigs": [
+            "447fdfda8ae4df09b559c22ef92d17523b882188f54cfc2cdcbc76dd70a58dc2"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 11,
+          "line_start": 10,
+          "node_sigs": [
+            "41d036df357ecaaa9bebb163b076e67006d3de9e7a216157b473bf89143a86ec"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 17,
+          "line_start": 12,
+          "node_sigs": [
+            "3049132e21a84195f8b0b2fcfde4b499097c1c67d3c8dc825d44a3dc3fa1d294"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 23,
+          "line_start": 18,
+          "node_sigs": [
+            "c60dfb53ac7178e6e20edfdf32d3ce923d7de208a5cffb64d9ab9c13119307d0"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 28,
+          "line_start": 24,
+          "node_sigs": [
+            "4280104cbc46a123a69b1599e7122d06d2a9420389626da8fc17800b40c95c70"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 29,
+          "line_start": 29,
+          "node_sigs": [
+            "447fdfda8ae4df09b559c22ef92d17523b882188f54cfc2cdcbc76dd70a58dc2"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/domain/support/AuditEntityListener.java",
+      "retained_regions": [],
+      "sha256": "e037d27bc7241d34909bf1d09f181158622588bc50f67c03a04731eadfc8dca9",
+      "tiers": {
+        "Isolated": 6
+      }
+    },
+    {
+      "bytes": 919,
+      "fragments": [
+        {
+          "line_end": 15,
+          "line_start": 1,
+          "node_sigs": [
+            "31babf4afb1e517e63f31e4c1371841b5858a56daff147c1daf36e852df6e020"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 18,
+          "line_start": 16,
+          "node_sigs": [
+            "5b7f662cd34bdcb072523fe6c5fbb0ff0c5f96e3ec2a9353a66d733433de50e4"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 23,
+          "line_start": 19,
+          "node_sigs": [
+            "078a2fe40e72024580559f807fd85b16436c31e0a738ca9131a5265555f76f59"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 29,
+          "line_start": 24,
+          "node_sigs": [
+            "ca68c100f6423d936bd5cb75b5066766e499ef416395faeff59ebb0092c0e254"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 30,
+          "line_start": 30,
+          "node_sigs": [
+            "31babf4afb1e517e63f31e4c1371841b5858a56daff147c1daf36e852df6e020"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/repository/LoginTokenRepository.java",
+      "retained_regions": [
+        {
+          "line_end": 29,
+          "line_start": 24,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "2a9bb6c622a2f25780ab4562da7ea6eb3024c24e4529e9fc211c3316ac753e0a",
+      "tiers": {
+        "Isolated": 4,
+        "Retained": 1
+      }
+    },
+    {
+      "bytes": 1110,
+      "fragments": [
+        {
+          "line_end": 19,
+          "line_start": 1,
+          "node_sigs": [
+            "e4553225467a4d02d283d59f50e309607054e8c633b252ff0479de8f9f987fd3"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 22,
+          "line_start": 20,
+          "node_sigs": [
+            "a87a77c35e48466aa0dee0035e53b52868339565e163dd10ce67bb2a461ba3c7"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 31,
+          "line_start": 23,
+          "node_sigs": [
+            "ce4230d80ef529363aafcb7559259025d894a4307ef7082e56098b76a9bbccc1"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 36,
+          "line_start": 32,
+          "node_sigs": [
+            "17cc947c8ee47d7d2273d6182129a2eaadea6bb8c219c74b7a6f0631814b9680"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 37,
+          "line_start": 37,
+          "node_sigs": [
+            "e4553225467a4d02d283d59f50e309607054e8c633b252ff0479de8f9f987fd3"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/repository/TaskRepository.java",
+      "retained_regions": [
+        {
+          "line_end": 31,
+          "line_start": 23,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "ffb9c8bd5d26a4158446708d7ac90ce4196cb2ce2fcf13972562fc3e78899b11",
+      "tiers": {
+        "Isolated": 4,
+        "Retained": 1
+      }
+    },
+    {
+      "bytes": 1383,
+      "fragments": [
+        {
+          "line_end": 18,
+          "line_start": 1,
+          "node_sigs": [
+            "fbdd5fe2cadba087b90b2d2d27246a5953f171e7e4e8604e2d9cc64c7ffe969a"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 21,
+          "line_start": 19,
+          "node_sigs": [
+            "36c474c8c58b0ac93a09d9ee2a3f192f612c5e599f9543c0d98629f3a77863ed"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 28,
+          "line_start": 22,
+          "node_sigs": [
+            "a5be6d411c40f467c8a977feafd4db90b52222ee5ad8e3ae6bccb38c8401b066"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 33,
+          "line_start": 29,
+          "node_sigs": [
+            "14c0da135aa09d492c2be0e1697f6db78d2e19a03a810328cf6db8b7668166a9"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 41,
+          "line_start": 34,
+          "node_sigs": [
+            "497018defb5fe681c76b77e2a97aa1f510d560ef802d2eade3b1cfd18331edf8"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 42,
+          "line_start": 42,
+          "node_sigs": [
+            "fbdd5fe2cadba087b90b2d2d27246a5953f171e7e4e8604e2d9cc64c7ffe969a"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/repository/UserRepository.java",
+      "retained_regions": [
+        {
+          "line_end": 28,
+          "line_start": 22,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        },
+        {
+          "line_end": 41,
+          "line_start": 34,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "1e680c205a7b28b1742e0ba0957ea86e2ec9480d13d393d28950e82f85fffa96",
+      "tiers": {
+        "Isolated": 4,
+        "Retained": 2
+      }
+    },
+    {
+      "bytes": 6113,
+      "fragments": [
+        {
+          "line_end": 115,
+          "line_start": 1,
+          "node_sigs": [
+            "089b1721e19a6a640110bd5ce4aecb5790bc8a3b6177ca93e2ece90e7179e859"
+          ],
+          "rule_id": "tir-security-to-spring-security",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/security/AuthController.java",
+      "retained_regions": [],
+      "sha256": "9197562cb8976fa7e0e99be81135527e45eab97209f04ed8370c9c1cb38a64dc",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 562,
+      "fragments": [
+        {
+          "line_end": 16,
+          "line_start": 1,
+          "node_sigs": [
+            "4b159330edb536692c0cd916aa1588f409ff3da6ea4ff8c3002390c3f347c95c"
+          ],
+          "rule_id": "lir-annotationtypedef-to-annotation-type",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 17,
+          "line_start": 17,
+          "node_sigs": [
+            "4b159330edb536692c0cd916aa1588f409ff3da6ea4ff8c3002390c3f347c95c"
+          ],
+          "rule_id": "lir-annotationtypedef-to-annotation-type",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/security/Authenticated.java",
+      "retained_regions": [],
+      "sha256": "e4ae1a014c5f7d3e47933d04515d6711a050c77f8f61d211cf2bf2cf3dc4699c",
+      "tiers": {
+        "Isolated": 2
+      }
+    },
+    {
+      "bytes": 710,
+      "fragments": [
+        {
+          "line_end": 9,
+          "line_start": 1,
+          "node_sigs": [
+            "2567fa753da595ff1c89cc1dbfca63ad7e07b27fd0dc46f166a72f47ce01970d"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 13,
+          "line_start": 10,
+          "node_sigs": [
+            "c82b5acb594684a26383b815ede001aafda2cb1dc279853f01ffc212aaa8f2ab"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 19,
+          "line_start": 14,
+          "node_sigs": [
+            "2ea1d9c3513810b123da6df2b7a1c82809b69e8b734fe131c893ed48226e9a06"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 20,
+          "line_start": 20,
+          "node_sigs": [
+            "2567fa753da595ff1c89cc1dbfca63ad7e07b27fd0dc46f166a72f47ce01970d"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/security/AuthenticatedUserProducer.java",
+      "retained_regions": [],
+      "sha256": "ad89c3bd71ff27a91a925f134dd99714e6c59173606b2230e64297ad46ec9560",
+      "tiers": {
+        "Isolated": 4
+      }
+    },
+    {
+      "bytes": 4560,
+      "fragments": [
+        {
+          "line_end": 89,
+          "line_start": 1,
+          "node_sigs": [
+            "0a858edea76bab3967603338c6c3f029a89cddbddad3f3a083a60480df9856ed"
+          ],
+          "rule_id": "tir-security-to-spring-security",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/security/LegacyPbkdf2PasswordEncoder.java",
+      "retained_regions": [],
+      "sha256": "fd307e19381fc6728571667325c0708f8948ad0881b4970641d8f78ab1a9df9e",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 1968,
+      "fragments": [
+        {
+          "line_end": 44,
+          "line_start": 1,
+          "node_sigs": [
+            "c35b75af6fd4ddd2ba3c9546a43ee1f96bfde8e7a247a98e143a5644761ba66c"
+          ],
+          "rule_id": "tir-security-to-spring-security",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/security/LegacyUserDetailsService.java",
+      "retained_regions": [],
+      "sha256": "9f2ebec3fdbcc09cf8b921cac9ddddc967101a06343e7d1ba50b8334aefb4d3a",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 7633,
+      "fragments": [
+        {
+          "line_end": 134,
+          "line_start": 1,
+          "node_sigs": [
+            "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
+          ],
+          "rule_id": "tir-security-to-spring-security",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
+      "retained_regions": [],
+      "sha256": "93343b451b6d2bff3cd7dc0fc0da65f60d0b597e6f238ce1098c28be6f04dce9",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 5179,
+      "fragments": [
+        {
+          "line_end": 113,
+          "line_start": 1,
+          "node_sigs": [
+            "1474475d537d744f6599d7e93fe0dbeb518ebfb46a3ee109af90d65a4e2a1346"
+          ],
+          "rule_id": "tir-security-to-spring-security",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/security/SpaShellConfig.java",
+      "retained_regions": [],
+      "sha256": "019645af635f29dd1b0ee52af7b96516fac1a06fc7f11791f0ba916f339077ce",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 362,
+      "fragments": [
+        {
+          "line_end": 14,
+          "line_start": 1,
+          "node_sigs": [
+            "01726b9672773192f634946e60aa37cfbc08284f63c91b36072176146c7f1cbe"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 16,
+          "line_start": 15,
+          "node_sigs": [
+            "15a62a88a574031c8c1bfcd241f9c204713b518212c644357651257fe7474c49"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 18,
+          "line_start": 17,
+          "node_sigs": [
+            "f12d279ca1f6af48a3a17602ecdf9889dd2fead5e7e03ec70a3e5146a557c79f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 19,
+          "line_start": 19,
+          "node_sigs": [
+            "01726b9672773192f634946e60aa37cfbc08284f63c91b36072176146c7f1cbe"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/security/UserInfo.java",
+      "retained_regions": [],
+      "sha256": "f27f4fa968280592c76503a62963b4a1c537a1b3ab39713fe0025a53f76ced54",
+      "tiers": {
+        "Isolated": 4
+      }
+    },
+    {
+      "bytes": 214,
+      "fragments": [
+        {
+          "line_end": 3,
+          "line_start": 1,
+          "node_sigs": [
+            "667a0c59654f764f1b321bc367aca7d9c41759ed33c0e4d0b32de6b9b8a1012e"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 7,
+          "line_start": 4,
+          "node_sigs": [
+            "667a0c59654f764f1b321bc367aca7d9c41759ed33c0e4d0b32de6b9b8a1012e"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 8,
+          "line_start": 8,
+          "node_sigs": [
+            "667a0c59654f764f1b321bc367aca7d9c41759ed33c0e4d0b32de6b9b8a1012e"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/service/InvalidUsernameException.java",
+      "retained_regions": [],
+      "sha256": "e06f97aa3e78b798e1df4081bf2db7e9268cf0c403c144fe33e6e3c14aaaca97",
+      "tiers": {
+        "Isolated": 3
+      }
+    },
+    {
+      "bytes": 228,
+      "fragments": [
+        {
+          "line_end": 3,
+          "line_start": 1,
+          "node_sigs": [
+            "ff2dc7b07b8074dde121e6a63eb7c2e6faa2b2639b0480095c9260c92cbdd62f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 7,
+          "line_start": 4,
+          "node_sigs": [
+            "ff2dc7b07b8074dde121e6a63eb7c2e6faa2b2639b0480095c9260c92cbdd62f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 8,
+          "line_start": 8,
+          "node_sigs": [
+            "ff2dc7b07b8074dde121e6a63eb7c2e6faa2b2639b0480095c9260c92cbdd62f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/service/TaskNotFoundException.java",
+      "retained_regions": [],
+      "sha256": "27e12a3c0eaf214f1bd71956d502fa5d3136b796f489f44a0f18380bec4dbf7c",
+      "tiers": {
+        "Isolated": 3
+      }
+    },
+    {
+      "bytes": 1250,
+      "fragments": [
+        {
+          "line_end": 10,
+          "line_start": 1,
+          "node_sigs": [
+            "ad6a7dee2e679ae6f74d1706b91992cf7d438a7ed1e5bb499ff0c5dd87ab2811"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 12,
+          "line_start": 11,
+          "node_sigs": [
+            "a1e3665110389c1a7bf5f6c0aefb601ec3f9f710dafcc47cbcf92d62ea45c854"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 16,
+          "line_start": 13,
+          "node_sigs": [
+            "a1e3665110389c1a7bf5f6c0aefb601ec3f9f710dafcc47cbcf92d62ea45c854",
+            "ad6a7dee2e679ae6f74d1706b91992cf7d438a7ed1e5bb499ff0c5dd87ab2811"
+          ],
+          "rule_id": "lir-field-injection-to-constructor",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 20,
+          "line_start": 17,
+          "node_sigs": [
+            "1fae025cc5f7fc7de149c903b454ce2ec163489922fa18be4f1d94fadcca1361"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 24,
+          "line_start": 21,
+          "node_sigs": [
+            "05a026fe317182f64ab1bba6267983206d1a383cc394fdbb9156165105b80cd2"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 28,
+          "line_start": 25,
+          "node_sigs": [
+            "b895bc8df485eea2565fb5735d31516194cd268f81d72a6db1d8e3c730c284aa"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 35,
+          "line_start": 29,
+          "node_sigs": [
+            "cd3ef52add268030dd41f18fe5b212de65b1ba65c3deb2f086f216b2c7cef506"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 40,
+          "line_start": 36,
+          "node_sigs": [
+            "2ba3a24ceb1b1eb3d55c2f5b3c22d98d53fede68b5e3db8322a260e38b770df8"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 46,
+          "line_start": 41,
+          "node_sigs": [
+            "93023287460b6ce5dd76370bbf1d86b922a67dc97b2b45ca6ebf8a1ad3a74b2f"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 47,
+          "line_start": 47,
+          "node_sigs": [
+            "ad6a7dee2e679ae6f74d1706b91992cf7d438a7ed1e5bb499ff0c5dd87ab2811"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/service/TaskService.java",
+      "retained_regions": [
+        {
+          "line_end": 20,
+          "line_start": 17,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        },
+        {
+          "line_end": 46,
+          "line_start": 36,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "15aea74a7ef40c008e9820b321749dfcd954e23998c47aedf618c0f5dac9f67a",
+      "tiers": {
+        "Isolated": 7,
+        "Retained": 3
+      }
+    },
+    {
+      "bytes": 2011,
+      "fragments": [
+        {
+          "line_end": 15,
+          "line_start": 1,
+          "node_sigs": [
+            "fbb3d2e7972352b3502b7a23bb4d26b34b743ef05d54d808facabcb8cf4def3d"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 17,
+          "line_start": 16,
+          "node_sigs": [
+            "c637577f7fe2e6c1bab419cd52acff26d9f26fde7da06899bf5b197b590af028"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 19,
+          "line_start": 18,
+          "node_sigs": [
+            "214e5fbb766b2a47f453dcb1cbeafda6cc1118a66f88814e3c760938c20adfa0"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 21,
+          "line_start": 20,
+          "node_sigs": [
+            "5d3d2de7a2e0545d2c1bc7b84e2260ff706f12ef4340684551b47fe7db106586"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 26,
+          "line_start": 22,
+          "node_sigs": [
+            "214e5fbb766b2a47f453dcb1cbeafda6cc1118a66f88814e3c760938c20adfa0",
+            "5d3d2de7a2e0545d2c1bc7b84e2260ff706f12ef4340684551b47fe7db106586",
+            "fbb3d2e7972352b3502b7a23bb4d26b34b743ef05d54d808facabcb8cf4def3d"
+          ],
+          "rule_id": "lir-field-injection-to-constructor",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 31,
+          "line_start": 27,
+          "node_sigs": [
+            "5afe1ad94aa6fbdbf02481df298acdf0173db9f2d320283198895f72e1cd2912"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 47,
+          "line_start": 32,
+          "node_sigs": [
+            "a161c55566e60928c62823e5e8e0da319be6ed084b1c23ce152b5a9d0dde42e5"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 51,
+          "line_start": 48,
+          "node_sigs": [
+            "8b9c0519ece071a93c2ff6c21c462f4701f4ef522f359f985825befad18e26eb"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 52,
+          "line_start": 52,
+          "node_sigs": [
+            "fbb3d2e7972352b3502b7a23bb4d26b34b743ef05d54d808facabcb8cf4def3d"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/service/UserService.java",
+      "retained_regions": [
+        {
+          "line_end": 51,
+          "line_start": 32,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "2e83badfa58394fed16c59fb2df47318239b6edad41b2ed7682d71aa5d4bb73c",
+      "tiers": {
+        "Isolated": 7,
+        "Retained": 2
+      }
+    },
+    {
+      "bytes": 1583,
+      "fragments": [
+        {
+          "line_end": 14,
+          "line_start": 1,
+          "node_sigs": [
+            "331a853c69b950f09b28597f11a695d33ca63377144358c91e03acb1ff1168fa"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 16,
+          "line_start": 15,
+          "node_sigs": [
+            "7007b4511b6e5d8cf6fea11d0ba06d668a77085ca76eded5c44c7e355b954ad2"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 18,
+          "line_start": 17,
+          "node_sigs": [
+            "84a5154ca43ba38a00dd0b554489e2a34d358d4e913427a38b276598fd976900"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 20,
+          "line_start": 19,
+          "node_sigs": [
+            "fe393cfe6f90bbaa69d28809cd4cb34901f84f586fc14f2ca5590aba07ad9c69"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 22,
+          "line_start": 21,
+          "node_sigs": [
+            "8ee6b92e4a5e334e46d716542c4d661910b50163a6389ca423c0691e73c9f9c6"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 24,
+          "line_start": 23,
+          "node_sigs": [
+            "94e9c56aea7a065b0a37de72b4f0dbba6122b705b9ee7e9d54682bfa9088d546"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 28,
+          "line_start": 25,
+          "node_sigs": [
+            "331a853c69b950f09b28597f11a695d33ca63377144358c91e03acb1ff1168fa",
+            "fe393cfe6f90bbaa69d28809cd4cb34901f84f586fc14f2ca5590aba07ad9c69"
+          ],
+          "rule_id": "lir-field-injection-to-constructor",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 32,
+          "line_start": 29,
+          "node_sigs": [
+            "c5303f432ea0b0018cfc68b8a3a24f23c36d0cf5319ca87bd5b5a69d7dcc1b9d"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 36,
+          "line_start": 33,
+          "node_sigs": [
+            "e972c84112bff267b389358518bba648c0697066498e28d6dce577262f73326e"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 40,
+          "line_start": 37,
+          "node_sigs": [
+            "c9c7a771d11e75271e9a6303ab24cb084ae63e41013a3958abf34cb5db4e88f6"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 44,
+          "line_start": 41,
+          "node_sigs": [
+            "351f764a1e4bb28644a16329643ed3711521070ed886662b9e06e90374b2a6fe"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 53,
+          "line_start": 45,
+          "node_sigs": [
+            "0b630c3e9bd626d1765905a675fa7c9f833cd3de913671becda4107f21aa3637"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 64,
+          "line_start": 54,
+          "node_sigs": [
+            "e2c79e9d482fd4373489ac7064e1309699eb82cbc553565214c4f76cb4775d72"
+          ],
+          "rule_id": "body-retained-faces-message-elided",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 65,
+          "line_start": 65,
+          "node_sigs": [
+            "331a853c69b950f09b28597f11a695d33ca63377144358c91e03acb1ff1168fa"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/web/EditTaskAction.java",
+      "retained_regions": [
+        {
+          "line_end": 64,
+          "line_start": 54,
+          "rule_ids": [
+            "body-retained-faces-message-elided"
+          ]
+        }
+      ],
+      "sha256": "ba32ed4f0f9a0a71c5def57e218a03d614e21a3a1a517cddd5f1ca9972cb27ea",
+      "tiers": {
+        "Isolated": 13,
+        "Retained": 1
+      }
+    },
+    {
+      "bytes": 1425,
+      "fragments": [
+        {
+          "line_end": 6,
+          "line_start": 1,
+          "node_sigs": [
+            "35755f631f96ba1eeed9dcaaa23250791a1d7017a5a7bf22381ca410facba014"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 8,
+          "line_start": 7,
+          "node_sigs": [
+            "e273313987fd07e211e7c84821384c99481ea843ffff322c242db22e730b7d62"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 10,
+          "line_start": 9,
+          "node_sigs": [
+            "12d7f4d12c35bedf4312f2acae79ce7d8864bca1a97a12bec2ba991ad5719437"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 12,
+          "line_start": 11,
+          "node_sigs": [
+            "968d76f29138aff357324f2c241f006192ad8d9771f96fbd8f149f98592f9750"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 14,
+          "line_start": 13,
+          "node_sigs": [
+            "7ea6778af047238f81d2e4886c736140031b1d2c3b9bf369733f76cd89bd7f3c"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 16,
+          "line_start": 15,
+          "node_sigs": [
+            "98bc5e3363e331c0f419884b6262cb08682ddcd48a2d672e05cf8c0dd12e70ae"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 18,
+          "line_start": 17,
+          "node_sigs": [
+            "82d3aa96d6af6e513d8643620045bd1e57d978fd6b9a766f117b34bf76f6a9af"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 22,
+          "line_start": 19,
+          "node_sigs": [
+            "c58273b6fbb891cfa9d559626ec9db0643e4e076dbebb5246aba216eea3e62cf"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 26,
+          "line_start": 23,
+          "node_sigs": [
+            "d4ec96139522c3da7cd37ab9b594be7fdd2d57f55bb4fbb266c806e7ec3219a2"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 30,
+          "line_start": 27,
+          "node_sigs": [
+            "b35aa9e992ef0e1936d375080ca6a24a7b5b9846e7c965b24c83eb6e4cbb1120"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 34,
+          "line_start": 31,
+          "node_sigs": [
+            "64e2c9944ac0ae68c1017b84767f10609707222589a1c153225e2544b9a60adf"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 38,
+          "line_start": 35,
+          "node_sigs": [
+            "58372ecfb809d98eb2c4d3f364b8b5114ef53ad14bcf40f853be81ee9f7f9c44"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 42,
+          "line_start": 39,
+          "node_sigs": [
+            "89a0a1dceac3c65f17cea6f188f76fe5d33855f3fdc904f6d04e6d59ead48a0d"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 46,
+          "line_start": 43,
+          "node_sigs": [
+            "1e0899f09c2b6774271ffbc04ce0011d8a6afbc625ad46cbf8cef133a9ed2408"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 50,
+          "line_start": 47,
+          "node_sigs": [
+            "35ebbb40f161fed831c449a880482065cd52611b13797a89bc591f79d52bce5c"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 54,
+          "line_start": 51,
+          "node_sigs": [
+            "ea6161ecfe1b7243db388e7d45c49ddf3485bd4595220405fcbfd6ed778668ac"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 58,
+          "line_start": 55,
+          "node_sigs": [
+            "57bda7c6148f8c4c4ca5ef021f6e042849bd238c4fbee543e0c9da3df5b96af1"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 63,
+          "line_start": 59,
+          "node_sigs": [
+            "1b83c7f48c2b8bb8b44bcf2879cdd83b02b7ee7fa4b534af5328c34ebadae2f7"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 64,
+          "line_start": 64,
+          "node_sigs": [
+            "35755f631f96ba1eeed9dcaaa23250791a1d7017a5a7bf22381ca410facba014"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/web/TaskDetails.java",
+      "retained_regions": [
+        {
+          "line_end": 63,
+          "line_start": 59,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "51cfc2cfe410d7edbff3a230e021fbde44d196ddb05611764525a7e6233dde15",
+      "tiers": {
+        "Isolated": 18,
+        "Retained": 1
+      }
+    },
+    {
+      "bytes": 2918,
+      "fragments": [
+        {
+          "line_end": 16,
+          "line_start": 1,
+          "node_sigs": [
+            "c2e9839895fb456262aa99ca06e4223b13b26d6d00284a630d874448530e4c23"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 18,
+          "line_start": 17,
+          "node_sigs": [
+            "6854932551ffb00b4d6b80263aa2dbb73d6eb4ec59ef8c39108cc24cb4c0fa60"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 20,
+          "line_start": 19,
+          "node_sigs": [
+            "e61da0eb7fc5755602a355b3bd8c14045333ac032c8be6b8f504af9867371bdf"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 22,
+          "line_start": 21,
+          "node_sigs": [
+            "637bb0873ac056cbf0017f9e6664dfdfadc21ba0df797a4d332cb5ff50d6e2b3"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 24,
+          "line_start": 23,
+          "node_sigs": [
+            "34bcf6f117db0a52bf7b59c00eb6e92737ff2c198b87fe71b5298366cbf98750"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 26,
+          "line_start": 25,
+          "node_sigs": [
+            "40990bd536e729b373d7e384a52cc1d7ee5f7e4547a9c8aba5566bbaba7054a5"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 30,
+          "line_start": 27,
+          "node_sigs": [
+            "c2e9839895fb456262aa99ca06e4223b13b26d6d00284a630d874448530e4c23",
+            "e61da0eb7fc5755602a355b3bd8c14045333ac032c8be6b8f504af9867371bdf"
+          ],
+          "rule_id": "lir-field-injection-to-constructor",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 34,
+          "line_start": 31,
+          "node_sigs": [
+            "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 38,
+          "line_start": 35,
+          "node_sigs": [
+            "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 42,
+          "line_start": 39,
+          "node_sigs": [
+            "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 47,
+          "line_start": 43,
+          "node_sigs": [
+            "ba88e30c0c418aa474a04ac25ac582b07583ecef5510688b6e516d6a81ab31c4"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 54,
+          "line_start": 48,
+          "node_sigs": [
+            "3993b2cee1af34c6d72364e73b1b28cf642852f294cd9fa7305746b1505036fb"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 73,
+          "line_start": 55,
+          "node_sigs": [
+            "c7f3b61ca1d5c211928dd3eace039d97a8d42bf0de48129cac6298a59050b232"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 83,
+          "line_start": 74,
+          "node_sigs": [
+            "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918"
+          ],
+          "rule_id": "body-retained-faces-message-elided",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 92,
+          "line_start": 84,
+          "node_sigs": [
+            "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 102,
+          "line_start": 93,
+          "node_sigs": [
+            "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 103,
+          "line_start": 103,
+          "node_sigs": [
+            "c2e9839895fb456262aa99ca06e4223b13b26d6d00284a630d874448530e4c23"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/web/TaskHome.java",
+      "retained_regions": [
+        {
+          "line_end": 102,
+          "line_start": 43,
+          "rule_ids": [
+            "body-retained-faces-message-elided",
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "35cd68373516377bc385ca58a9d7a3544852d65d2c40f6a8889420ceb8531f9f",
+      "tiers": {
+        "Isolated": 11,
+        "Retained": 6
+      }
+    },
+    {
+      "bytes": 1373,
+      "fragments": [
+        {
+          "line_end": 17,
+          "line_start": 1,
+          "node_sigs": [
+            "4d968408b28277c28fae0f4f5787900c80ef59e6e998e4997976716f2500ad34"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 19,
+          "line_start": 18,
+          "node_sigs": [
+            "3e7b41f73d9d9e50165d966ff0e2bff05945272baf1f944e6d4279192817060f"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 21,
+          "line_start": 20,
+          "node_sigs": [
+            "29f11b703342e5a3691f07cfea7b4d3f772fc9a8e852eb84f48f2ce8147a3a04"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 23,
+          "line_start": 22,
+          "node_sigs": [
+            "1644e84932f115a75ced2694d5ec1ba8f4d5af4fb7def61453bb388d8244bf0a"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 26,
+          "line_start": 24,
+          "node_sigs": [
+            "d56c7f0e6fcb8838895de2d2c98d2adca6c0a4d7278bc36b1f5ca0209ea24e09"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 28,
+          "line_start": 27,
+          "node_sigs": [
+            "ea02308832ca6e7835c88246545ef0304af3ad4d737b71fff45d7b9abed73312"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 32,
+          "line_start": 29,
+          "node_sigs": [
+            "1644e84932f115a75ced2694d5ec1ba8f4d5af4fb7def61453bb388d8244bf0a",
+            "4d968408b28277c28fae0f4f5787900c80ef59e6e998e4997976716f2500ad34"
+          ],
+          "rule_id": "lir-field-injection-to-constructor",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 42,
+          "line_start": 33,
+          "node_sigs": [
+            "0e45ab54438baaeafbeaa552916745daa0c1e905d86282edfbcc1db865004581"
+          ],
+          "rule_id": "body-retained-verbatim",
+          "tier": "Retained"
+        },
+        {
+          "line_end": 46,
+          "line_start": 43,
+          "node_sigs": [
+            "2eeac1e480e6025872dcff2d5f9a1e116e9433a0fe4785935f95555ec5a5b452"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 50,
+          "line_start": 47,
+          "node_sigs": [
+            "d4cfd908b44b22bc0aae34627434ee010073911e98dafe8304ba42f84fcf4686"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 54,
+          "line_start": 51,
+          "node_sigs": [
+            "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 55,
+          "line_start": 55,
+          "node_sigs": [
+            "4d968408b28277c28fae0f4f5787900c80ef59e6e998e4997976716f2500ad34"
+          ],
+          "rule_id": "lir-classdef-to-pojo",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/web/ViewTaskDetailsAction.java",
+      "retained_regions": [
+        {
+          "line_end": 42,
+          "line_start": 33,
+          "rule_ids": [
+            "body-retained-verbatim"
+          ]
+        }
+      ],
+      "sha256": "2e98e0407c8192e00532ffae8202d7e28bcbf70de3e53f87d52cc26aad4dbcd9",
+      "tiers": {
+        "Isolated": 11,
+        "Retained": 1
+      }
+    },
+    {
+      "bytes": 585,
+      "fragments": [
+        {
+          "line_end": 9,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "spring-boot-postgresql-profile",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/resources/application-postgresql.properties",
+      "retained_regions": [],
+      "sha256": "ddf757348f0099b92edd4db344f4aafccfd233a7fb1a963bcf50dafeca960e8b",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 295,
+      "fragments": [
+        {
+          "line_end": 5,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "spring-boot-application-properties",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/resources/application.properties",
+      "retained_regions": [],
+      "sha256": "74fe766612ffd767a76127b470c52995b2211b5d19700d73500474f30edb6b35",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 742,
+      "fragments": [
+        {
+          "line_end": 16,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "sql-refusal-report-summary",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/resources/db/schema-postgresql-refusals.txt",
+      "retained_regions": [],
+      "sha256": "04542e87c114c13864220804da5e4cda7fa0a9b021afd5ec8e0b9c4de730293a",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 1118,
+      "fragments": [
+        {
+          "line_end": 1,
+          "line_start": 1,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-id-generation-to-postgres-sequence",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 2,
+          "line_start": 2,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-id-generation-to-postgres-sequence",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 3,
+          "line_start": 3,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-id-generation-to-postgres-sequence",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 4,
+          "line_start": 4,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 5,
+          "line_start": 5,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 6,
+          "line_start": 6,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 7,
+          "line_start": 7,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 8,
+          "line_start": 8,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 9,
+          "line_start": 9,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 10,
+          "line_start": 10,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 11,
+          "line_start": 11,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 12,
+          "line_start": 12,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 13,
+          "line_start": 13,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 14,
+          "line_start": 14,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 16,
+          "line_start": 15,
+          "node_sigs": [
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 17,
+          "line_start": 17,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 18,
+          "line_start": 18,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 19,
+          "line_start": 19,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 20,
+          "line_start": 20,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 21,
+          "line_start": 21,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 22,
+          "line_start": 22,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 23,
+          "line_start": 23,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 24,
+          "line_start": 24,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 25,
+          "line_start": 25,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 26,
+          "line_start": 26,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 27,
+          "line_start": 27,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 29,
+          "line_start": 28,
+          "node_sigs": [
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 30,
+          "line_start": 30,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 31,
+          "line_start": 31,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 32,
+          "line_start": 32,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 34,
+          "line_start": 33,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 35,
+          "line_start": 35,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 36,
+          "line_start": 36,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 37,
+          "line_start": 37,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 38,
+          "line_start": 38,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 39,
+          "line_start": 39,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 40,
+          "line_start": 40,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 42,
+          "line_start": 41,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-mapping-to-postgres-ddl",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 43,
+          "line_start": 43,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5",
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+          ],
+          "rule_id": "jpa-relation-to-postgres-fk",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 44,
+          "line_start": 44,
+          "node_sigs": [
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+          ],
+          "rule_id": "jpa-relation-to-postgres-fk",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/resources/db/schema-postgresql.sql",
+      "retained_regions": [],
+      "sha256": "067cf9c18374517e6c4eabb81d274b40b47a012118f690c86fba9480b245085d",
+      "tiers": {
+        "Isolated": 40
+      }
+    }
+  ],
+  "generator": {
+    "name": "modernizer",
+    "version": "0.1.0"
+  },
+  "legacy_semantics": {
+    "basis": "legacy_annotations_and_emitter_mapping",
+    "classes": [
+      {
+        "class": "com.github.hantsy.ee8sample.Bootstrap",
+        "file": "src/main/java/com/github/hantsy/ee8sample/Bootstrap.java",
+        "generated": {
+          "class_transactional": [
+            "@Transactional(propagation = Propagation.REQUIRED)"
+          ],
+          "scope": null
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": "REQUIRED",
+            "source": "ejb_default"
+          },
+          "component_kind": "ejb_singleton",
+          "scope": null,
+          "transaction_management": "container"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "ejb_default"
+            },
+            "lifecycle_callback": true,
+            "name": "init",
+            "node_sig": "ba9e032d1aede4cb41ee3a9001e7a8beb30cc0e6bb572a60ed714a3c8a2569e7"
+          }
+        ],
+        "node_sig": "bc531387b943ec7139c2940cb0c2efa77ca007b4c995ebb534ee2697bcdd2fdf"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.Resources",
+        "file": "src/main/java/com/github/hantsy/ee8sample/Resources.java",
+        "generated": {
+          "class_transactional": [],
+          "scope": null
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": null,
+            "source": "none"
+          },
+          "component_kind": "cdi_bean",
+          "scope": "Dependent",
+          "transaction_management": "none"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "getLogger",
+            "node_sig": "6f9cfef5d986e126f7d4ab5938168abdac7e1f41da12725c74a9f6e903455325"
+          }
+        ],
+        "node_sig": "620d9460f9c4bb0f3094123bccb7ad583987cfd8683b05726e0c38d97f0926ed"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.domain.support.AbstractRepository",
+        "file": "src/main/java/com/github/hantsy/ee8sample/domain/support/AbstractRepository.java",
+        "generated": {
+          "class_transactional": [
+            "@Transactional(propagation = Propagation.REQUIRED)"
+          ],
+          "scope": null
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": "REQUIRED",
+            "source": "inherited_ejb_default"
+          },
+          "component_kind": "ejb_inherited",
+          "scope": null,
+          "transaction_management": "container"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "inherited_ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "delete",
+            "node_sig": "6fe21d6e2377d2b0c05275f1a0fe09592a370ecc56c158d4b2332be60a3403f3"
+          },
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "inherited_ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "deleteById",
+            "node_sig": "9bcb502a623d0d9d2341071bc948d51ebf8b7898b7a1d0b987b1237c0322e89f"
+          },
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "inherited_ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "findAll",
+            "node_sig": "fb8b8aafb2be287ce1aefd3c15ee96448da06bb21f1d2a2154e7fccf147aaaab"
+          },
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "inherited_ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "findById",
+            "node_sig": "fe27abd15509670bf1d104b4d3bfc2cf1e21738ba78e4b5c845ee23cb3f4190e"
+          },
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "inherited_ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "findOptionalById",
+            "node_sig": "ab7d7fd4fb3417ad50225b270f5f26e91d37f5ac204a743d087df1237689c805"
+          },
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "inherited_ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "save",
+            "node_sig": "58d6928ac61ca77fb1064239ab4828f55bf3f69792c933f5237c48367b410923"
+          },
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "inherited_ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "stream",
+            "node_sig": "621e5b878f5db65f559934bd1c3dc5aa6be7483621042b1d7e9840d30ea5d6bc"
+          }
+        ],
+        "node_sig": "aa8bd9f1a452d91a7fd80ef64d1d0ff1b1060aa506b5e5456ae5510c49d9faa2"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.repository.LoginTokenRepository",
+        "file": "src/main/java/com/github/hantsy/ee8sample/repository/LoginTokenRepository.java",
+        "generated": {
+          "class_transactional": [
+            "@Transactional(propagation = Propagation.REQUIRED)"
+          ],
+          "scope": null
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": "REQUIRED",
+            "source": "ejb_default"
+          },
+          "component_kind": "ejb_stateless",
+          "scope": null,
+          "transaction_management": "container"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "removeByTokenHash",
+            "node_sig": "ca68c100f6423d936bd5cb75b5066766e499ef416395faeff59ebb0092c0e254"
+          }
+        ],
+        "node_sig": "31babf4afb1e517e63f31e4c1371841b5858a56daff147c1daf36e852df6e020"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.repository.TaskRepository",
+        "file": "src/main/java/com/github/hantsy/ee8sample/repository/TaskRepository.java",
+        "generated": {
+          "class_transactional": [
+            "@Transactional(propagation = Propagation.REQUIRED)"
+          ],
+          "scope": null
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": "REQUIRED",
+            "source": "ejb_default"
+          },
+          "component_kind": "ejb_stateless",
+          "scope": null,
+          "transaction_management": "container"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "findByStatus",
+            "node_sig": "ce4230d80ef529363aafcb7559259025d894a4307ef7082e56098b76a9bbccc1"
+          }
+        ],
+        "node_sig": "e4553225467a4d02d283d59f50e309607054e8c633b252ff0479de8f9f987fd3"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.repository.UserRepository",
+        "file": "src/main/java/com/github/hantsy/ee8sample/repository/UserRepository.java",
+        "generated": {
+          "class_transactional": [
+            "@Transactional(propagation = Propagation.REQUIRED)"
+          ],
+          "scope": null
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": "REQUIRED",
+            "source": "ejb_default"
+          },
+          "component_kind": "ejb_stateless",
+          "scope": null,
+          "transaction_management": "container"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "findByLoginToken",
+            "node_sig": "497018defb5fe681c76b77e2a97aa1f510d560ef802d2eade3b1cfd18331edf8"
+          },
+          {
+            "emitted": true,
+            "generated": {
+              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
+              "level": "class"
+            },
+            "legacy": {
+              "attribute": "REQUIRED",
+              "source": "ejb_default"
+            },
+            "lifecycle_callback": false,
+            "name": "findByUsername",
+            "node_sig": "a5be6d411c40f467c8a977feafd4db90b52222ee5ad8e3ae6bccb38c8401b066"
+          }
+        ],
+        "node_sig": "fbdd5fe2cadba087b90b2d2d27246a5953f171e7e4e8604e2d9cc64c7ffe969a"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.security.AuthenticatedUserProducer",
+        "file": "src/main/java/com/github/hantsy/ee8sample/security/AuthenticatedUserProducer.java",
+        "generated": {
+          "class_transactional": [],
+          "scope": "@Scope(\"prototype\")"
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": null,
+            "source": "none"
+          },
+          "component_kind": "cdi_bean",
+          "scope": "Dependent",
+          "transaction_management": "none"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "handleAuthenticationEvent",
+            "node_sig": "2ea1d9c3513810b123da6df2b7a1c82809b69e8b734fe131c893ed48226e9a06"
+          }
+        ],
+        "node_sig": "2567fa753da595ff1c89cc1dbfca63ad7e07b27fd0dc46f166a72f47ce01970d"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.service.TaskService",
+        "file": "src/main/java/com/github/hantsy/ee8sample/service/TaskService.java",
+        "generated": {
+          "class_transactional": [],
+          "scope": null
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": null,
+            "source": "none"
+          },
+          "component_kind": "cdi_bean",
+          "scope": "ApplicationScoped",
+          "transaction_management": "none"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "deleteById",
+            "node_sig": "2ba3a24ceb1b1eb3d55c2f5b3c22d98d53fede68b5e3db8322a260e38b770df8"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "findById",
+            "node_sig": "1fae025cc5f7fc7de149c903b454ce2ec163489922fa18be4f1d94fadcca1361"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "findByStatus",
+            "node_sig": "05a026fe317182f64ab1bba6267983206d1a383cc394fdbb9156165105b80cd2"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "save",
+            "node_sig": "b895bc8df485eea2565fb5735d31516194cd268f81d72a6db1d8e3c730c284aa"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "update",
+            "node_sig": "cd3ef52add268030dd41f18fe5b212de65b1ba65c3deb2f086f216b2c7cef506"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "updateStatus",
+            "node_sig": "93023287460b6ce5dd76370bbf1d86b922a67dc97b2b45ca6ebf8a1ad3a74b2f"
+          }
+        ],
+        "node_sig": "ad6a7dee2e679ae6f74d1706b91992cf7d438a7ed1e5bb499ff0c5dd87ab2811"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.service.UserService",
+        "file": "src/main/java/com/github/hantsy/ee8sample/service/UserService.java",
+        "generated": {
+          "class_transactional": [],
+          "scope": null
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": null,
+            "source": "none"
+          },
+          "component_kind": "cdi_bean",
+          "scope": "ApplicationScoped",
+          "transaction_management": "none"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "generate",
+            "node_sig": "5afe1ad94aa6fbdbf02481df298acdf0173db9f2d320283198895f72e1cd2912"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "generate",
+            "node_sig": "a161c55566e60928c62823e5e8e0da319be6ed084b1c23ce152b5a9d0dde42e5"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "remove",
+            "node_sig": "8b9c0519ece071a93c2ff6c21c462f4701f4ef522f359f985825befad18e26eb"
+          }
+        ],
+        "node_sig": "fbb3d2e7972352b3502b7a23bb4d26b34b743ef05d54d808facabcb8cf4def3d"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.web.EditTaskAction",
+        "file": "src/main/java/com/github/hantsy/ee8sample/web/EditTaskAction.java",
+        "generated": {
+          "class_transactional": [],
+          "scope": "@RequestScope"
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": null,
+            "source": "none"
+          },
+          "component_kind": "jsf_managed_bean",
+          "scope": "ViewScoped",
+          "transaction_management": "none"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "getTask",
+            "node_sig": "c5303f432ea0b0018cfc68b8a3a24f23c36d0cf5319ca87bd5b5a69d7dcc1b9d"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "getTaskId",
+            "node_sig": "c9c7a771d11e75271e9a6303ab24cb084ae63e41013a3958abf34cb5db4e88f6"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "init",
+            "node_sig": "0b630c3e9bd626d1765905a675fa7c9f833cd3de913671becda4107f21aa3637"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "save",
+            "node_sig": "e2c79e9d482fd4373489ac7064e1309699eb82cbc553565214c4f76cb4775d72"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "setTask",
+            "node_sig": "351f764a1e4bb28644a16329643ed3711521070ed886662b9e06e90374b2a6fe"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "setTaskId",
+            "node_sig": "e972c84112bff267b389358518bba648c0697066498e28d6dce577262f73326e"
+          }
+        ],
+        "node_sig": "331a853c69b950f09b28597f11a695d33ca63377144358c91e03acb1ff1168fa"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.web.TaskHome",
+        "file": "src/main/java/com/github/hantsy/ee8sample/web/TaskHome.java",
+        "generated": {
+          "class_transactional": [],
+          "scope": "@RequestScope"
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": null,
+            "source": "none"
+          },
+          "component_kind": "jsf_managed_bean",
+          "scope": "ViewScoped",
+          "transaction_management": "none"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "deleteTask",
+            "node_sig": "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "getDoingtasks",
+            "node_sig": "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "getDonetasks",
+            "node_sig": "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "getTodotasks",
+            "node_sig": "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "init",
+            "node_sig": "ba88e30c0c418aa474a04ac25ac582b07583ecef5510688b6e516d6a81ab31c4"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "markTaskDoing",
+            "node_sig": "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "markTaskDone",
+            "node_sig": "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d"
+          }
+        ],
+        "node_sig": "c2e9839895fb456262aa99ca06e4223b13b26d6d00284a630d874448530e4c23"
+      },
+      {
+        "class": "com.github.hantsy.ee8sample.web.ViewTaskDetailsAction",
+        "file": "src/main/java/com/github/hantsy/ee8sample/web/ViewTaskDetailsAction.java",
+        "generated": {
+          "class_transactional": [],
+          "scope": "@RequestScope"
+        },
+        "legacy": {
+          "class_transaction": {
+            "attribute": null,
+            "source": "none"
+          },
+          "component_kind": "jsf_managed_bean",
+          "scope": "ViewScoped",
+          "transaction_management": "none"
+        },
+        "methods": [
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "getTask",
+            "node_sig": "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "getTaskId",
+            "node_sig": "2eeac1e480e6025872dcff2d5f9a1e116e9433a0fe4785935f95555ec5a5b452"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "init",
+            "node_sig": "0e45ab54438baaeafbeaa552916745daa0c1e905d86282edfbcc1db865004581"
+          },
+          {
+            "emitted": true,
+            "generated": null,
+            "legacy": {
+              "attribute": null,
+              "source": "none"
+            },
+            "lifecycle_callback": false,
+            "name": "setTaskId",
+            "node_sig": "d4cfd908b44b22bc0aae34627434ee010073911e98dafe8304ba42f84fcf4686"
+          }
+        ],
+        "node_sig": "4d968408b28277c28fae0f4f5787900c80ef59e6e998e4997976716f2500ad34"
+      }
+    ]
+  },
+  "nodesig_scheme_version": 1,
+  "preserve": {
+    "by_rule": {
+      "angular-workspace-scaffold": {
+        "Isolated": 13
+      },
+      "body-retained-faces-message-elided": {
+        "Retained": 2
+      },
+      "body-retained-verbatim": {
+        "Retained": 22
+      },
+      "initializer-retained-verbatim": {
+        "Retained": 4
+      },
+      "jpa-id-generation-to-postgres-sequence": {
+        "Isolated": 3
+      },
+      "jpa-mapping-to-postgres-ddl": {
+        "Isolated": 35
+      },
+      "jpa-relation-to-postgres-fk": {
+        "Isolated": 2
+      },
+      "legacy-binary-resource-manifest": {
+        "Isolated": 1
+      },
+      "legacy-binary-resource-verbatim": {
+        "Retained": 1
+      },
+      "lir-annotationtypedef-to-annotation-type": {
+        "Isolated": 2
+      },
+      "lir-classdef-to-pojo": {
+        "Isolated": 149
+      },
+      "lir-field-injection-to-constructor": {
+        "Isolated": 6
+      },
+      "project-readme": {
+        "Isolated": 1
+      },
+      "spring-boot-application-main": {
+        "Isolated": 1
+      },
+      "spring-boot-application-properties": {
+        "Isolated": 1
+      },
+      "spring-boot-postgresql-profile": {
+        "Isolated": 1
+      },
+      "sql-refusal-report-summary": {
+        "Isolated": 1
+      },
+      "tir-bean-endpoint-to-angular-api": {
+        "Isolated": 22
+      },
+      "tir-endpoint-to-rest-controller": {
+        "Isolated": 11
+      },
+      "tir-faces-messages-to-angular-service": {
+        "Isolated": 1
+      },
+      "tir-security-to-spring-security": {
+        "Isolated": 5
+      },
+      "tir-session-login-to-angular-auth": {
+        "Isolated": 5
+      },
+      "uir-component-tree-to-angular-component": {
+        "Isolated": 22
+      },
+      "uir-screens-to-angular-routes": {
+        "Isolated": 1
+      }
+    },
+    "tier_basis": "emitter_tiers_before_verification_sealing",
+    "tier_labels": [
+      "Proven",
+      "Empirical",
+      "Retained",
+      "Isolated"
+    ],
+    "tiers": {
+      "Empirical": {
+        "files": 0,
+        "records": 0
+      },
+      "Isolated": {
+        "files": 67,
+        "records": 283
+      },
+      "Proven": {
+        "files": 0,
+        "records": 0
+      },
+      "Retained": {
+        "files": 15,
+        "records": 29
+      }
+    }
+  },
+  "project": {
+    "artifact_id": "taskboard",
+    "package": "com.github.hantsy.ee8sample"
+  },
+  "reserved_to_emitter": {
+    "categories": [
+      "imports",
+      "build_dependencies",
+      "type_fidelity",
+      "source_set_scoping"
+    ],
+    "integrity": {
+      "colliding_nodes": 0,
+      "dangling_edges": 1,
+      "duplicate_edges": 1,
+      "path_collisions": 0,
+      "skipped_units": 9
+    },
+    "losses": [
+      {
+        "count": 1,
+        "decision_ref": "pilot/tb-boot",
+        "deliberate_refusal": true,
+        "kind": "annotation",
+        "legacy_state": "unproven",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/domain/support/AuditEntityListener.java",
+            "line": 14,
+            "node_sigs": [
+              "3049132e21a84195f8b0b2fcfde4b499097c1c67d3c8dc825d44a3dc3fa1d294"
+            ]
+          }
+        ],
+        "reason": "PrePersist, body_not_extracted",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/tb-boot",
+        "deliberate_refusal": true,
+        "kind": "annotation",
+        "legacy_state": "unproven",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/domain/support/AuditEntityListener.java",
+            "line": 20,
+            "node_sigs": [
+              "c60dfb53ac7178e6e20edfdf32d3ce923d7de208a5cffb64d9ab9c13119307d0"
+            ]
+          }
+        ],
+        "reason": "PreUpdate, body_not_extracted",
+        "unlocated": 0
+      },
+      {
+        "count": 2,
+        "decision_ref": "pilot/tb-back",
+        "deliberate_refusal": true,
+        "kind": "body",
+        "legacy_state": "unproven",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/domain/support/AuditEntityListener.java",
+            "line": 13,
+            "node_sigs": [
+              "3049132e21a84195f8b0b2fcfde4b499097c1c67d3c8dc825d44a3dc3fa1d294"
+            ]
+          },
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/domain/support/AuditEntityListener.java",
+            "line": 19,
+            "node_sigs": [
+              "c60dfb53ac7178e6e20edfdf32d3ce923d7de208a5cffb64d9ab9c13119307d0"
+            ]
+          }
+        ],
+        "reason": "retention_calls_stubbed_member:currentUser",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/tb-back",
+        "deliberate_refusal": true,
+        "kind": "body",
+        "legacy_state": "unproven",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/domain/support/AuditEntityListener.java",
+            "line": 25,
+            "node_sigs": [
+              "4280104cbc46a123a69b1599e7122d06d2a9420389626da8fc17800b40c95c70"
+            ]
+          }
+        ],
+        "reason": "retention_unprovided_library_type",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/tb-precise-losses",
+        "deliberate_refusal": true,
+        "kind": "cdi",
+        "legacy_state": "dead",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/security/AuthenticatedUserProducer.java",
+            "line": 6,
+            "node_sigs": [
+              "2567fa753da595ff1c89cc1dbfca63ad7e07b27fd0dc46f166a72f47ce01970d"
+            ]
+          }
+        ],
+        "reason": "provably_null_normal_scoped_product",
+        "unlocated": 0
+      },
+      {
+        "count": 3,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "class_not_emitted",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "jakarta_security_spi_class_not_emitted",
+        "unlocated": 3
+      },
+      {
+        "count": 5,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "class_not_emitted",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "jsf_runtime_class_not_emitted",
+        "unlocated": 5
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "class_not_emitted",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "superseded_by_mapped_form_login",
+        "unlocated": 1
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/tb-csrf",
+        "deliberate_refusal": true,
+        "kind": "csrf_token_not_session_bound",
+        "legacy_state": "accepted_residual",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
+            "line": 40,
+            "node_sigs": [
+              "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
+            ]
+          }
+        ],
+        "reason": "double-submit XSRF-TOKEN cookie without __Host- prefix (no secure transport): plantable over HTTP or from a sibling subdomain; forgery still needs the X-XSRF-TOKEN header, which a cross-site page cannot send without a CORS preflight",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "frontend_lockfile_absent",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "frontend_profile_runs_npm_install_without_package_lock",
+        "unlocated": 1
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "kept_library_version_upgraded",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "org.omnifaces:omniutils: 0.5 -> 0.17",
+        "unlocated": 1
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "layout_fragment_not_mounted",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "a layout fragment is emitted as a component but no emitted file mounts it; the legacy template included it on its pages",
+        "unlocated": 1
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/tb-backend-todos",
+        "deliberate_refusal": true,
+        "kind": "login_resubmit_semantics_changed",
+        "legacy_state": "accepted_residual",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
+            "line": 41,
+            "node_sigs": [
+              "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
+            ]
+          }
+        ],
+        "reason": "the legacy login passed newAuthentication(false): an already logged-in caller who resubmitted the form kept the current identity; the emitted login authenticates the submitted credentials again",
+        "unlocated": 0
+      },
+      {
+        "count": 5,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "navigation",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "logout_postback_stale_principal_not_reproduced",
+        "unlocated": 5
+      },
+      {
+        "count": 2,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "navigation",
+        "legacy_state": null,
+        "locations": [
+          {
+            "file": "frontend/src/app/tasks/tasks.component.ts",
+            "line": 71,
+            "node_sigs": [
+              "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+            ]
+          },
+          {
+            "file": "frontend/src/app/tasks/tasks.component.ts",
+            "line": 74,
+            "node_sigs": [
+              "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+            ]
+          }
+        ],
+        "reason": "query_parameter_precision:id",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "param_annotation",
+        "legacy_state": null,
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/security/AuthenticatedUserProducer.java",
+            "line": 16,
+            "node_sigs": [
+              "2ea1d9c3513810b123da6df2b7a1c82809b69e8b734fe131c893ed48226e9a06"
+            ]
+          }
+        ],
+        "reason": "authenticatedUser: Authenticated, not_mapped",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/tb-precise-losses",
+        "deliberate_refusal": true,
+        "kind": "param_annotation",
+        "legacy_state": "dead",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/security/AuthenticatedUserProducer.java",
+            "line": 15,
+            "node_sigs": [
+              "2ea1d9c3513810b123da6df2b7a1c82809b69e8b734fe131c893ed48226e9a06"
+            ]
+          }
+        ],
+        "reason": "authenticatedUser: Observes, cdi_event_never_fired",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/tb-precise-losses",
+        "deliberate_refusal": true,
+        "kind": "remember_me_lookup_inconsistent",
+        "legacy_state": "broken",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
+            "line": 42,
+            "node_sigs": [
+              "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
+            ]
+          }
+        ],
+        "reason": "the legacy remember-me store keeps a digest of the token in tokenHash and looks up the raw token by it, so a returned cookie never matches a stored login token",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/tb-precise-losses",
+        "deliberate_refusal": true,
+        "kind": "remember_me_query_not_parseable",
+        "legacy_state": "broken",
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
+            "line": 43,
+            "node_sigs": [
+              "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
+            ]
+          }
+        ],
+        "reason": "the finder `findByLoginToken` runs createNativeQuery on `User.byLoginTokens`, the name of a named query, which is not SQL",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/pom-deploy",
+        "deliberate_refusal": true,
+        "kind": "spa_bundle_anonymous",
+        "legacy_state": "accepted_residual",
+        "locations": [],
+        "reason": "client_bundle_readable_before_login_legacy_exposed_only_the_login_page",
+        "unlocated": 1
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "stylesheet_applied_globally",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "the legacy page loaded this stylesheet for itself only; index.html loads it for every route",
+        "unlocated": 1
+      },
+      {
+        "count": 5,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "ui_text",
+        "legacy_state": null,
+        "locations": [
+          {
+            "file": "frontend/src/app/details/details.component.ts",
+            "line": 22,
+            "node_sigs": [
+              "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
+            ]
+          },
+          {
+            "file": "frontend/src/app/error/error.component.ts",
+            "line": 20,
+            "node_sigs": [
+              "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
+            ]
+          },
+          {
+            "file": "frontend/src/app/form/form.component.ts",
+            "line": 24,
+            "node_sigs": [
+              "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
+            ]
+          },
+          {
+            "file": "frontend/src/app/nav/nav.component.ts",
+            "line": 18,
+            "node_sigs": [
+              "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
+            ]
+          },
+          {
+            "file": "frontend/src/app/tasks/tasks.component.ts",
+            "line": 22,
+            "node_sigs": [
+              "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+            ]
+          }
+        ],
+        "reason": "dynamic_class_not_carried:request_uri_contains",
+        "unlocated": 0
+      },
+      {
+        "count": 5,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "ui_text",
+        "legacy_state": null,
+        "locations": [
+          {
+            "file": "frontend/src/app/details/details.component.ts",
+            "line": 43,
+            "node_sigs": [
+              "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
+            ]
+          },
+          {
+            "file": "frontend/src/app/error/error.component.ts",
+            "line": 41,
+            "node_sigs": [
+              "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
+            ]
+          },
+          {
+            "file": "frontend/src/app/form/form.component.ts",
+            "line": 45,
+            "node_sigs": [
+              "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
+            ]
+          },
+          {
+            "file": "frontend/src/app/login/login.component.ts",
+            "line": 15,
+            "node_sigs": [
+              "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
+            ]
+          },
+          {
+            "file": "frontend/src/app/tasks/tasks.component.ts",
+            "line": 43,
+            "node_sigs": [
+              "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+            ]
+          }
+        ],
+        "reason": "framework_messages_not_carried",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "ui_text",
+        "legacy_state": null,
+        "locations": [
+          {
+            "file": "frontend/src/app/login/login.component.ts",
+            "line": 13,
+            "node_sigs": [
+              "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
+            ]
+          }
+        ],
+        "reason": "remember_me_checkbox_not_rendered",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "ui_text",
+        "legacy_state": null,
+        "locations": [
+          {
+            "file": "frontend/src/app/error/error.component.ts",
+            "line": 59,
+            "node_sigs": [
+              "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
+            ]
+          }
+        ],
+        "reason": "text_expression_not_carried",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "unknown_path_page_not_carried",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "container_404_page",
+        "unlocated": 1
+      }
+    ],
+    "on_encounter": "report_as_emitter_gap"
+  },
+  "schema": "provenant.modernization-contract",
+  "schema_version": 3,
+  "target": {
+    "angular_version": "19.2.25",
+    "database": {
+      "default": "h2",
+      "profiles": [
+        "postgresql"
+      ]
+    },
+    "java_release": "21",
+    "profile": "layered",
+    "spring_boot_version": "3.2.5"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "assets": [
+    {
+      "bytes": 6860,
+      "path": "frontend/src/legacy/images/tb.png",
+      "sha256": "b7a473f6f52ba9dde5b0528e09e403a481c134e567955f2f06babfbbe6b06488",
+      "source": "src/main/webapp/resources/images/tb.png",
+      "tier": "Retained"
+    }
+  ],
+  "note": "Legacy binary resources carried byte for byte; sha256 is of the carried bytes; the tier of each entry is the tier of that binary (this manifest is generated, tier Isolated)."
+}
