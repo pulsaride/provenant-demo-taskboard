@@ -42,7 +42,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 // TODO(remember_me_lookup_inconsistent: the legacy remember-me store keeps a digest of the token in tokenHash and looks up the raw token by it, so a returned cookie never matches a stored login token)
 // TODO(remember_me_query_not_parseable: the finder `findByLoginToken` runs createNativeQuery on `User.byLoginTokens`, the name of a named query, which is not SQL)
 @Configuration
-@EnableMethodSecurity(jsr250Enabled = true)
+@EnableMethodSecurity(prePostEnabled = true, jsr250Enabled = true)
 public class SecurityConfig {
 
     @Bean
@@ -56,9 +56,6 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/api/taskHome/donetasks").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/taskHome/todotasks").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/viewTaskAction/task").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/taskHome/deleteTask").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/taskHome/markTaskDoing").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/taskHome/markTaskDone").permitAll()
                         .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                         .anyRequest().authenticated())
                 .csrf(csrf -> csrf

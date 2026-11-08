@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Validators } from '@angular/forms';
@@ -11,9 +11,10 @@ import { Task } from '../api/models';
 @Component({
   selector: 'app-form',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, RouterLink],
   template: `
-    <form [formGroup]="form" (ngSubmit)="save()">
+    <form [formGroup]="form" (ngSubmit)="save()" data-legacy-body>
       <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
           <div class="container">

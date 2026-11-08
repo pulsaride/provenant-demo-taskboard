@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,6 +33,7 @@ public class TaskboardController {
     }
 
     // delegates to the retained backing bean com.github.hantsy.ee8sample.web.ViewTaskDetailsAction (one Spring-managed instance per call; legacy scope @ViewScoped)
+    // public by attestation pub-0001
     @PermitAll
     @GetMapping("/api/viewTaskAction/task")
     public ResponseEntity<ViewTaskActionTaskView> apiViewtaskactionTask(@RequestParam(name = "id", required = false) Long id) {
@@ -49,6 +51,7 @@ public class TaskboardController {
     }
 
     // delegates to the retained backing bean com.github.hantsy.ee8sample.web.TaskHome (one Spring-managed instance per call; legacy scope @ViewScoped)
+    // public by attestation pub-0002
     @PermitAll
     @GetMapping("/api/taskHome/donetasks")
     public ResponseEntity<List<TaskHomeDonetasksView>> apiTaskhomeDonetasks() {
@@ -66,6 +69,7 @@ public class TaskboardController {
     }
 
     // delegates to the retained backing bean com.github.hantsy.ee8sample.web.TaskHome (one Spring-managed instance per call; legacy scope @ViewScoped)
+    // public by attestation pub-0003
     @PermitAll
     @GetMapping("/api/taskHome/doingtasks")
     public ResponseEntity<List<TaskHomeDoingtasksView>> apiTaskhomeDoingtasks() {
@@ -83,7 +87,8 @@ public class TaskboardController {
     }
 
     // delegates to the retained backing bean com.github.hantsy.ee8sample.web.TaskHome (one Spring-managed instance per call; legacy scope @ViewScoped)
-    @PermitAll
+    // TODO(endpoint_security_unproven: no_declaration)
+    @PreAuthorize("isAuthenticated()")
     @PostMapping("/api/taskHome/markTaskDoing")
     public ResponseEntity<Void> apiTaskhomeMarktaskdoing(@RequestParam(name = "id", required = true) Long id) {
         TaskHome bean = taskHomeProvider.getObject();
@@ -92,7 +97,8 @@ public class TaskboardController {
     }
 
     // delegates to the retained backing bean com.github.hantsy.ee8sample.web.TaskHome (one Spring-managed instance per call; legacy scope @ViewScoped)
-    @PermitAll
+    // TODO(endpoint_security_unproven: no_declaration)
+    @PreAuthorize("isAuthenticated()")
     @PostMapping("/api/taskHome/markTaskDone")
     public ResponseEntity<Void> apiTaskhomeMarktaskdone(@RequestParam(name = "id", required = true) Long id) {
         TaskHome bean = taskHomeProvider.getObject();
@@ -101,6 +107,7 @@ public class TaskboardController {
     }
 
     // delegates to the retained backing bean com.github.hantsy.ee8sample.web.TaskHome (one Spring-managed instance per call; legacy scope @ViewScoped)
+    // public by attestation pub-0004
     @PermitAll
     @GetMapping("/api/taskHome/todotasks")
     public ResponseEntity<List<TaskHomeTodotasksView>> apiTaskhomeTodotasks() {
@@ -118,7 +125,8 @@ public class TaskboardController {
     }
 
     // delegates to the retained backing bean com.github.hantsy.ee8sample.web.TaskHome (one Spring-managed instance per call; legacy scope @ViewScoped)
-    @PermitAll
+    // TODO(endpoint_security_unproven: no_declaration)
+    @PreAuthorize("isAuthenticated()")
     @PostMapping("/api/taskHome/deleteTask")
     public ResponseEntity<List<FacesGlobalMessage>> apiTaskhomeDeletetask(@RequestParam(name = "id", required = true) Long id) {
         TaskHome bean = taskHomeProvider.getObject();

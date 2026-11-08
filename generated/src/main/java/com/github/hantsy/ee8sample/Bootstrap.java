@@ -1,18 +1,19 @@
 package com.github.hantsy.ee8sample;
 
+import org.springframework.beans.factory.SmartInitializingSingleton;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionTemplate;
 
 import com.github.hantsy.ee8sample.domain.Task;
 import com.github.hantsy.ee8sample.repository.TaskRepository;
-import jakarta.annotation.PostConstruct;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @Component
-@Transactional(propagation = Propagation.REQUIRED)
-public class Bootstrap {
+@Profile("!legacydb")
+public class Bootstrap implements SmartInitializingSingleton {
 
     private final Logger LOG;
 
@@ -23,7 +24,6 @@ public class Bootstrap {
         this.taskRepository = taskRepository;
     }
 
-    @PostConstruct
     public void init() {
         LOG.log(Level.INFO, "bootstraping application...");
 
@@ -35,5 +35,17 @@ public class Bootstrap {
         task = taskRepository.save(task);
 
         LOG.log(Level.INFO, "inserted task: {0}", new Object[]{task});
+    }
+
+    private TransactionTemplate transactionTemplate;
+
+    @Autowired
+    void setTransactionTemplate(TransactionTemplate transactionTemplate) {
+        this.transactionTemplate = transactionTemplate;
+    }
+
+    @Override
+    public void afterSingletonsInstantiated() {
+        transactionTemplate.executeWithoutResult(status -> init());
     }
 }

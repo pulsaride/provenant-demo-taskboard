@@ -13,17 +13,17 @@ public class AuditEntityListener {
     // TODO(body: retention_calls_stubbed_member:currentUser)
     // TODO(annotation: PrePersist, body_not_extracted)
     public void beforePersist(Object entity) {
-        throw new UnsupportedOperationException("body not extracted for beforePersist — see lower::lir's module docs");
+        throw new provenant.engine.EngineStubException("body not extracted for beforePersist — see lower::lir's module docs");
     }
 
     // TODO(body: retention_calls_stubbed_member:currentUser)
     // TODO(annotation: PreUpdate, body_not_extracted)
     public void beforeUpdate(Object entity) {
-        throw new UnsupportedOperationException("body not extracted for beforeUpdate — see lower::lir's module docs");
+        throw new provenant.engine.EngineStubException("body not extracted for beforeUpdate — see lower::lir's module docs");
     }
 
     // TODO(body: retention_unprovided_library_type)
     private String currentUser() {
-        throw new UnsupportedOperationException("body not extracted for currentUser — see lower::lir's module docs");
+        throw new provenant.engine.EngineStubException("body not extracted for currentUser — see lower::lir's module docs");
     }
 }

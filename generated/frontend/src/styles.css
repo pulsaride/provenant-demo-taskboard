@@ -1,3 +1,8 @@
 /* Global styles of the application. */
 @import './legacy/css/main.css';
 @import './legacy/css/login.css';
+
+/* Derived from legacy/css/main.css: its `body >` rules, applied to the page component's root element (data-legacy-body), the generated counterpart of the legacy <body>. */
+:where([data-legacy-body]) > .container {
+    padding: 60px 15px 0;
+}

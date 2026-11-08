@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
@@ -7,9 +7,10 @@ import { FacesMessages } from '../messages/faces-messages.service';
 @Component({
   selector: 'app-error',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ReactiveFormsModule, RouterLink],
   template: `
-    <form [formGroup]="form">
+    <form [formGroup]="form" data-legacy-body>
       <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
           <div class="container">

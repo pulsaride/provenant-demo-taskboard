@@ -181,12 +181,644 @@
     },
     "systemic_threshold": 2
   },
+  "endpoint_security": {
+    "attestation": {
+      "digest": "bb9a5bc39cbb2308d0e94b3c06d4ab823a611267f527331024a86d7e98485e93",
+      "path": ".provenant/public-endpoints.json",
+      "records": [
+        {
+          "access": "public",
+          "acknowledged_evidence": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
+          "applied": true,
+          "basis": {
+            "kind": "legacy_observed",
+            "legacy_status": 200,
+            "report_artifact_digest": "b377546aa052fb54150b1a405dbac6a291f3dc894cee9f96f21f72c8c28c0b30",
+            "scenario": "S2_task_details"
+          },
+          "decided_by": "Architecture advisor, delegated by the product owner",
+          "decided_on": "2026-11-05",
+          "decision": "accepted",
+          "entry_point": "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a",
+          "id": "pub-0001",
+          "justification": "web.xml declares one security-constraint, for /form.xhtml (ROLE_ADMIN, ROLE_USER); no constraint, filter, listener or annotation restricts details.xhtml?id=1. Harness run of 2026-11-05 on the unattested emission: the legacy answered an anonymous GET of the page with 200 and its content (S2_task_details); the generated application answered 401, so the scenario was 'differs'. The legacy page is public by that observation and by the absent constraint; this record opens exactly this endpoint.",
+          "method": "GET",
+          "path": "/api/viewTaskAction/task",
+          "reference": "docs/autopilot/DECISIONS.md 2026-11-05 (RFC-034 U1 to U4); RFC-034 section 7.1",
+          "refusal": null,
+          "roles": null,
+          "scope": null
+        },
+        {
+          "access": "public",
+          "acknowledged_evidence": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
+          "applied": true,
+          "basis": {
+            "kind": "legacy_observed",
+            "legacy_status": 200,
+            "report_artifact_digest": "b377546aa052fb54150b1a405dbac6a291f3dc894cee9f96f21f72c8c28c0b30",
+            "scenario": "S1_list_tasks_by_status"
+          },
+          "decided_by": "Architecture advisor, delegated by the product owner",
+          "decided_on": "2026-11-05",
+          "decision": "accepted",
+          "entry_point": "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd",
+          "id": "pub-0002",
+          "justification": "web.xml declares one security-constraint, for /form.xhtml (ROLE_ADMIN, ROLE_USER); no constraint, filter, listener or annotation restricts tasks.xhtml. Harness run of 2026-11-05 on the unattested emission: the legacy answered an anonymous GET of the page with 200 and its content (S1_list_tasks_by_status); the generated application answered 401, so the scenario was 'differs'. The legacy page is public by that observation and by the absent constraint; this record opens exactly this endpoint.",
+          "method": "GET",
+          "path": "/api/taskHome/donetasks",
+          "reference": "docs/autopilot/DECISIONS.md 2026-11-05 (RFC-034 U1 to U4); RFC-034 section 7.1",
+          "refusal": null,
+          "roles": null,
+          "scope": null
+        },
+        {
+          "access": "public",
+          "acknowledged_evidence": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
+          "applied": true,
+          "basis": {
+            "kind": "legacy_observed",
+            "legacy_status": 200,
+            "report_artifact_digest": "b377546aa052fb54150b1a405dbac6a291f3dc894cee9f96f21f72c8c28c0b30",
+            "scenario": "S1_list_tasks_by_status"
+          },
+          "decided_by": "Architecture advisor, delegated by the product owner",
+          "decided_on": "2026-11-05",
+          "decision": "accepted",
+          "entry_point": "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e",
+          "id": "pub-0003",
+          "justification": "web.xml declares one security-constraint, for /form.xhtml (ROLE_ADMIN, ROLE_USER); no constraint, filter, listener or annotation restricts tasks.xhtml. Harness run of 2026-11-05 on the unattested emission: the legacy answered an anonymous GET of the page with 200 and its content (S1_list_tasks_by_status); the generated application answered 401, so the scenario was 'differs'. The legacy page is public by that observation and by the absent constraint; this record opens exactly this endpoint.",
+          "method": "GET",
+          "path": "/api/taskHome/doingtasks",
+          "reference": "docs/autopilot/DECISIONS.md 2026-11-05 (RFC-034 U1 to U4); RFC-034 section 7.1",
+          "refusal": null,
+          "roles": null,
+          "scope": null
+        },
+        {
+          "access": "public",
+          "acknowledged_evidence": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
+          "applied": true,
+          "basis": {
+            "kind": "legacy_observed",
+            "legacy_status": 200,
+            "report_artifact_digest": "b377546aa052fb54150b1a405dbac6a291f3dc894cee9f96f21f72c8c28c0b30",
+            "scenario": "S1_list_tasks_by_status"
+          },
+          "decided_by": "Architecture advisor, delegated by the product owner",
+          "decided_on": "2026-11-05",
+          "decision": "accepted",
+          "entry_point": "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee",
+          "id": "pub-0004",
+          "justification": "web.xml declares one security-constraint, for /form.xhtml (ROLE_ADMIN, ROLE_USER); no constraint, filter, listener or annotation restricts tasks.xhtml. Harness run of 2026-11-05 on the unattested emission: the legacy answered an anonymous GET of the page with 200 and its content (S1_list_tasks_by_status); the generated application answered 401, so the scenario was 'differs'. The legacy page is public by that observation and by the absent constraint; this record opens exactly this endpoint.",
+          "method": "GET",
+          "path": "/api/taskHome/todotasks",
+          "reference": "docs/autopilot/DECISIONS.md 2026-11-05 (RFC-034 U1 to U4); RFC-034 section 7.1",
+          "refusal": null,
+          "roles": null,
+          "scope": null
+        }
+      ]
+    },
+    "basis": {
+      "open_application": {
+        "checks": [
+          {
+            "blockers": [
+              {
+                "code": "security_constraint",
+                "detail": "<auth-constraint> at byte 1443",
+                "file": "src/main/webapp/WEB-INF/web.xml"
+              }
+            ],
+            "checked": 1,
+            "files": [
+              "src/main/webapp/WEB-INF/web.xml"
+            ],
+            "id": "web_constraint",
+            "result": "blocked"
+          },
+          {
+            "blockers": [
+              {
+                "code": "restricting_annotation",
+                "detail": "@AutoApplySession",
+                "file": "com.github.hantsy.ee8sample.security.auth.CustomAuthenticationMechanism"
+              },
+              {
+                "code": "restricting_annotation",
+                "detail": "@LoginToContinue",
+                "file": "com.github.hantsy.ee8sample.security.auth.CustomAuthenticationMechanism"
+              },
+              {
+                "code": "restricting_annotation",
+                "detail": "@RememberMe",
+                "file": "com.github.hantsy.ee8sample.security.auth.CustomAuthenticationMechanism"
+              }
+            ],
+            "checked": 34,
+            "files": [
+              "com.github.hantsy.ee8sample.security.auth.CustomAuthenticationMechanism"
+            ],
+            "id": "restricting_annotation",
+            "result": "blocked"
+          },
+          {
+            "blockers": [
+              {
+                "code": "unread_mechanism_evidence",
+                "detail": "open_application_idiom: uses ExceptionHandler",
+                "file": "src/main/java/com/github/hantsy/ee8sample/faces/DefaultExceptionHandler.java"
+              },
+              {
+                "code": "unread_mechanism_evidence",
+                "detail": "open_application_idiom: uses ExceptionHandlerWrapper",
+                "file": "src/main/java/com/github/hantsy/ee8sample/faces/DefaultExceptionHandler.java"
+              },
+              {
+                "code": "unread_mechanism_evidence",
+                "detail": "open_application_idiom: uses NavigationHandler",
+                "file": "src/main/java/com/github/hantsy/ee8sample/faces/DefaultExceptionHandler.java"
+              },
+              {
+                "code": "unread_mechanism_evidence",
+                "detail": "open_application_idiom: uses ExceptionHandler",
+                "file": "src/main/java/com/github/hantsy/ee8sample/faces/DefaultExceptionHandlerFactory.java"
+              }
+            ],
+            "checked": 10,
+            "files": [
+              "src/main/java/com/github/hantsy/ee8sample/faces/DefaultExceptionHandler.java",
+              "src/main/java/com/github/hantsy/ee8sample/faces/DefaultExceptionHandlerFactory.java"
+            ],
+            "id": "unread_mechanism",
+            "result": "blocked"
+          },
+          {
+            "blockers": [
+              {
+                "code": "authentication_mapped",
+                "detail": "a login mechanism is mapped",
+                "file": ""
+              }
+            ],
+            "checked": 1,
+            "files": [],
+            "id": "authentication",
+            "result": "blocked"
+          },
+          {
+            "blockers": [],
+            "checked": 37,
+            "files": [],
+            "id": "completeness",
+            "result": "pass"
+          }
+        ],
+        "holds": false,
+        "inactive_profile_files": [],
+        "inert_findings": [
+          {
+            "detail": "<security-role-mapping> at byte 2189",
+            "file": "src/main/webapp/WEB-INF/glassfish-web.xml",
+            "id": "inert_role_mapping"
+          },
+          {
+            "detail": "<security-role-mapping> at byte 2337",
+            "file": "src/main/webapp/WEB-INF/glassfish-web.xml",
+            "id": "inert_role_mapping"
+          },
+          {
+            "detail": "ROLE_ADMIN",
+            "file": "src/main/webapp/WEB-INF/web.xml",
+            "id": "security_role_declared"
+          },
+          {
+            "detail": "ROLE_USER",
+            "file": "src/main/webapp/WEB-INF/web.xml",
+            "id": "security_role_declared"
+          }
+        ]
+      },
+      "policy": "public_requires_proof"
+    },
+    "counts": {
+      "authenticated_default": 3,
+      "endpoints": 9,
+      "public_attested": 4,
+      "public_declared": 0,
+      "public_open_application": 0,
+      "records_accepted": 4,
+      "records_pending": 0,
+      "records_refused": 0,
+      "records_rejected": 0,
+      "refused": 0,
+      "roles": 2
+    },
+    "default": "authenticated",
+    "endpoints": [
+      {
+        "binding": {
+          "bean_fqn": "com.github.hantsy.ee8sample.web.ViewTaskDetailsAction",
+          "el_name": "viewTaskAction"
+        },
+        "method": "GET",
+        "node_sig": "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a",
+        "params": [
+          {
+            "java_type": "Long",
+            "name": "id"
+          }
+        ],
+        "path": "/api/viewTaskAction/task",
+        "security": {
+          "kind": "public",
+          "proof": {
+            "kind": "attested",
+            "record": "pub-0001"
+          }
+        },
+        "tier": null
+      },
+      {
+        "binding": {
+          "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+          "el_name": "taskHome"
+        },
+        "method": "GET",
+        "node_sig": "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd",
+        "params": [],
+        "path": "/api/taskHome/donetasks",
+        "security": {
+          "kind": "public",
+          "proof": {
+            "kind": "attested",
+            "record": "pub-0002"
+          }
+        },
+        "tier": null
+      },
+      {
+        "binding": {
+          "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+          "el_name": "taskHome"
+        },
+        "method": "GET",
+        "node_sig": "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e",
+        "params": [],
+        "path": "/api/taskHome/doingtasks",
+        "security": {
+          "kind": "public",
+          "proof": {
+            "kind": "attested",
+            "record": "pub-0003"
+          }
+        },
+        "tier": null
+      },
+      {
+        "binding": {
+          "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+          "el_name": "taskHome"
+        },
+        "method": "POST",
+        "node_sig": "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae",
+        "params": [
+          {
+            "java_type": "Long",
+            "name": "id"
+          }
+        ],
+        "path": "/api/taskHome/markTaskDoing",
+        "security": {
+          "decided": false,
+          "kind": "authenticated_default",
+          "reason": "no_declaration"
+        },
+        "tier": null
+      },
+      {
+        "binding": {
+          "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+          "el_name": "taskHome"
+        },
+        "method": "POST",
+        "node_sig": "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d",
+        "params": [
+          {
+            "java_type": "Long",
+            "name": "id"
+          }
+        ],
+        "path": "/api/taskHome/markTaskDone",
+        "security": {
+          "decided": false,
+          "kind": "authenticated_default",
+          "reason": "no_declaration"
+        },
+        "tier": null
+      },
+      {
+        "binding": {
+          "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+          "el_name": "taskHome"
+        },
+        "method": "GET",
+        "node_sig": "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee",
+        "params": [],
+        "path": "/api/taskHome/todotasks",
+        "security": {
+          "kind": "public",
+          "proof": {
+            "kind": "attested",
+            "record": "pub-0004"
+          }
+        },
+        "tier": null
+      },
+      {
+        "binding": {
+          "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+          "el_name": "taskHome"
+        },
+        "method": "POST",
+        "node_sig": "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918",
+        "params": [
+          {
+            "java_type": "Long",
+            "name": "id"
+          }
+        ],
+        "path": "/api/taskHome/deleteTask",
+        "security": {
+          "decided": false,
+          "kind": "authenticated_default",
+          "reason": "no_declaration"
+        },
+        "tier": null
+      },
+      {
+        "binding": {
+          "bean_fqn": "com.github.hantsy.ee8sample.web.EditTaskAction",
+          "el_name": "editTaskAction"
+        },
+        "method": "GET",
+        "node_sig": "c5303f432ea0b0018cfc68b8a3a24f23c36d0cf5319ca87bd5b5a69d7dcc1b9d",
+        "params": [
+          {
+            "java_type": "Long",
+            "name": "id"
+          }
+        ],
+        "path": "/api/editTaskAction/task",
+        "security": {
+          "basis": "declared",
+          "kind": "roles",
+          "lower_bound_unverified": false,
+          "roles": [
+            "ROLE_ADMIN",
+            "ROLE_USER"
+          ]
+        },
+        "tier": null
+      },
+      {
+        "binding": {
+          "bean_fqn": "com.github.hantsy.ee8sample.web.EditTaskAction",
+          "el_name": "editTaskAction"
+        },
+        "method": "POST",
+        "node_sig": "e2c79e9d482fd4373489ac7064e1309699eb82cbc553565214c4f76cb4775d72",
+        "params": [
+          {
+            "java_type": "Long",
+            "name": "id"
+          }
+        ],
+        "path": "/api/editTaskAction/save",
+        "security": {
+          "basis": "declared",
+          "kind": "roles",
+          "lower_bound_unverified": false,
+          "roles": [
+            "ROLE_ADMIN",
+            "ROLE_USER"
+          ]
+        },
+        "tier": null
+      }
+    ],
+    "evidence": [],
+    "evidence_digest": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
+    "fail_closed": "an entry point whose access rules were seen and cannot be evaluated is not emitted, and an endpoint without a proof of roles or of public access is emitted without annotation under anyRequest().authenticated(): an anonymous request is rejected",
+    "partition": {
+      "adapters": [
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.LoginBean",
+            "el_name": "loginBean"
+          },
+          "node_sig": "4f343009963b4677e3f823ec8395b97c35648d81b0e3043cafe361f93d0be95e",
+          "reason": "superseded_by_mapped_form_login"
+        },
+        {
+          "binding": null,
+          "node_sig": "7d53f2bf5f5589e6523e81e0102a306a610ac5ea65dd63aac6d9f7e2682913fa",
+          "reason": "action_unresolved: bean_unresolved"
+        }
+      ],
+      "counts": {
+        "adapters": 2,
+        "endpoints": 9,
+        "entry_points": 11,
+        "violations": 0
+      },
+      "entry_points": [
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.ViewTaskDetailsAction",
+            "el_name": "viewTaskAction"
+          },
+          "node_sig": "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a"
+        },
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+            "el_name": "taskHome"
+          },
+          "node_sig": "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd"
+        },
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+            "el_name": "taskHome"
+          },
+          "node_sig": "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e"
+        },
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+            "el_name": "taskHome"
+          },
+          "node_sig": "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae"
+        },
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.LoginBean",
+            "el_name": "loginBean"
+          },
+          "node_sig": "4f343009963b4677e3f823ec8395b97c35648d81b0e3043cafe361f93d0be95e"
+        },
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+            "el_name": "taskHome"
+          },
+          "node_sig": "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d"
+        },
+        {
+          "binding": null,
+          "node_sig": "7d53f2bf5f5589e6523e81e0102a306a610ac5ea65dd63aac6d9f7e2682913fa"
+        },
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+            "el_name": "taskHome"
+          },
+          "node_sig": "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee"
+        },
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.TaskHome",
+            "el_name": "taskHome"
+          },
+          "node_sig": "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918"
+        },
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.EditTaskAction",
+            "el_name": "editTaskAction"
+          },
+          "node_sig": "c5303f432ea0b0018cfc68b8a3a24f23c36d0cf5319ca87bd5b5a69d7dcc1b9d"
+        },
+        {
+          "binding": {
+            "bean_fqn": "com.github.hantsy.ee8sample.web.EditTaskAction",
+            "el_name": "editTaskAction"
+          },
+          "node_sig": "e2c79e9d482fd4373489ac7064e1309699eb82cbc553565214c4f76cb4775d72"
+        }
+      ],
+      "rule": "every legacy entry point, a pair (bean binding, declaring method), is the entry point of exactly one endpoint or one adapter (RFC-025 section 2.1, RFC-035); a run with a violation writes its emission and exits non-zero, G1 fails on it, it is not a deliverable",
+      "violations": []
+    },
+    "refused": []
+  },
   "files": [
     {
-      "bytes": 2148,
+      "bytes": 100,
       "fragments": [
         {
-          "line_end": 52,
+          "line_end": 3,
+          "line_start": 1,
+          "node_sigs": [
+            "1242679b30f9e46571d80e3d233048da4d75441e4234d4020577bd584628a5be"
+          ],
+          "rule_id": "engine-dockerfile",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": ".dockerignore",
+      "retained_regions": [],
+      "sha256": "caa4503c67d27917e3f652a6426e394eb495dfe553478c25fa61c7e0d9dd427f",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 9,
+      "fragments": [
+        {
+          "line_end": 1,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "maven-jvm-config",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": ".mvn/jvm.config",
+      "retained_regions": [],
+      "sha256": "ae0a4ce03ad26ff3cac7ca5cea0501f51dcf094e24ed3a3c1b6201a108eed2b4",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 1065,
+      "fragments": [
+        {
+          "line_end": 19,
+          "line_start": 1,
+          "node_sigs": [
+            "ad297f1ed19510f504bfb898edd5c575e3ae5e3a6392e57c43534aabef0ee517"
+          ],
+          "rule_id": "engine-dockerfile",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "Dockerfile",
+      "retained_regions": [],
+      "sha256": "63ba63e34c323e80c55de96905731340394ea0f267a0bcd44ee9bd6b9840f39e",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 35141,
+      "fragments": [
+        {
+          "line_end": 674,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "legacy-license-copy",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "LICENSE",
+      "retained_regions": [],
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 311,
+      "fragments": [
+        {
+          "line_end": 3,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "legacy-license-notice",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "NOTICE",
+      "retained_regions": [],
+      "sha256": "74f822f154bcf458f033553b7fe512c2c38d2118688820ca604df0b2b77386b1",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 2000,
+      "fragments": [
+        {
+          "line_end": 50,
           "line_start": 1,
           "node_sigs": [],
           "rule_id": "project-readme",
@@ -196,7 +828,28 @@
       "kind": "text",
       "path": "README.md",
       "retained_regions": [],
-      "sha256": "f1d7b708a09a2cbb2bb9ecd20aae8835efbd0c10c1c08136a979d8c4fcaa24a1",
+      "sha256": "f98aefad61c1cb7b9e976c4d31c47b56caa7d1d90687cbecf099c6f4ccfeec25",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 807,
+      "fragments": [
+        {
+          "line_end": 22,
+          "line_start": 1,
+          "node_sigs": [
+            "b323e4e2745822d197132bc5a11c556634231419c28539922756a0aceeaa1f31"
+          ],
+          "rule_id": "engine-ci-script",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "ci.sh",
+      "retained_regions": [],
+      "sha256": "d1d20b269cb69d66372ec5dfef48dd8555ec880aef68a0e7471e363bf25dcd79",
       "tiers": {
         "Isolated": 1
       }
@@ -221,7 +874,7 @@
       }
     },
     {
-      "bytes": 1486,
+      "bytes": 1456,
       "fragments": [
         {
           "line_end": 46,
@@ -234,7 +887,7 @@
       "kind": "text",
       "path": "frontend/angular.json",
       "retained_regions": [],
-      "sha256": "225c4436a8dd1b4d2552473a071ad005850cbb04fc7210dd6bd5ab4313b0a15b",
+      "sha256": "265234ddb4f783e54d17df0790fc6275c8c43c3b41bda667bdd9caa30e300894",
       "tiers": {
         "Isolated": 1
       }
@@ -261,10 +914,29 @@
       }
     },
     {
+      "bytes": 200541,
+      "fragments": [
+        {
+          "line_end": 6025,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "angular-workspace-scaffold",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "frontend/package-lock.json",
+      "retained_regions": [],
+      "sha256": "e44f7817697ad1b8ed7e2f259ce582d1d8c7536402280982d1d6a030f1c32e2f",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
       "bytes": 690,
       "fragments": [
         {
-          "line_end": 29,
+          "line_end": 30,
           "line_start": 1,
           "node_sigs": [],
           "rule_id": "angular-workspace-scaffold",
@@ -274,7 +946,7 @@
       "kind": "text",
       "path": "frontend/package.json",
       "retained_regions": [],
-      "sha256": "fba4d0a3fe468eb63c2c8def7b80c20c44bff2bd3e5891151171eed043bc9958",
+      "sha256": "350982c9e508bfb1ed4ba63673aa6a4aedaec4c348c4147b2c4a2b8ba89dabad",
       "tiers": {
         "Isolated": 1
       }
@@ -557,10 +1229,10 @@
       }
     },
     {
-      "bytes": 241,
+      "bytes": 316,
       "fragments": [
         {
-          "line_end": 10,
+          "line_end": 11,
           "line_start": 1,
           "node_sigs": [],
           "rule_id": "angular-workspace-scaffold",
@@ -570,13 +1242,13 @@
       "kind": "text",
       "path": "frontend/src/app/app.component.ts",
       "retained_regions": [],
-      "sha256": "bede3aa41b8f0193fe2a481c05960bba94f6376244ed1daf38e0b10c66e978b1",
+      "sha256": "0097c8de843da92abb2987cc1a0b9c14f74008b8b49bc4b1957aaea2188294bf",
       "tiers": {
         "Isolated": 1
       }
     },
     {
-      "bytes": 464,
+      "bytes": 522,
       "fragments": [
         {
           "line_end": 10,
@@ -589,7 +1261,7 @@
       "kind": "text",
       "path": "frontend/src/app/app.config.ts",
       "retained_regions": [],
-      "sha256": "4ce64754ec11ef932f10a0dfd225001e6a6ec9a900f8d9ddf4d8257ea309ee2d",
+      "sha256": "4d46ead54ae090c090860bdc3979d8bc5f9e124c9804ae5a133e1032a652c068",
       "tiers": {
         "Isolated": 1
       }
@@ -704,10 +1376,10 @@
       }
     },
     {
-      "bytes": 4931,
+      "bytes": 5023,
       "fragments": [
         {
-          "line_end": 81,
+          "line_end": 82,
           "line_start": 1,
           "node_sigs": [
             "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
@@ -716,17 +1388,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 115,
-          "line_start": 82,
-          "node_sigs": [
-            "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
-          ],
-          "rule_id": "uir-component-tree-to-angular-component",
-          "tier": "Isolated"
-        },
-        {
-          "line_end": 121,
-          "line_start": 116,
+          "line_end": 116,
+          "line_start": 83,
           "node_sigs": [
             "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
           ],
@@ -735,7 +1398,16 @@
         },
         {
           "line_end": 122,
-          "line_start": 122,
+          "line_start": 117,
+          "node_sigs": [
+            "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 123,
+          "line_start": 123,
           "node_sigs": [
             "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
           ],
@@ -746,16 +1418,16 @@
       "kind": "text",
       "path": "frontend/src/app/details/details.component.ts",
       "retained_regions": [],
-      "sha256": "1a5525801fbb2c96fcfe299ff007be722f47dca7a8124d8f87ef23324f6e0a9c",
+      "sha256": "4758804e3a54634b277b360782d87eacc5318d92ae63c7d8f7323cfe1613e3a8",
       "tiers": {
         "Isolated": 4
       }
     },
     {
-      "bytes": 3700,
+      "bytes": 3792,
       "fragments": [
         {
-          "line_end": 73,
+          "line_end": 74,
           "line_start": 1,
           "node_sigs": [
             "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
@@ -764,17 +1436,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 82,
-          "line_start": 74,
-          "node_sigs": [
-            "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
-          ],
-          "rule_id": "uir-component-tree-to-angular-component",
-          "tier": "Isolated"
-        },
-        {
-          "line_end": 88,
-          "line_start": 83,
+          "line_end": 83,
+          "line_start": 75,
           "node_sigs": [
             "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
           ],
@@ -783,7 +1446,16 @@
         },
         {
           "line_end": 89,
-          "line_start": 89,
+          "line_start": 84,
+          "node_sigs": [
+            "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 90,
+          "line_start": 90,
           "node_sigs": [
             "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
           ],
@@ -794,16 +1466,16 @@
       "kind": "text",
       "path": "frontend/src/app/error/error.component.ts",
       "retained_regions": [],
-      "sha256": "0b698ece785760b24234f37a6145b0f10b7f674d133ae1c0dff404e5371a7dd3",
+      "sha256": "bc4153d6bbbb5df378ded506275495208c7ea92f735c2898d70c19bd69f68545",
       "tiers": {
         "Isolated": 4
       }
     },
     {
-      "bytes": 6742,
+      "bytes": 6834,
       "fragments": [
         {
-          "line_end": 90,
+          "line_end": 91,
           "line_start": 1,
           "node_sigs": [
             "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
@@ -812,8 +1484,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 93,
-          "line_start": 91,
+          "line_end": 94,
+          "line_start": 92,
           "node_sigs": [
             "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
           ],
@@ -821,8 +1493,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 130,
-          "line_start": 94,
+          "line_end": 131,
+          "line_start": 95,
           "node_sigs": [
             "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
           ],
@@ -830,17 +1502,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 152,
-          "line_start": 131,
-          "node_sigs": [
-            "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
-          ],
-          "rule_id": "uir-component-tree-to-angular-component",
-          "tier": "Isolated"
-        },
-        {
-          "line_end": 158,
-          "line_start": 153,
+          "line_end": 153,
+          "line_start": 132,
           "node_sigs": [
             "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
           ],
@@ -849,7 +1512,16 @@
         },
         {
           "line_end": 159,
-          "line_start": 159,
+          "line_start": 154,
+          "node_sigs": [
+            "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 160,
+          "line_start": 160,
           "node_sigs": [
             "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
           ],
@@ -860,16 +1532,16 @@
       "kind": "text",
       "path": "frontend/src/app/form/form.component.ts",
       "retained_regions": [],
-      "sha256": "4eeb4f6561a5aea93ff7cad103c6ead7ba9b64f7895a35832356751932e5279d",
+      "sha256": "4253cda73294f47ee59f86db7468b1c796fabf93ff020847282a9d3ef728cedf",
       "tiers": {
         "Isolated": 6
       }
     },
     {
-      "bytes": 3264,
+      "bytes": 3356,
       "fragments": [
         {
-          "line_end": 83,
+          "line_end": 84,
           "line_start": 1,
           "node_sigs": [
             "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
@@ -881,7 +1553,7 @@
       "kind": "text",
       "path": "frontend/src/app/login/login.component.ts",
       "retained_regions": [],
-      "sha256": "cf0e2ec7eb126c00a01e029579f81586da6ba55fe89b612e4b99c8aaa4875584",
+      "sha256": "125bd65694bd89ec4acbcfa10065e16c2dbc0e757c4f9530e065eba82ef8496e",
       "tiers": {
         "Isolated": 1
       }
@@ -908,10 +1580,10 @@
       }
     },
     {
-      "bytes": 2267,
+      "bytes": 2342,
       "fragments": [
         {
-          "line_end": 40,
+          "line_end": 41,
           "line_start": 1,
           "node_sigs": [
             "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
@@ -920,17 +1592,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 48,
-          "line_start": 41,
-          "node_sigs": [
-            "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
-          ],
-          "rule_id": "uir-component-tree-to-angular-component",
-          "tier": "Isolated"
-        },
-        {
-          "line_end": 54,
-          "line_start": 49,
+          "line_end": 49,
+          "line_start": 42,
           "node_sigs": [
             "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
           ],
@@ -939,7 +1602,16 @@
         },
         {
           "line_end": 55,
-          "line_start": 55,
+          "line_start": 50,
+          "node_sigs": [
+            "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 56,
+          "line_start": 56,
           "node_sigs": [
             "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
           ],
@@ -950,16 +1622,16 @@
       "kind": "text",
       "path": "frontend/src/app/nav/nav.component.ts",
       "retained_regions": [],
-      "sha256": "5589e5d02940078a7543885150a4b481c8a11a7f0164d3933e2683d4d9f6c29a",
+      "sha256": "a452a36b49bc4953d86e86dddf9b0704769d5b5a6499e26182bab875d5a17317",
       "tiers": {
         "Isolated": 4
       }
     },
     {
-      "bytes": 9144,
+      "bytes": 9236,
       "fragments": [
         {
-          "line_end": 134,
+          "line_end": 135,
           "line_start": 1,
           "node_sigs": [
             "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
@@ -968,17 +1640,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 166,
-          "line_start": 135,
-          "node_sigs": [
-            "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
-          ],
-          "rule_id": "uir-component-tree-to-angular-component",
-          "tier": "Isolated"
-        },
-        {
-          "line_end": 205,
-          "line_start": 167,
+          "line_end": 167,
+          "line_start": 136,
           "node_sigs": [
             "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
           ],
@@ -987,7 +1650,16 @@
         },
         {
           "line_end": 206,
-          "line_start": 206,
+          "line_start": 168,
+          "node_sigs": [
+            "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
+          ],
+          "rule_id": "uir-component-tree-to-angular-component",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 207,
+          "line_start": 207,
           "node_sigs": [
             "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
           ],
@@ -998,7 +1670,7 @@
       "kind": "text",
       "path": "frontend/src/app/tasks/tasks.component.ts",
       "retained_regions": [],
-      "sha256": "b312a0653a02ddde0ff7dbc6706d74fb71a86aca27528c055345d90d595f5c4a",
+      "sha256": "b963751f0d3b2e7077eb8a8dfcdcbaa49bdd8a6e2d97b418700d22643ca03778",
       "tiers": {
         "Isolated": 4
       }
@@ -1113,10 +1785,10 @@
       }
     },
     {
-      "bytes": 107,
+      "bytes": 351,
       "fragments": [
         {
-          "line_end": 3,
+          "line_end": 8,
           "line_start": 1,
           "node_sigs": [],
           "rule_id": "angular-workspace-scaffold",
@@ -1126,7 +1798,7 @@
       "kind": "text",
       "path": "frontend/src/styles.css",
       "retained_regions": [],
-      "sha256": "060e1c475ce089dde0db80fa6ee7d0f1bf1dd36589d4f74c221db665f26990ab",
+      "sha256": "3f6ce421edf25c7beb893ab492239634b04304af700250748e28eda87a34ef1d",
       "tiers": {
         "Isolated": 1
       }
@@ -1170,19 +1842,59 @@
       }
     },
     {
-      "bytes": 5792,
+      "bytes": 8110,
+      "fragments": [
+        {
+          "line_end": 301,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "openapi-document",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "openapi.yaml",
+      "retained_regions": [],
+      "sha256": "81e0a0e494112811b4812370d6529f82c4e13cbbf9dd13aad1f49be8872ac4aa",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 6835,
       "fragments": [],
       "kind": "text",
       "path": "pom.xml",
       "retained_regions": [],
-      "sha256": "495ed84be6a10fa0c89e301c0566e3c46135b241d474a118a5f0b14921c9b86a",
+      "sha256": "421193916a5a94865b2b47c12642915dae8db545412929d6ec7469245102df04",
       "tiers": {}
     },
     {
-      "bytes": 1151,
+      "bytes": 1822,
       "fragments": [
         {
-          "line_end": 15,
+          "line_end": 37,
+          "line_start": 1,
+          "node_sigs": [
+            "23e684c07c4a404481744c7633082f59d7e93cebcf324f18e31684b0defee612"
+          ],
+          "rule_id": "engine-actuator-security",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/ActuatorSecurityConfig.java",
+      "retained_regions": [],
+      "sha256": "af8ee8149d5c2443001f1adb6d0d6f7273919e1f7df37c3b9ce37cf75cbd8c3e",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 1571,
+      "fragments": [
+        {
+          "line_end": 16,
           "line_start": 1,
           "node_sigs": [
             "bc531387b943ec7139c2940cb0c2efa77ca007b4c995ebb534ee2697bcdd2fdf"
@@ -1191,8 +1903,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 17,
-          "line_start": 16,
+          "line_end": 18,
+          "line_start": 17,
           "node_sigs": [
             "51848f5d6bd754e65e84405a3f0cc7b950b171eec862ed5881b24a09ca8033f1"
           ],
@@ -1200,8 +1912,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 19,
-          "line_start": 18,
+          "line_end": 20,
+          "line_start": 19,
           "node_sigs": [
             "868bf4846353eb9e0782f148952a8ec2de2f545e4cb994557d1cd485bb50a31e"
           ],
@@ -1209,8 +1921,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 24,
-          "line_start": 20,
+          "line_end": 25,
+          "line_start": 21,
           "node_sigs": [
             "51848f5d6bd754e65e84405a3f0cc7b950b171eec862ed5881b24a09ca8033f1",
             "868bf4846353eb9e0782f148952a8ec2de2f545e4cb994557d1cd485bb50a31e",
@@ -1221,7 +1933,7 @@
         },
         {
           "line_end": 38,
-          "line_start": 25,
+          "line_start": 26,
           "node_sigs": [
             "ba9e032d1aede4cb41ee3a9001e7a8beb30cc0e6bb572a60ed714a3c8a2569e7"
           ],
@@ -1229,8 +1941,17 @@
           "tier": "Retained"
         },
         {
-          "line_end": 39,
+          "line_end": 50,
           "line_start": 39,
+          "node_sigs": [
+            "bc531387b943ec7139c2940cb0c2efa77ca007b4c995ebb534ee2697bcdd2fdf"
+          ],
+          "rule_id": "startup-initialiser-smart-initializing-singleton",
+          "tier": "Isolated"
+        },
+        {
+          "line_end": 51,
+          "line_start": 51,
           "node_sigs": [
             "bc531387b943ec7139c2940cb0c2efa77ca007b4c995ebb534ee2697bcdd2fdf"
           ],
@@ -1243,15 +1964,15 @@
       "retained_regions": [
         {
           "line_end": 38,
-          "line_start": 25,
+          "line_start": 26,
           "rule_ids": [
             "body-retained-verbatim"
           ]
         }
       ],
-      "sha256": "772cfb04d005754b8246273c8e0925f03a3808168c8220fe7f667ed08f3088e8",
+      "sha256": "7d5429248abc3aaa3280e7aced3dba51750e298be5fc0c6c260b94bac391756b",
       "tiers": {
-        "Isolated": 5,
+        "Isolated": 6,
         "Retained": 1
       }
     },
@@ -1313,6 +2034,27 @@
       }
     },
     {
+      "bytes": 1359,
+      "fragments": [
+        {
+          "line_end": 33,
+          "line_start": 1,
+          "node_sigs": [
+            "6459f100a7a4f7ea16d605f70aa3f960d43bb6c8c2f1723d20c5f8aae76c74f8"
+          ],
+          "rule_id": "engine-authored-file",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/EngineStubHandler.java",
+      "retained_regions": [],
+      "sha256": "a70a783752ecaf3bb3e6582717d6ca535deb7f70da8691624a8666bae98574a4",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
       "bytes": 501,
       "fragments": [
         {
@@ -1352,10 +2094,10 @@
       }
     },
     {
-      "bytes": 337,
+      "bytes": 554,
       "fragments": [
         {
-          "line_end": 12,
+          "line_end": 14,
           "line_start": 1,
           "node_sigs": [
             "61227ad0af56d490b8f6832d7bd72b66b67ed87220153659b3e480704be27504"
@@ -1367,16 +2109,16 @@
       "kind": "text",
       "path": "src/main/java/com/github/hantsy/ee8sample/TaskboardApplication.java",
       "retained_regions": [],
-      "sha256": "69fa44aa297dfc9d35e23e0142af88780b3d702c4e843c0be0f80e01c7b2d953",
+      "sha256": "ac24f2e9b06ef44ddc6b8c654a5eb6dfcd673d3043b05eb6e9b4cc25c3344a3c",
       "tiers": {
         "Isolated": 1
       }
     },
     {
-      "bytes": 8503,
+      "bytes": 8960,
       "fragments": [
         {
-          "line_end": 32,
+          "line_end": 33,
           "line_start": 1,
           "node_sigs": [
             "e032ebe151f831c121643805267d60586f5bd974e22c51bbf8451ec8b23802c1"
@@ -1385,8 +2127,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 49,
-          "line_start": 33,
+          "line_end": 51,
+          "line_start": 34,
           "node_sigs": [
             "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a"
           ],
@@ -1394,8 +2136,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 66,
-          "line_start": 50,
+          "line_end": 69,
+          "line_start": 52,
           "node_sigs": [
             "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd"
           ],
@@ -1403,8 +2145,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 83,
-          "line_start": 67,
+          "line_end": 87,
+          "line_start": 70,
           "node_sigs": [
             "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e"
           ],
@@ -1412,8 +2154,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 92,
-          "line_start": 84,
+          "line_end": 97,
+          "line_start": 88,
           "node_sigs": [
             "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae"
           ],
@@ -1421,8 +2163,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 101,
-          "line_start": 93,
+          "line_end": 107,
+          "line_start": 98,
           "node_sigs": [
             "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d"
           ],
@@ -1430,8 +2172,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 118,
-          "line_start": 102,
+          "line_end": 125,
+          "line_start": 108,
           "node_sigs": [
             "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee"
           ],
@@ -1439,8 +2181,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 130,
-          "line_start": 119,
+          "line_end": 138,
+          "line_start": 126,
           "node_sigs": [
             "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918"
           ],
@@ -1448,8 +2190,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 140,
-          "line_start": 131,
+          "line_end": 148,
+          "line_start": 139,
           "node_sigs": [
             "c5303f432ea0b0018cfc68b8a3a24f23c36d0cf5319ca87bd5b5a69d7dcc1b9d"
           ],
@@ -1457,8 +2199,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 151,
-          "line_start": 141,
+          "line_end": 159,
+          "line_start": 149,
           "node_sigs": [
             "e2c79e9d482fd4373489ac7064e1309699eb82cbc553565214c4f76cb4775d72"
           ],
@@ -1466,8 +2208,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 152,
-          "line_start": 152,
+          "line_end": 160,
+          "line_start": 160,
           "node_sigs": [
             "e032ebe151f831c121643805267d60586f5bd974e22c51bbf8451ec8b23802c1"
           ],
@@ -1478,7 +2220,7 @@
       "kind": "text",
       "path": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
       "retained_regions": [],
-      "sha256": "06f3c964da16fa79eba93650cab4ac6604c643d9d3cf70c720c5f0b951f58808",
+      "sha256": "03ddcff39fbd9f6e8802135a8a16f5c992cbc65c4c3372688c4eed948a6a4658",
       "tiers": {
         "Isolated": 11
       }
@@ -2081,7 +2823,7 @@
       }
     },
     {
-      "bytes": 1195,
+      "bytes": 1216,
       "fragments": [
         {
           "line_end": 9,
@@ -2141,7 +2883,7 @@
       "kind": "text",
       "path": "src/main/java/com/github/hantsy/ee8sample/domain/support/AuditEntityListener.java",
       "retained_regions": [],
-      "sha256": "e037d27bc7241d34909bf1d09f181158622588bc50f67c03a04731eadfc8dca9",
+      "sha256": "4c4835b105599fbc1a2291c8b0e006c2ff69ef66936af26d8483010071abf46e",
       "tiers": {
         "Isolated": 6
       }
@@ -2502,10 +3244,10 @@
       }
     },
     {
-      "bytes": 7633,
+      "bytes": 7357,
       "fragments": [
         {
-          "line_end": 134,
+          "line_end": 131,
           "line_start": 1,
           "node_sigs": [
             "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
@@ -2517,16 +3259,16 @@
       "kind": "text",
       "path": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
       "retained_regions": [],
-      "sha256": "93343b451b6d2bff3cd7dc0fc0da65f60d0b597e6f238ce1098c28be6f04dce9",
+      "sha256": "7669ae49b3d9174240b2da4ad2eb2a1a724a9dd447cd88e460ed2ec1306f4edd",
       "tiers": {
         "Isolated": 1
       }
     },
     {
-      "bytes": 5179,
+      "bytes": 5454,
       "fragments": [
         {
-          "line_end": 113,
+          "line_end": 117,
           "line_start": 1,
           "node_sigs": [
             "1474475d537d744f6599d7e93fe0dbeb518ebfb46a3ee109af90d65a4e2a1346"
@@ -2538,7 +3280,7 @@
       "kind": "text",
       "path": "src/main/java/com/github/hantsy/ee8sample/security/SpaShellConfig.java",
       "retained_regions": [],
-      "sha256": "019645af635f29dd1b0ee52af7b96516fac1a06fc7f11791f0ba916f339077ce",
+      "sha256": "af987c11cdc1695aaa0d04115ede9a3390b449251b251953d3a47095301517b7",
       "tiers": {
         "Isolated": 1
       }
@@ -3539,6 +4281,46 @@
       }
     },
     {
+      "bytes": 596,
+      "fragments": [
+        {
+          "line_end": 17,
+          "line_start": 1,
+          "node_sigs": [
+            "7f5e89b03ea266a707153cd6953a012908cb364845a5dda586b3ae1b5f712e4d"
+          ],
+          "rule_id": "engine-authored-file",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/provenant/engine/EngineStubException.java",
+      "retained_regions": [],
+      "sha256": "baf47b151361bd1d046bc59fefb647c66b10666436407495915cb6610680c4c4",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 1322,
+      "fragments": [
+        {
+          "line_end": 16,
+          "line_start": 1,
+          "node_sigs": [],
+          "rule_id": "spring-boot-legacydb-profile",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/resources/application-legacydb.properties",
+      "retained_regions": [],
+      "sha256": "f162f5324ab93c201cd3cf5eb0211757be27d4b4811c708da8723f995497f33f",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
       "bytes": 585,
       "fragments": [
         {
@@ -3558,10 +4340,10 @@
       }
     },
     {
-      "bytes": 295,
+      "bytes": 521,
       "fragments": [
         {
-          "line_end": 5,
+          "line_end": 8,
           "line_start": 1,
           "node_sigs": [],
           "rule_id": "spring-boot-application-properties",
@@ -3571,7 +4353,28 @@
       "kind": "text",
       "path": "src/main/resources/application.properties",
       "retained_regions": [],
-      "sha256": "74fe766612ffd767a76127b470c52995b2211b5d19700d73500474f30edb6b35",
+      "sha256": "f0edd8fd901e1017b1bc45ac8801db42b218641190a6b05d3afccf8bb006dea9",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
+      "bytes": 334,
+      "fragments": [
+        {
+          "line_end": 5,
+          "line_start": 1,
+          "node_sigs": [
+            "dfaeb1340c325ff446561bcae6d5f43a66e44eb8eb1890cf4a197b07e7f0c5dc"
+          ],
+          "rule_id": "engine-actuator-properties",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/resources/config/application.properties",
+      "retained_regions": [],
+      "sha256": "ccc94a56eca1dedaadd027de043d805c546c4ed9642294adfed669013b0b75f8",
       "tiers": {
         "Isolated": 1
       }
@@ -3967,6 +4770,27 @@
       "tiers": {
         "Isolated": 40
       }
+    },
+    {
+      "bytes": 8722,
+      "fragments": [
+        {
+          "line_end": 173,
+          "line_start": 1,
+          "node_sigs": [
+            "4eee5b1a5976753c2453db4dc467c415310058b4ddb71351f80c1167a9f93852"
+          ],
+          "rule_id": "engine-endpoint-answers",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/test/java/com/github/hantsy/ee8sample/endpoints/EndpointAnswersTest.java",
+      "retained_regions": [],
+      "sha256": "3a39e9cc8c24fe814dff896266a5d4f7500290ab47497cf2878424c6b55a305c",
+      "tiers": {
+        "Isolated": 1
+      }
     }
   ],
   "generator": {
@@ -3980,9 +4804,7 @@
         "class": "com.github.hantsy.ee8sample.Bootstrap",
         "file": "src/main/java/com/github/hantsy/ee8sample/Bootstrap.java",
         "generated": {
-          "class_transactional": [
-            "@Transactional(propagation = Propagation.REQUIRED)"
-          ],
+          "class_transactional": [],
           "scope": null
         },
         "legacy": {
@@ -3997,10 +4819,7 @@
         "methods": [
           {
             "emitted": true,
-            "generated": {
-              "annotation": "@Transactional(propagation = Propagation.REQUIRED)",
-              "level": "class"
-            },
+            "generated": null,
             "legacy": {
               "attribute": "REQUIRED",
               "source": "ejb_default"
@@ -4704,17 +5523,74 @@
       }
     ]
   },
+  "n_plus_one": {
+    "call_hop_bound": 4,
+    "counts": {
+      "n_plus_one_candidate:eager_association_list_query": 1,
+      "n_plus_one_candidate:loop_lazy_association": 0,
+      "n_plus_one_candidate:loop_repository_call": 0,
+      "n_plus_one_candidate:view_lazy_association": 0,
+      "n_plus_one_undecided:eager_association_list_query": 0,
+      "n_plus_one_undecided:loop_lazy_association": 0,
+      "n_plus_one_undecided:loop_repository_call": 0,
+      "n_plus_one_undecided:view_lazy_association": 0
+    },
+    "findings": [
+      {
+        "association": "user",
+        "basis": "entity LoginToken is loaded by 2 list queries that reach a statement; eager @ManyToOne `user` (JPA default for @ManyToOne); the provider decides between a join, a batch and one query per row",
+        "category": "n_plus_one_candidate:eager_association_list_query",
+        "decision": "candidate",
+        "entity": "com.github.hantsy.ee8sample.domain.LoginToken",
+        "instances": 2,
+        "location": {
+          "class": "com.github.hantsy.ee8sample.domain.LoginToken",
+          "file": "src/main/java/com/github/hantsy/ee8sample/domain/LoginToken.java",
+          "kind": "entity",
+          "node_sig": "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+        },
+        "provider_dependent": true,
+        "reason": null,
+        "shape": "eager_association_list_query",
+        "via": [
+          "LoginTokenRepository.findAll",
+          "LoginTokenRepository.stream"
+        ]
+      }
+    ],
+    "legacy_provider": "eclipselink",
+    "method": "static_declaration_analysis",
+    "unscanned_method_bodies": 0
+  },
   "nodesig_scheme_version": 1,
   "preserve": {
     "by_rule": {
       "angular-workspace-scaffold": {
-        "Isolated": 13
+        "Isolated": 14
       },
       "body-retained-faces-message-elided": {
         "Retained": 2
       },
       "body-retained-verbatim": {
         "Retained": 22
+      },
+      "engine-actuator-properties": {
+        "Isolated": 1
+      },
+      "engine-actuator-security": {
+        "Isolated": 1
+      },
+      "engine-authored-file": {
+        "Isolated": 2
+      },
+      "engine-ci-script": {
+        "Isolated": 1
+      },
+      "engine-dockerfile": {
+        "Isolated": 2
+      },
+      "engine-endpoint-answers": {
+        "Isolated": 1
       },
       "initializer-retained-verbatim": {
         "Retained": 4
@@ -4734,6 +5610,12 @@
       "legacy-binary-resource-verbatim": {
         "Retained": 1
       },
+      "legacy-license-copy": {
+        "Isolated": 1
+      },
+      "legacy-license-notice": {
+        "Isolated": 1
+      },
       "lir-annotationtypedef-to-annotation-type": {
         "Isolated": 2
       },
@@ -4742,6 +5624,12 @@
       },
       "lir-field-injection-to-constructor": {
         "Isolated": 6
+      },
+      "maven-jvm-config": {
+        "Isolated": 1
+      },
+      "openapi-document": {
+        "Isolated": 1
       },
       "project-readme": {
         "Isolated": 1
@@ -4752,10 +5640,16 @@
       "spring-boot-application-properties": {
         "Isolated": 1
       },
+      "spring-boot-legacydb-profile": {
+        "Isolated": 1
+      },
       "spring-boot-postgresql-profile": {
         "Isolated": 1
       },
       "sql-refusal-report-summary": {
+        "Isolated": 1
+      },
+      "startup-initialiser-smart-initializing-singleton": {
         "Isolated": 1
       },
       "tir-bean-endpoint-to-angular-api": {
@@ -4793,8 +5687,8 @@
         "records": 0
       },
       "Isolated": {
-        "files": 67,
-        "records": 283
+        "files": 81,
+        "records": 298
       },
       "Proven": {
         "files": 0,
@@ -4817,6 +5711,47 @@
       "type_fidelity",
       "source_set_scoping"
     ],
+    "engine_files": {
+      "count": 6,
+      "files": [
+        {
+          "node_sig": "1242679b30f9e46571d80e3d233048da4d75441e4234d4020577bd584628a5be",
+          "path": ".dockerignore",
+          "rule_id": "engine-dockerfile",
+          "tier": "Isolated"
+        },
+        {
+          "node_sig": "ad297f1ed19510f504bfb898edd5c575e3ae5e3a6392e57c43534aabef0ee517",
+          "path": "Dockerfile",
+          "rule_id": "engine-dockerfile",
+          "tier": "Isolated"
+        },
+        {
+          "node_sig": "b323e4e2745822d197132bc5a11c556634231419c28539922756a0aceeaa1f31",
+          "path": "ci.sh",
+          "rule_id": "engine-ci-script",
+          "tier": "Isolated"
+        },
+        {
+          "node_sig": "23e684c07c4a404481744c7633082f59d7e93cebcf324f18e31684b0defee612",
+          "path": "src/main/java/com/github/hantsy/ee8sample/ActuatorSecurityConfig.java",
+          "rule_id": "engine-actuator-security",
+          "tier": "Isolated"
+        },
+        {
+          "node_sig": "dfaeb1340c325ff446561bcae6d5f43a66e44eb8eb1890cf4a197b07e7f0c5dc",
+          "path": "src/main/resources/config/application.properties",
+          "rule_id": "engine-actuator-properties",
+          "tier": "Isolated"
+        },
+        {
+          "node_sig": "4eee5b1a5976753c2453db4dc467c415310058b4ddb71351f80c1167a9f93852",
+          "path": "src/test/java/com/github/hantsy/ee8sample/endpoints/EndpointAnswersTest.java",
+          "rule_id": "engine-endpoint-answers",
+          "tier": "Isolated"
+        }
+      ]
+    },
     "integrity": {
       "colliding_nodes": 0,
       "dangling_edges": 1,
@@ -4971,14 +5906,36 @@
         "unlocated": 0
       },
       {
-        "count": 1,
+        "count": 3,
         "decision_ref": null,
         "deliberate_refusal": false,
-        "kind": "frontend_lockfile_absent",
+        "kind": "endpoint_security_unproven",
         "legacy_state": null,
-        "locations": [],
-        "reason": "frontend_profile_runs_npm_install_without_package_lock",
-        "unlocated": 1
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
+            "line": 90,
+            "node_sigs": [
+              "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae"
+            ]
+          },
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
+            "line": 100,
+            "node_sigs": [
+              "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d"
+            ]
+          },
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
+            "line": 128,
+            "node_sigs": [
+              "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918"
+            ]
+          }
+        ],
+        "reason": "no_declaration",
+        "unlocated": 0
       },
       {
         "count": 1,
@@ -4998,6 +5955,16 @@
         "legacy_state": null,
         "locations": [],
         "reason": "a layout fragment is emitted as a component but no emitted file mounts it; the legacy template included it on its pages",
+        "unlocated": 1
+      },
+      {
+        "count": 1,
+        "decision_ref": "pilot/db-open-in-view",
+        "deliberate_refusal": true,
+        "kind": "lazy_load_outside_request_not_carried",
+        "legacy_state": "accepted_residual",
+        "locations": [],
+        "reason": "com.github.hantsy.ee8sample.domain.User",
         "unlocated": 1
       },
       {
@@ -5037,14 +6004,14 @@
         "locations": [
           {
             "file": "frontend/src/app/tasks/tasks.component.ts",
-            "line": 71,
+            "line": 72,
             "node_sigs": [
               "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
             ]
           },
           {
             "file": "frontend/src/app/tasks/tasks.component.ts",
-            "line": 74,
+            "line": 75,
             "node_sigs": [
               "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
             ]
@@ -5154,35 +6121,35 @@
         "locations": [
           {
             "file": "frontend/src/app/details/details.component.ts",
-            "line": 22,
+            "line": 23,
             "node_sigs": [
               "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
             ]
           },
           {
             "file": "frontend/src/app/error/error.component.ts",
-            "line": 20,
+            "line": 21,
             "node_sigs": [
               "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
             ]
           },
           {
             "file": "frontend/src/app/form/form.component.ts",
-            "line": 24,
+            "line": 25,
             "node_sigs": [
               "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
             ]
           },
           {
             "file": "frontend/src/app/nav/nav.component.ts",
-            "line": 18,
+            "line": 19,
             "node_sigs": [
               "5bc133fec578ac5b403607a58d181fbc47979a1bf4d8c73017672a88760b82f0"
             ]
           },
           {
             "file": "frontend/src/app/tasks/tasks.component.ts",
-            "line": 22,
+            "line": 23,
             "node_sigs": [
               "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
             ]
@@ -5200,35 +6167,35 @@
         "locations": [
           {
             "file": "frontend/src/app/details/details.component.ts",
-            "line": 43,
+            "line": 44,
             "node_sigs": [
               "72c7f220afacdbdcab40b289652ef94e923031179556b5e30e66dd829735352a"
             ]
           },
           {
             "file": "frontend/src/app/error/error.component.ts",
-            "line": 41,
+            "line": 42,
             "node_sigs": [
               "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
             ]
           },
           {
             "file": "frontend/src/app/form/form.component.ts",
-            "line": 45,
+            "line": 46,
             "node_sigs": [
               "7a428f6656dade5868e0ecec854df49c3f2a99addde6e43487041df232c1ca89"
             ]
           },
           {
             "file": "frontend/src/app/login/login.component.ts",
-            "line": 15,
+            "line": 16,
             "node_sigs": [
               "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
             ]
           },
           {
             "file": "frontend/src/app/tasks/tasks.component.ts",
-            "line": 43,
+            "line": 44,
             "node_sigs": [
               "9bbc87cc9951114edb0a4ab0e592531677bab5f51e321ebb318f9e4d79d99380"
             ]
@@ -5246,7 +6213,7 @@
         "locations": [
           {
             "file": "frontend/src/app/login/login.component.ts",
-            "line": 13,
+            "line": 14,
             "node_sigs": [
               "10e737e2de5239314267caf94725caf3145351e0a27804d654c3e77661598d5d"
             ]
@@ -5264,13 +6231,31 @@
         "locations": [
           {
             "file": "frontend/src/app/error/error.component.ts",
-            "line": 59,
+            "line": 60,
             "node_sigs": [
               "27653477bc564775c96602c5654a057791700011f5ce5ed0d1ae73c092d9737c"
             ]
           }
         ],
         "reason": "text_expression_not_carried",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "unclassified_marker",
+        "legacy_state": null,
+        "locations": [
+          {
+            "file": "src/main/java/provenant/engine/EngineStubException.java",
+            "line": 5,
+            "node_sigs": [
+              "7f5e89b03ea266a707153cd6953a012908cb364845a5dda586b3ae1b5f712e4d"
+            ]
+          }
+        ],
+        "reason": " in the source",
         "unlocated": 0
       },
       {
@@ -5286,18 +6271,29 @@
     ],
     "on_encounter": "report_as_emitter_gap"
   },
+  "run_status": "complete",
   "schema": "provenant.modernization-contract",
-  "schema_version": 3,
+  "schema_version": 5,
   "target": {
-    "angular_version": "19.2.25",
+    "angular_version": "22.2.5",
     "database": {
       "default": "h2",
+      "open_in_view": {
+        "evidence_ref": "rfc/RFC-033-open-in-view.md",
+        "lazy_load_outside_request_not_carried": [
+          "com.github.hantsy.ee8sample.domain.User"
+        ],
+        "legacy_provider": "eclipselink",
+        "provider_basis": "pom_eclipselink_dependency",
+        "value": true
+      },
       "profiles": [
+        "legacydb",
         "postgresql"
       ]
     },
     "java_release": "21",
     "profile": "layered",
-    "spring_boot_version": "3.2.5"
+    "spring_boot_version": "3.5.16"
   }
 }

@@ -1,0 +1,301 @@
+openapi: "3.0.3"
+info:
+  title: "taskboard"
+  version: "0.1.0-SNAPSHOT"
+  description: "Endpoints served by the controllers of this generated project. This file is not served by the application."
+paths:
+  "/api/editTaskAction/save":
+    post:
+      operationId: "apiEdittaskactionSave"
+      parameters:
+        - name: "id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            schema:
+              "$ref": "#/components/schemas/Task"
+      responses:
+        "200":
+          description: "The global messages the action queued."
+          content:
+            "application/json":
+              schema:
+                type: "array"
+                items:
+                  "$ref": "#/components/schemas/FacesGlobalMessage"
+      security:
+        - sessionCookie: []
+      x-required-roles:
+        - "ROLE_ADMIN"
+        - "ROLE_USER"
+  "/api/editTaskAction/task":
+    get:
+      operationId: "apiEdittaskactionTask"
+      parameters:
+        - name: "id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            "application/json":
+              schema:
+                "$ref": "#/components/schemas/Task"
+      security:
+        - sessionCookie: []
+      x-required-roles:
+        - "ROLE_ADMIN"
+        - "ROLE_USER"
+  "/api/taskHome/deleteTask":
+    post:
+      operationId: "apiTaskhomeDeletetask"
+      parameters:
+        - name: "id"
+          in: "query"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "200":
+          description: "The global messages the action queued."
+          content:
+            "application/json":
+              schema:
+                type: "array"
+                items:
+                  "$ref": "#/components/schemas/FacesGlobalMessage"
+      security:
+        - sessionCookie: []
+      x-security-unproven: "no_declaration"
+  "/api/taskHome/doingtasks":
+    get:
+      operationId: "apiTaskhomeDoingtasks"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            "application/json":
+              schema:
+                type: "array"
+                items:
+                  type: "object"
+                  properties:
+                    description:
+                      type: "string"
+                    id:
+                      type: "integer"
+                      format: "int64"
+                    name:
+                      type: "string"
+      security: []
+      x-public-proof: "attested"
+  "/api/taskHome/donetasks":
+    get:
+      operationId: "apiTaskhomeDonetasks"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            "application/json":
+              schema:
+                type: "array"
+                items:
+                  type: "object"
+                  properties:
+                    description:
+                      type: "string"
+                    id:
+                      type: "integer"
+                      format: "int64"
+                    name:
+                      type: "string"
+      security: []
+      x-public-proof: "attested"
+  "/api/taskHome/markTaskDoing":
+    post:
+      operationId: "apiTaskhomeMarktaskdoing"
+      parameters:
+        - name: "id"
+          in: "query"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "204":
+          description: "No Content"
+      security:
+        - sessionCookie: []
+      x-security-unproven: "no_declaration"
+  "/api/taskHome/markTaskDone":
+    post:
+      operationId: "apiTaskhomeMarktaskdone"
+      parameters:
+        - name: "id"
+          in: "query"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "204":
+          description: "No Content"
+      security:
+        - sessionCookie: []
+      x-security-unproven: "no_declaration"
+  "/api/taskHome/todotasks":
+    get:
+      operationId: "apiTaskhomeTodotasks"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            "application/json":
+              schema:
+                type: "array"
+                items:
+                  type: "object"
+                  properties:
+                    description:
+                      type: "string"
+                    id:
+                      type: "integer"
+                      format: "int64"
+                    name:
+                      type: "string"
+      security: []
+      x-public-proof: "attested"
+  "/api/viewTaskAction/task":
+    get:
+      operationId: "apiViewtaskactionTask"
+      parameters:
+        - name: "id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  createdDate:
+                    type: "string"
+                    x-java-type: "LocalDateTime"
+                  description:
+                    type: "string"
+                  lastModifiedDate:
+                    type: "string"
+                    x-java-type: "LocalDateTime"
+                  name:
+                    type: "string"
+                  status:
+                    "$ref": "#/components/schemas/Status"
+      security: []
+      x-public-proof: "attested"
+components:
+  schemas:
+    FacesGlobalMessage:
+      type: "object"
+      properties:
+        severity:
+          type: "string"
+        summary:
+          type: "string"
+    Status:
+      type: "string"
+      enum:
+        - "TODO"
+        - "DOING"
+        - "DONE"
+    Task:
+      type: "object"
+      properties:
+        id:
+          type: "integer"
+          format: "int64"
+        version:
+          type: "integer"
+          format: "int64"
+        createdDate:
+          type: "string"
+          x-java-type: "LocalDateTime"
+        lastModifiedDate:
+          type: "string"
+          x-java-type: "LocalDateTime"
+        createdBy:
+          type: "string"
+        lastModifiedBy:
+          type: "string"
+        name:
+          type: "string"
+        description:
+          type: "string"
+        status:
+          "$ref": "#/components/schemas/Status"
+    TaskHomeDoingtasksView:
+      type: "object"
+      properties:
+        description:
+          type: "string"
+        id:
+          type: "integer"
+          format: "int64"
+        name:
+          type: "string"
+    TaskHomeDonetasksView:
+      type: "object"
+      properties:
+        description:
+          type: "string"
+        id:
+          type: "integer"
+          format: "int64"
+        name:
+          type: "string"
+    TaskHomeTodotasksView:
+      type: "object"
+      properties:
+        description:
+          type: "string"
+        id:
+          type: "integer"
+          format: "int64"
+        name:
+          type: "string"
+    ViewTaskActionTaskView:
+      type: "object"
+      properties:
+        createdDate:
+          type: "string"
+          x-java-type: "LocalDateTime"
+        description:
+          type: "string"
+        lastModifiedDate:
+          type: "string"
+          x-java-type: "LocalDateTime"
+        name:
+          type: "string"
+        status:
+          "$ref": "#/components/schemas/Status"
+  securitySchemes:
+    sessionCookie:
+      type: "apiKey"
+      in: "cookie"
+      name: "JSESSIONID"
+      description: "The HTTP session cookie. The session is established by `POST /api/auth/login` when the project emits a login (only then; the document does not list it as an operation). Unsafe methods also need the CSRF token echoed in the `X-XSRF-TOKEN` header, read from the `XSRF-TOKEN` cookie (`__Host-XSRF-TOKEN` under a secure transport)."

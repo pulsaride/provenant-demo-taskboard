@@ -36,7 +36,7 @@ Open <http://localhost:4200>. The dev server forwards `/api` to the backend on p
 
 `npm run build` writes the production build to `frontend/dist/app/browser`.
 
-The Angular and TypeScript versions are pinned exactly in `frontend/package.json`; there is no `package-lock.json` yet, so commit the one `npm install` writes.
+The Angular and TypeScript versions are pinned exactly in `frontend/package.json`; `frontend/package-lock.json` pins the transitive packages, so every install resolves the same tree.
 
 ## One jar (API and UI on one port)
 
@@ -48,5 +48,3 @@ java -jar target/*.jar
 The `frontend` profile runs `npm install` and `npm run build` in `frontend` and packages `frontend/dist/app/browser` into the jar's static resources, so <http://localhost:8080> serves the UI and `/api` together; a reload on a client route such as `/tasks` returns the UI. It needs Node.js and npm on the PATH. A plain `mvn package` does not build the UI.
 
 Security note (`spa_bundle_anonymous`): in this jar the whole client bundle (`index.html`, the scripts and styles, every client route) is readable before login, so the login screen can render; the legacy application exposed only its login page. The bundle holds code and no data. Every `/api` request, every write, CSRF and the session behave as without the profile.
-
-`npm install` runs without a `package-lock.json` (`frontend_lockfile_absent`): commit the lock the first run writes so later builds resolve the same transitive packages.
