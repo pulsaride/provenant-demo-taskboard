@@ -13,6 +13,8 @@ Provenant is a deterministic modernization compiler (no LLM in the pipeline):
 - **Provenance everywhere.** Every generated unit records where it came from and the tier of evidence behind it: Proven, Empirical, Retained or Isolated.
 - **Counted, never hidden.** Whatever the engine could not prove is not guessed. It is left as a visible `TODO(kind: reason)` marker and counted.
 
+📋 **What Provenant migrates, and what comes next:** [`COVERAGE.md`](COVERAGE.md). Using something that is not covered? [Request it](../../issues/new?template=framework-request.yml).
+
 ▶️ **Demo video** (2.5 min): [`demo/provenant-demo.mp4`](demo/provenant-demo.mp4)
 
 ## What to look at

@@ -1,0 +1,65 @@
+name: Framework or library request
+description: Your Java EE application uses a framework, library or pattern that COVERAGE.md lists as not supported yet, or does not list at all.
+title: "[coverage] <framework or library> <version>"
+labels: ["coverage-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Requests are used to order the roadmap in [COVERAGE.md](../blob/main/COVERAGE.md).
+        **Do not paste confidential code, credentials or customer data.** Names and versions are enough.
+  - type: input
+    id: technology
+    attributes:
+      label: Framework, library or pattern
+      description: Name, and version if you know it.
+      placeholder: "e.g. PrimeFaces p:fileUpload 8.0, EJB 2.1 CMP entity beans, Spring Web Flow 2"
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: What does COVERAGE.md say about it?
+      options:
+        - Not listed
+        - Planned (v1)
+        - Deferred (v2+)
+        - Not supported
+        - Listed as supported, but it did not work for me
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      options:
+        - Web / UI (JSF, PrimeFaces, Struts, JSP)
+        - Business (EJB, CDI, JMS, timers, batch)
+        - Persistence (JPA, Hibernate, iBatis, JDBC, database engine)
+        - Services (JAX-RS, JAX-WS)
+        - Security
+        - Third-party library
+        - Build or application server
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: usage
+    attributes:
+      label: How the application uses it
+      description: A rough size helps, such as the number of screens, beans or mappings that depend on it.
+    validations:
+      required: false
+  - type: input
+    id: runtime
+    attributes:
+      label: Application server and database
+      placeholder: "e.g. WebLogic 12c, Oracle 19c"
+    validations:
+      required: false
+  - type: checkboxes
+    id: contact
+    attributes:
+      label: Follow-up
+      options:
+        - label: I would like to be contacted about a modernization assessment of this application.
