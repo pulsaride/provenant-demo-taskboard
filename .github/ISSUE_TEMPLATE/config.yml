@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Coverage matrix and roadmap
+    url: https://github.com/pulsaride/provenant-demo-taskboard/blob/main/COVERAGE.md
+    about: Check what Provenant migrates today and what is planned before opening a request.
