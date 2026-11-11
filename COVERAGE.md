@@ -53,8 +53,8 @@ So an unsupported item makes the migration less complete. It never makes it sile
 - [x] ☑️ `@Singleton @Startup` initialisers → run at startup in a transaction
 - [x] ☑️ `@TransactionAttribute` → `@Transactional` with the same propagation
 - [x] ☑️ JNDI lookups (kept as they are)
-- [ ] 🔄 `@Stateful` session beans → conversation-scoped beans
-- [ ] 📅 Message-driven beans and JMS → `@JmsListener` on an embedded Artemis broker
+- [x] ☑️ `@Stateful` session beans → conversation-scoped beans
+- [x] ☑️ Message-driven beans and JMS → `@JmsListener` on an embedded Artemis broker
 - [ ] ⏭️ EJB timers and `@Schedule`
 - [ ] ⏭️ Batch (JSR-352)
 - [ ] ⏭️ EJB 2 CMP entity beans
@@ -67,10 +67,11 @@ So an unsupported item makes the migration less complete. It never makes it sile
 - [x] ✅ `@ApplicationScoped`, `@SessionScoped`, `@RequestScoped`, `@Dependent`, `@Model`
 - [x] ✅ `@ViewScoped` beans that hold no state across requests
 - [x] ☑️ Producer methods → `@Bean`
-- [ ] 🔄 `@ConversationScoped` and `Conversation` → a generated conversation runtime shared by the backend and the Angular client
-- [ ] 📅 `@ViewScoped` beans that hold state
-- [ ] 📅 Faces Flows (`@FlowScoped`)
-- [ ] ❌ CDI events (`@Observes`) and custom qualifiers
+- [x] ☑️ `@ConversationScoped` and `Conversation` → a generated conversation runtime shared by the backend and the Angular client
+- [x] ☑️ `@ViewScoped` beans that hold state
+- [x] ☑️ Faces Flows (`@FlowScoped`)
+- [x] ☑️ Asynchronous CDI events (`fireAsync`): not delivered, counted in the report
+- [ ] ❌ Synchronous CDI events (`@Observes`) and custom qualifiers
 
 ## Persistence
 
@@ -116,7 +117,7 @@ So an unsupported item makes the migration less complete. It never makes it sile
 ## Web services
 
 - [x] ☑️ JAX-WS clients (Apache CXF, kept)
-- [ ] 📅 JAX-RS resources → JAX-RS on Jersey inside Spring Boot
+- [x] ☑️ JAX-RS resources → JAX-RS on Jersey inside Spring Boot
 - [ ] ❌ JAX-WS server endpoints (`@WebService`)
 
 ## Security
@@ -127,7 +128,8 @@ So an unsupported item makes the migration less complete. It never makes it sile
 - [x] ☑️ Endpoints declared public stay public only when that is proven
 - [x] ☑️ Spring Security 3/4 in the legacy → current Spring Security
 - [ ] ❌ JAAS, container realms and BASIC authentication (refused, never weakened)
-- [ ] ❌ Remember-me cookies
+- [x] ☑️ Login token rows written to the database exactly as the legacy writes them
+- [ ] ❌ Remember-me cookies and automatic re-login
 
 ## Third-party libraries
 
