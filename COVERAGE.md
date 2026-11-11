@@ -55,12 +55,12 @@ So an unsupported item makes the migration less complete. It never makes it sile
 - [x] ☑️ JNDI lookups (kept as they are)
 - [x] ☑️ `@Stateful` session beans → conversation-scoped beans
 - [x] ☑️ Message-driven beans and JMS → `@JmsListener` on an embedded Artemis broker
-- [ ] ⏭️ EJB timers and `@Schedule`
-- [ ] ⏭️ Batch (JSR-352)
+- [ ] ⏭️ EJB timers and `@Schedule`, Quartz: **v2**
+- [ ] ⏭️ Batch: Spring Batch 2/3 XML jobs and JSR-352: **v2**
 - [ ] ⏭️ EJB 2 CMP entity beans
 - [ ] ❌ EJB 2 session beans (home interfaces), `@Remote` views, bean-managed transactions
 - [ ] ❌ Singleton concurrency control (`@Lock`, `@AccessTimeout`)
-- [ ] ❌ Interceptors (`@Interceptors`, `@AroundInvoke`)
+- [ ] ⏭️ Interceptors (`@Interceptors`, `@AroundInvoke`) and aspects (Spring AOP `@Aspect`, `<aop:config>`, AspectJ): **v2**, early
 
 ## CDI
 
@@ -87,9 +87,10 @@ So an unsupported item makes the migration less complete. It never makes it sile
 - [ ] 📅 Hibernate `hbm.xml` mappings
 - [ ] 🔄 PostgreSQL schema generation
 - [ ] ⏭️ PL/SQL stored-procedure code translation
-- [ ] ❌ MyBatis mappers
+- [ ] ⏭️ MyBatis 3 mappers: **v2**
 - [ ] ❌ Hibernate 5 Criteria API
-- [ ] ❌ MySQL as the kept legacy database
+- [ ] ⏭️ MySQL, DB2 and SQL Server as the kept legacy database: **v2**
+- [ ] ⏭️ Plain JDBC and Spring `JdbcTemplate` DAOs: **v2**
 
 ## Web and UI (JSF, PrimeFaces, Struts)
 
@@ -139,6 +140,7 @@ Libraries are **migrated** to a current release, or **kept** as jars pinned by c
 - [x] ☑️ Ehcache 2 → Ehcache 3 (JCache)
 - [x] ☑️ JasperReports 6 → 7
 - [x] ☑️ Kept: Dozer, jsoup, ZXing, Xerces, Lombok and others
+- [ ] ❌ Apache Camel, Apache Shiro, OpenJPA, Coherence / Hazelcast / Infinispan: on demand
 - [ ] ❌ Anything else: [request it](../../issues/new?template=framework-request.yml)
 
 ## Applications used as public proof
