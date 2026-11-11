@@ -4,7 +4,7 @@ Provenant turns a Java EE application (JSF, EJB, CDI, JPA) into a **Spring Boot 
 
 This page lists, per framework and pattern, what Provenant carries today and what comes next. Is something you use **missing, planned or not supported**? [Open a framework request](../../issues/new?template=framework-request.yml). Requests decide the order of the roadmap.
 
-*Last updated: 2026-11-08.*
+*Last updated: 2026-11-11.*
 
 ## How to read this page
 
@@ -26,6 +26,7 @@ So an unsupported item makes the migration less complete. It never makes it sile
 ## Output
 
 - [x] ✅ Spring Boot **3.5** project (Maven), Java 21
+- [ ] ⏭️ Spring Boot **4.1** target (Spring Framework 7, Hibernate 7, Jackson 3, Spring Security 7): **v1.1**, the first update after v1
 - [x] ✅ Angular **22** frontend (standalone components), built into the same jar
 - [x] ✅ Byte-identical output on every run of the same input
 - [x] ✅ Layered (`web` / `service` / `repository` / `domain`) or **hexagonal** project layout
