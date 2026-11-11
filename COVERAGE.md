@@ -26,7 +26,7 @@ So an unsupported item makes the migration less complete. It never makes it sile
 ## Output
 
 - [x] ✅ Spring Boot **3.5** project (Maven), Java 21
-- [ ] ⏭️ Spring Boot **4.1** target (Spring Framework 7, Hibernate 7, Jackson 3, Spring Security 7): **v1.1**, the first update after v1
+- [ ] ⏭️ Spring Boot **4.1** on **Java 25** (Spring Framework 7, Hibernate 7, Jackson 3, Spring Security 7): **v1.1**, the first update after v1
 - [x] ✅ Angular **22** frontend (standalone components), built into the same jar
 - [x] ✅ Byte-identical output on every run of the same input
 - [x] ✅ Layered (`web` / `service` / `repository` / `domain`) or **hexagonal** project layout
