@@ -1,0 +1,3 @@
+# Engine-authored (ADR-010 PR-6.W1): the build context is the jar and nothing else.
+*
+!target/*.jar

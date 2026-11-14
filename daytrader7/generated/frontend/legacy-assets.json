@@ -1,0 +1,509 @@
+{
+  "assets": [
+    {
+      "bytes": 866,
+      "path": "src/main/resources/provenant/legacy-web/PingHtml.html",
+      "sha256": "1a0daa8748dd6181edc884d5ac19a1ad76458b83dc59ae7c7c29a4d0bcbb079e",
+      "source": "daytrader-ee7-web/src/main/webapp/PingHtml.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 3174,
+      "path": "src/main/resources/provenant/legacy-web/PingWebSocketBinary.html",
+      "sha256": "1d142c1da7f4338751534959c7168047bde61bb0fc47ceb63ad8aac741cdf152",
+      "source": "daytrader-ee7-web/src/main/webapp/PingWebSocketBinary.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 4013,
+      "path": "src/main/resources/provenant/legacy-web/PingWebSocketJson.html",
+      "sha256": "2b8c11512c512338b22c1b3f78baa1c2bcd11597eee57cc6122167a385b27d2a",
+      "source": "daytrader-ee7-web/src/main/webapp/PingWebSocketJson.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 3095,
+      "path": "src/main/resources/provenant/legacy-web/PingWebSocketTextAsync.html",
+      "sha256": "211475c68d53e9db2d536b7548da36b8e7b31c24d08ed13f1fc207300c926d50",
+      "source": "daytrader-ee7-web/src/main/webapp/PingWebSocketTextAsync.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 3092,
+      "path": "src/main/resources/provenant/legacy-web/PingWebSocketTextSync.html",
+      "sha256": "5df53eb36893a38fe156470fdea8a312487454274b632fed0ad92e8c970751ee",
+      "source": "daytrader-ee7-web/src/main/webapp/PingWebSocketTextSync.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 5378,
+      "path": "src/main/resources/provenant/legacy-web/configure.html",
+      "sha256": "2787ce21b19b5694336b54b2c61093b2197600e57d1560568431e2f07b1714b9",
+      "source": "daytrader-ee7-web/src/main/webapp/configure.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 4016,
+      "path": "src/main/resources/provenant/legacy-web/contentHome.html",
+      "sha256": "ae8c45fa2ebf67f99f716c2a822dbd9cbf08e9d1f4e0b0645a131ec852e30030",
+      "source": "daytrader-ee7-web/src/main/webapp/contentHome.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 3162,
+      "path": "src/main/resources/provenant/legacy-web/docs/benchmarking.html",
+      "sha256": "441409aa9a95e8815735d39ed031e3ea789e8969835d3c80c33906e9fb804177",
+      "source": "daytrader-ee7-web/src/main/webapp/docs/benchmarking.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2255,
+      "path": "src/main/resources/provenant/legacy-web/docs/documentation.html",
+      "sha256": "ddfbbde2eb2bca466605a75692ec6ebdfbdd3bf5d83daccc9fe5bf6a172a40cb",
+      "source": "daytrader-ee7-web/src/main/webapp/docs/documentation.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 5894,
+      "path": "src/main/resources/provenant/legacy-web/docs/glossary.html",
+      "sha256": "dcb8cadc86d56bb476f14299886ea40adb0317f69bb121465e44671e94711d6d",
+      "source": "daytrader-ee7-web/src/main/webapp/docs/glossary.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 6376,
+      "path": "src/main/resources/provenant/legacy-web/docs/rtCharacterisitics.html",
+      "sha256": "7f040cd741b3e2be135f9c6c9d63777115ea429fd0002c37bb5e98cc88ab97d1",
+      "source": "daytrader-ee7-web/src/main/webapp/docs/rtCharacterisitics.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 11930,
+      "path": "src/main/resources/provenant/legacy-web/docs/tradeFAQ.html",
+      "sha256": "05886659eb849d9d7e13eec2d6e088d814689905099e3e8419ffdde7aeb39c71",
+      "source": "daytrader-ee7-web/src/main/webapp/docs/tradeFAQ.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 929,
+      "path": "src/main/resources/provenant/legacy-web/docs/tradeversion.html",
+      "sha256": "1ca90a093014ceea7c1952a74b30e5a2a109e5a00092982a9b01bb7ccc3fe14f",
+      "source": "daytrader-ee7-web/src/main/webapp/docs/tradeversion.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 18846,
+      "path": "src/main/resources/provenant/legacy-web/favicon.ico",
+      "sha256": "88e99602f8520d5f2cd15e12aa7f170a349ca3d8632bbee17860990fa5524b98",
+      "source": "daytrader-ee7-web/src/main/webapp/favicon.ico",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1643,
+      "path": "src/main/resources/provenant/legacy-web/footer.html",
+      "sha256": "304a0e03e1685787265f778985a0bfae3f4322e099038c9ba519dba4a2c43ccb",
+      "source": "daytrader-ee7-web/src/main/webapp/footer.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 4492,
+      "path": "src/main/resources/provenant/legacy-web/header.html",
+      "sha256": "90e4323a7e6848bd43826e078bf978c38d283df01bc17349dec0a393aaf3a64a",
+      "source": "daytrader-ee7-web/src/main/webapp/header.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 3908,
+      "path": "src/main/resources/provenant/legacy-web/images/DayTraderHead_blue.gif",
+      "sha256": "6cf45fcbfd26147a477737a7f2862e23608dd1e35cf81ec81d7375402ab348d6",
+      "source": "daytrader-ee7-web/src/main/webapp/images/DayTraderHead_blue.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 3734,
+      "path": "src/main/resources/provenant/legacy-web/images/DayTraderHead_red.gif",
+      "sha256": "5b2fbd22816eb995432feaae01f660e57aa6584354cf3d55a09437fcbab6eade",
+      "source": "daytrader-ee7-web/src/main/webapp/images/DayTraderHead_red.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1311,
+      "path": "src/main/resources/provenant/legacy-web/images/about.gif",
+      "sha256": "5783cb42a3c197cf8e9f94bbd72bc04e4b6cda8395723b065d06e2f059c861bf",
+      "source": "daytrader-ee7-web/src/main/webapp/images/about.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2241,
+      "path": "src/main/resources/provenant/legacy-web/images/account.gif",
+      "sha256": "e02e7a9cabc3ac5db89d903e58e601ec103118a01bef4d2f99f936c47d8e25d6",
+      "source": "daytrader-ee7-web/src/main/webapp/images/account.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 197,
+      "path": "src/main/resources/provenant/legacy-web/images/arrowdown.gif",
+      "sha256": "dbd7801688e0c42759a65f60901df8686ab2a1402a1ebf458659857def3dfda1",
+      "source": "daytrader-ee7-web/src/main/webapp/images/arrowdown.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 198,
+      "path": "src/main/resources/provenant/legacy-web/images/arrowup.gif",
+      "sha256": "9acc384090cab3d145b5e0e8b474bde86684a98d5d242c5f162ca3c87b7290fd",
+      "source": "daytrader-ee7-web/src/main/webapp/images/arrowup.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 108,
+      "path": "src/main/resources/provenant/legacy-web/images/bottomRedBar.gif",
+      "sha256": "51a2a125714124ad10ec263dea2a2bd24e20cb3b6eeaf3f14622245aef92f5a9",
+      "source": "daytrader-ee7-web/src/main/webapp/images/bottomRedBar.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1430,
+      "path": "src/main/resources/provenant/legacy-web/images/configuration.gif",
+      "sha256": "8f252b161c7b4819e056e5a13e9df07ad8991c68a565548626e42f209489eb93",
+      "source": "daytrader-ee7-web/src/main/webapp/images/configuration.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 3774,
+      "path": "src/main/resources/provenant/legacy-web/images/dayTraderLogo.gif",
+      "sha256": "219123d06d0f8a6f38c340df4ac477b7d76bf88e5f86fec154cab28a2d16d134",
+      "source": "daytrader-ee7-web/src/main/webapp/images/dayTraderLogo.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 43988,
+      "path": "src/main/resources/provenant/legacy-web/images/daytrader_simple_arch.gif",
+      "sha256": "53f1706c5053fa7098d2a841234699630bcf7e33d72bd6306e3686c8ccfaffbc",
+      "source": "daytrader-ee7-web/src/main/webapp/images/daytrader_simple_arch.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1156,
+      "path": "src/main/resources/provenant/legacy-web/images/faq.gif",
+      "sha256": "81b5dcb202724a20c07bb171f7a6c8874cd9f04c3d41960dddefa5aedc108779",
+      "source": "daytrader-ee7-web/src/main/webapp/images/faq.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1123,
+      "path": "src/main/resources/provenant/legacy-web/images/graph.gif",
+      "sha256": "514888201eb11d690e717b6576d1571ee2942cfd32d1ae4681e2aaa371fcc891",
+      "source": "daytrader-ee7-web/src/main/webapp/images/graph.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1185,
+      "path": "src/main/resources/provenant/legacy-web/images/home.gif",
+      "sha256": "2e90cbec5ab2acd0695cf42ac12f5ef6853cfb3450f3940993b0bca54c944e2a",
+      "source": "daytrader-ee7-web/src/main/webapp/images/home.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1184,
+      "path": "src/main/resources/provenant/legacy-web/images/homeBanner.gif",
+      "sha256": "ffaf691aaf33d6ef7d6b62105cd37ce09169e574f222dd0631b30a37c12e0b27",
+      "source": "daytrader-ee7-web/src/main/webapp/images/homeBanner.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2346,
+      "path": "src/main/resources/provenant/legacy-web/images/line.gif",
+      "sha256": "b3c02247c3f3d312f55e89903119b70fa1f63b5ec0c16ce79f81ed77f3ed8964",
+      "source": "daytrader-ee7-web/src/main/webapp/images/line.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2191,
+      "path": "src/main/resources/provenant/legacy-web/images/logout.gif",
+      "sha256": "12bf1ace5cbde31d895a37cdab7b693b91c01c9070916d44fbbb692444d99cf9",
+      "source": "daytrader-ee7-web/src/main/webapp/images/logout.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2378,
+      "path": "src/main/resources/provenant/legacy-web/images/lower_banner.gif",
+      "sha256": "6f79ba1e1dd79455d6a8daabf76469960c60a535eceeb80c67a079140b0f1c81",
+      "source": "daytrader-ee7-web/src/main/webapp/images/lower_banner.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2096,
+      "path": "src/main/resources/provenant/legacy-web/images/menuHome.gif",
+      "sha256": "b3aced7fb0827a6ebc347ec8ac2a527ab98e4829426d5dd6c1e01ce1b6395951",
+      "source": "daytrader-ee7-web/src/main/webapp/images/menuHome.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 938,
+      "path": "src/main/resources/provenant/legacy-web/images/nav_bg.png",
+      "sha256": "c5dd665a9846396b83a2ba28a9a61de9ca348c9b4488cff25be4a3d3cce4786f",
+      "source": "daytrader-ee7-web/src/main/webapp/images/nav_bg.png",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2273,
+      "path": "src/main/resources/provenant/legacy-web/images/portfolio.gif",
+      "sha256": "062580585e89a781d64f997ec359e558c8ce4e0e07550e8c38e721c5e52af096",
+      "source": "daytrader-ee7-web/src/main/webapp/images/portfolio.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1213,
+      "path": "src/main/resources/provenant/legacy-web/images/primitives.gif",
+      "sha256": "57e8eb2e49d8f407cc9e619bec907025859dbfd11d4679e218a2e74f07be4911",
+      "source": "daytrader-ee7-web/src/main/webapp/images/primitives.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2236,
+      "path": "src/main/resources/provenant/legacy-web/images/quotes.gif",
+      "sha256": "4a07b9272e588acb2bb667202e9f1ab978679a5988b927b74762fc0754179210",
+      "source": "daytrader-ee7-web/src/main/webapp/images/quotes.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1220,
+      "path": "src/main/resources/provenant/legacy-web/images/reports.gif",
+      "sha256": "fbd8a8eea122c9254ed0fab0046cda4dc7149599a219b3e14c691feec31ad300",
+      "source": "daytrader-ee7-web/src/main/webapp/images/reports.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 43,
+      "path": "src/main/resources/provenant/legacy-web/images/spacer.gif",
+      "sha256": "548f2d6f4d0d820c6c5ffbeffcbd7f0e73193e2932eefe542accc84762deec87",
+      "source": "daytrader-ee7-web/src/main/webapp/images/spacer.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 6035,
+      "path": "src/main/resources/provenant/legacy-web/images/ticker-anim.gif",
+      "sha256": "4b32e13388dbe305f7fad19100fd3a399f389dd6bcb083f1d66e5351689dc312",
+      "source": "daytrader-ee7-web/src/main/webapp/images/ticker-anim.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 279,
+      "path": "src/main/resources/provenant/legacy-web/images/topRedBar.gif",
+      "sha256": "032cdf399854e73b63aea5fce648eb3b236dc80bbef4bb9ee7570ca9c347efed",
+      "source": "daytrader-ee7-web/src/main/webapp/images/topRedBar.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 645,
+      "path": "src/main/resources/provenant/legacy-web/images/topline.jpg",
+      "sha256": "f662c162c59b6ca0bab31c53f21e702f27d536aca38e1bb35d5c5d9b886adad5",
+      "source": "daytrader-ee7-web/src/main/webapp/images/topline.jpg",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 206781,
+      "path": "src/main/resources/provenant/legacy-web/images/tradeOverview.png",
+      "sha256": "0c921726b668961ced16d7dab059fe18043e925222013bc720cec3f60debd478",
+      "source": "daytrader-ee7-web/src/main/webapp/images/tradeOverview.png",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1677,
+      "path": "src/main/resources/provenant/legacy-web/images/tradingAndPortfolios.gif",
+      "sha256": "3cc35d50c3c402ed6797b02fdc9c41746e8f3eaf991d650dabf026109d899f06",
+      "source": "daytrader-ee7-web/src/main/webapp/images/tradingAndPortfolios.gif",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1351,
+      "path": "src/main/resources/provenant/legacy-web/index.html",
+      "sha256": "e624525de540a6e5dc5a5cdaaba68ea94b0e5b43855fd4f4f21c1b2e61321bf5",
+      "source": "daytrader-ee7-web/src/main/webapp/index.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2292,
+      "path": "src/main/resources/provenant/legacy-web/leftMenu.html",
+      "sha256": "8afeb21fa7a3c9d365d7c92c5c26d14e040fbb01832a3bb19e4e4b721c6a5f70",
+      "source": "daytrader-ee7-web/src/main/webapp/leftMenu.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 17174,
+      "path": "src/main/resources/provenant/legacy-web/marketSummary.html",
+      "sha256": "0895d6a532736921f63bb229173cc6fd22752216c814d1bbcd63cac3c1f6f12b",
+      "source": "daytrader-ee7-web/src/main/webapp/marketSummary.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 4419,
+      "path": "src/main/resources/provenant/legacy-web/style-jsf.css",
+      "sha256": "bc4725f24d5fbe9d7ec8733dc10caae4692945f057ef745b7550d536702994b2",
+      "source": "daytrader-ee7-web/src/main/webapp/style-jsf.css",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1905,
+      "path": "src/main/resources/provenant/legacy-web/style.css",
+      "sha256": "b3ae8f5a0f6d88046197c4ca7af0321af693dc73ad6b7d5da1335ab01855a758",
+      "source": "daytrader-ee7-web/src/main/webapp/style.css",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 24192,
+      "path": "src/main/resources/provenant/legacy-web/web_prmtv.html",
+      "sha256": "70c8bcc871dd8e1fcf9577cd7afc15f9bdfc1d835ed0c600b3357b91104930d4",
+      "source": "daytrader-ee7-web/src/main/webapp/web_prmtv.html",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1219,
+      "path": "src/main/resources/provenant/web-pages/PingJsp.jsp",
+      "sha256": "78f3fb070e174a8af72d51daf0f775c8d791e1744b328c5812c7b4fc03c722db",
+      "source": "daytrader-ee7-web/src/main/webapp/PingJsp.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1310,
+      "path": "src/main/resources/provenant/web-pages/PingServlet2Jsp.jsp",
+      "sha256": "0bfa19fe0b9fddd2cf7bdff787d1abda2a39cd0381a77510df9d273100b04352",
+      "source": "daytrader-ee7-web/src/main/webapp/PingServlet2Jsp.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 21933,
+      "path": "src/main/resources/provenant/web-pages/account.jsp",
+      "sha256": "6a87c28d2206157fcbd0fa706e80eab8ab6fa184b5a67fc198784414ad9b0503",
+      "source": "daytrader-ee7-web/src/main/webapp/account.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 22826,
+      "path": "src/main/resources/provenant/web-pages/accountImg.jsp",
+      "sha256": "4fa17368daa391654d3c190f696d2763ce689c7d20126e2371eb6822d3f7f48b",
+      "source": "daytrader-ee7-web/src/main/webapp/accountImg.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 12869,
+      "path": "src/main/resources/provenant/web-pages/config.jsp",
+      "sha256": "ec48c275f07e25bb6e5698c26bf5b7046579cb22695136d29e081b1c622684c3",
+      "source": "daytrader-ee7-web/src/main/webapp/config.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 2181,
+      "path": "src/main/resources/provenant/web-pages/displayQuote.jsp",
+      "sha256": "7733017d2e37c49ee60a3de0c897f08dfdf16e70a3e0bda17d42f868279f2dea",
+      "source": "daytrader-ee7-web/src/main/webapp/displayQuote.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 7340,
+      "path": "src/main/resources/provenant/web-pages/marketSummary.jsp",
+      "sha256": "9a483ca1713da1266e0bf80743d4542aa3b154fbd04b7448ee9f11c91725ed2c",
+      "source": "daytrader-ee7-web/src/main/webapp/marketSummary.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 11842,
+      "path": "src/main/resources/provenant/web-pages/order.jsp",
+      "sha256": "0438cbbcfc29bec3cb25bb9a4561c78e823572638a0cae71b39dc8b0d268f48a",
+      "source": "daytrader-ee7-web/src/main/webapp/order.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 12507,
+      "path": "src/main/resources/provenant/web-pages/orderImg.jsp",
+      "sha256": "7ab5f6544a9054faa4535dd89d59c99110992c85c516dfc7b30db46a08b23a03",
+      "source": "daytrader-ee7-web/src/main/webapp/orderImg.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 16814,
+      "path": "src/main/resources/provenant/web-pages/portfolio.jsp",
+      "sha256": "b5584fdea3c50ef145e21dadac3db546a8871622f3caedb200ecfa8d25fa74c0",
+      "source": "daytrader-ee7-web/src/main/webapp/portfolio.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 17460,
+      "path": "src/main/resources/provenant/web-pages/portfolioImg.jsp",
+      "sha256": "efdd47c95401a612d6dde156f735acc0ddb5542b83997eef0f8bbcf64941d447",
+      "source": "daytrader-ee7-web/src/main/webapp/portfolioImg.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 10637,
+      "path": "src/main/resources/provenant/web-pages/quote.jsp",
+      "sha256": "976601f3a9e29c8f6b2d280ddae404d893734a5664c3358bbcee56b69fb9a2c4",
+      "source": "daytrader-ee7-web/src/main/webapp/quote.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 1689,
+      "path": "src/main/resources/provenant/web-pages/quoteDataPrimitive.jsp",
+      "sha256": "71f70d33d1f3b0d73d87cbe2ae6a20d901d583c36e8f322fbea61a60742aa13d",
+      "source": "daytrader-ee7-web/src/main/webapp/quoteDataPrimitive.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 11342,
+      "path": "src/main/resources/provenant/web-pages/quoteImg.jsp",
+      "sha256": "1c3a333f444117611b9a449a22087976aa154682f6228ac486d9ae915cf62389",
+      "source": "daytrader-ee7-web/src/main/webapp/quoteImg.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 7265,
+      "path": "src/main/resources/provenant/web-pages/register.jsp",
+      "sha256": "606df76213908fb0658de469af4931f1bb7ae4d607ec1eb8186949c980a0b52c",
+      "source": "daytrader-ee7-web/src/main/webapp/register.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 7444,
+      "path": "src/main/resources/provenant/web-pages/registerImg.jsp",
+      "sha256": "21c0d49f3932e05cb37dd5848873f3515238386aaf48b832b6925d928627914e",
+      "source": "daytrader-ee7-web/src/main/webapp/registerImg.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 28653,
+      "path": "src/main/resources/provenant/web-pages/runStats.jsp",
+      "sha256": "75eb68c5531447a4e5f1aa6c6213e69662667e24a37e1e7a4551c4bc9444cdb9",
+      "source": "daytrader-ee7-web/src/main/webapp/runStats.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 12648,
+      "path": "src/main/resources/provenant/web-pages/tradehome.jsp",
+      "sha256": "d8a5bb314f0711300b0765f75bf212aae25c3a7b81871642b6d5aaac2d1bd6c4",
+      "source": "daytrader-ee7-web/src/main/webapp/tradehome.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 13684,
+      "path": "src/main/resources/provenant/web-pages/tradehomeImg.jsp",
+      "sha256": "fa981b05e9c5ac3a370089f79c39d6f571ce77d09ac78d49e164d64bbda31455",
+      "source": "daytrader-ee7-web/src/main/webapp/tradehomeImg.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 4939,
+      "path": "src/main/resources/provenant/web-pages/welcome.jsp",
+      "sha256": "f6bf841625f22c742aac401ec5c16ef46a4bc158301de9af724d56433ab68383",
+      "source": "daytrader-ee7-web/src/main/webapp/welcome.jsp",
+      "tier": "Retained"
+    },
+    {
+      "bytes": 5156,
+      "path": "src/main/resources/provenant/web-pages/welcomeImg.jsp",
+      "sha256": "e24c9a7f3f852bb46fd14fbbe68dd6fbeb6f4bf1a48d9595988a1006d0d44087",
+      "source": "daytrader-ee7-web/src/main/webapp/welcomeImg.jsp",
+      "tier": "Retained"
+    }
+  ],
+  "note": "Legacy binary resources carried byte for byte; sha256 is of the carried bytes; the tier of each entry is the tier of that binary (this manifest is generated, tier Isolated)."
+}

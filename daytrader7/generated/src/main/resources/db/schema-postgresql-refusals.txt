@@ -1,0 +1,23 @@
+# emit-sql refusal report (PostgreSQL 16; guarantee tier: Isolated)
+# Not carried by the RIR, hence never emitted: defaults, UNIQUE/CHECK, composite
+# primary keys, sequences, indexes, views, foreign-key names, ON DELETE.
+# Oracle treats '' as NULL and PostgreSQL does not: empty-string data and
+# NOT NULL / unique behaviour on '' differ after migration.
+# Tables with no legacy DDL are derived from the JPA mapping (explicit
+# annotations and JPA defaults only); UNIQUE, sequences and identity keys
+# are emitted for them, NOT NULL only where the mapping states it.
+tables_emitted=3
+tables_refused=7
+columns_emitted=16
+foreign_keys_emitted=0
+foreign_keys_refused=0
+columns_with_widened_varchar_length=8
+refusals=8
+REFUSED column HOLDINGEJB.QUANTITY | unmapped_type | DOUBLE
+REFUSED column ORDEREJB.QUANTITY | unmapped_type | DOUBLE
+REFUSED column QUOTEEJB.CHANGE1 | unmapped_type | DOUBLE
+REFUSED column QUOTEEJB.VOLUME | unmapped_type | DOUBLE
+REFUSED table AccountDataBean | jpa_unmodelled_mapping_annotation | @TableGenerator
+REFUSED table HoldingDataBean | jpa_unmodelled_mapping_annotation | @TableGenerator
+REFUSED table OrderDataBean | jpa_unmodelled_mapping_annotation | @TableGenerator
+REFUSED table QuoteDataBean | jpa_precision_unspecified | java.math.BigDecimal
