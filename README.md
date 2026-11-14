@@ -65,6 +65,10 @@ The generated app is meant to behave like the legacy one, legacy quirks included
 
 On this app, Provenant's behaviour harness reports scenarios S1–S4 equal, S5 partial and S6 stricter than the legacy.
 
+## Second demo: DayTrader 7 (Java EE 7 to Spring Boot 4.1 on Java 25)
+
+Taskboard is a small JSF app. To see a larger public application, [`demo/daytrader7/`](demo/daytrader7) has a 3.5 min video of IBM's DayTrader 7 (EJB, JMS, JSP, WebSocket) going from the legacy server to Spring Boot 4.1 on Java 25: profile, emit, a byte-identical second emission, the counted losses, the build, and the same browser walk on both sides. On the DayTrader behaviour harness with a shared legacy database, 10 of 11 scenarios are equal; DT1 differs on one sub-test (a CDI decorator ping page), refused and counted, and that deviation is accepted by the owner. The [README there](demo/daytrader7/README.md) has the upstream commit, the numbers and how to reproduce.
+
 ## License and credit
 
 The legacy application is © Hantsy Bai and licensed under the **GNU GPL v3**. The generated code is derived from it, so this whole repository is distributed under the same license (see [`LICENSE`](LICENSE)).

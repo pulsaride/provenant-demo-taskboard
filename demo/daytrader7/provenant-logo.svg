@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="56" viewBox="0 0 230 56">
+  <rect x="0" y="0" width="230" height="56" rx="12" fill="#ffffff"/>
+  <!-- stem -->
+  <rect x="14" y="8" width="6" height="40" rx="3" fill="#14233b"/>
+  <!-- bowl -->
+  <circle cx="33" cy="24" r="13" fill="none" stroke="#1f6fd1" stroke-width="6"/>
+  <!-- pulse line leaving the bowl to the right -->
+  <polyline points="46,24 52,24 55,15 59,35 62,24 70,24" fill="none" stroke="#1f6fd1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="78" y="36" font-family="Liberation Sans, DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" fill="#14233b">Provenant</text>
+</svg>
