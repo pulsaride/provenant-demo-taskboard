@@ -47,3 +47,6 @@ PROVENANT_LEGACY_DB_URL=jdbc:derby:<copy-of-snapshot> PROVENANT_LEGACY_DB_USER=d
 Provenant itself is a separate product and is not part of this repository. The sample's database credentials are the sample's own public defaults.
 
 `demo/provenant-logo.svg` and `demo/provenant-logo.png` are the corner mark used in the video. Back to the [index](../README.md).
+
+
+Note: the upstream tree ships IBM's DB2 JDBC driver (`legacy/db2jars/db2jcc4.jar`). It is not redistributed here (proprietary licence; the demo runs on Derby). Get it from the upstream repository or IBM if you need DB2.
