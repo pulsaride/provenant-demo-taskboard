@@ -98,8 +98,9 @@ paths:
                       format: "int64"
                     name:
                       type: "string"
-      security: []
-      x-public-proof: "attested"
+      security:
+        - sessionCookie: []
+      x-security-unproven: "no_declaration"
   "/api/taskHome/donetasks":
     get:
       operationId: "apiTaskhomeDonetasks"
@@ -120,8 +121,9 @@ paths:
                       format: "int64"
                     name:
                       type: "string"
-      security: []
-      x-public-proof: "attested"
+      security:
+        - sessionCookie: []
+      x-security-unproven: "no_declaration"
   "/api/taskHome/markTaskDoing":
     post:
       operationId: "apiTaskhomeMarktaskdoing"
@@ -174,8 +176,9 @@ paths:
                       format: "int64"
                     name:
                       type: "string"
-      security: []
-      x-public-proof: "attested"
+      security:
+        - sessionCookie: []
+      x-security-unproven: "no_declaration"
   "/api/viewTaskAction/task":
     get:
       operationId: "apiViewtaskactionTask"
@@ -206,8 +209,9 @@ paths:
                     type: "string"
                   status:
                     "$ref": "#/components/schemas/Status"
-      security: []
-      x-public-proof: "attested"
+      security:
+        - sessionCookie: []
+      x-security-unproven: "no_declaration"
 components:
   schemas:
     FacesGlobalMessage:

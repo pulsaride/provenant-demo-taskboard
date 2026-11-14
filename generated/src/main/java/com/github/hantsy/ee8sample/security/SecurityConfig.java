@@ -39,6 +39,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
  */
 // TODO(csrf_token_not_session_bound: double-submit XSRF-TOKEN cookie without __Host- prefix (no secure transport): plantable over HTTP or from a sibling subdomain; forgery still needs the X-XSRF-TOKEN header, which a cross-site page cannot send without a CORS preflight)
 // TODO(login_resubmit_semantics_changed: the legacy login passed newAuthentication(false): an already logged-in caller who resubmitted the form kept the current identity; the emitted login authenticates the submitted credentials again)
+// TODO(remember_me_issuance_not_proven: runtime_not_attested: the legacy login token row is not carried)
 // TODO(remember_me_lookup_inconsistent: the legacy remember-me store keeps a digest of the token in tokenHash and looks up the raw token by it, so a returned cookie never matches a stored login token)
 // TODO(remember_me_query_not_parseable: the finder `findByLoginToken` runs createNativeQuery on `User.byLoginTokens`, the name of a named query, which is not SQL)
 @Configuration
@@ -52,10 +53,6 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/api/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/auth/session").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/taskHome/doingtasks").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/taskHome/donetasks").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/taskHome/todotasks").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/viewTaskAction/task").permitAll()
                         .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                         .anyRequest().authenticated())
                 .csrf(csrf -> csrf
@@ -95,8 +92,7 @@ public class SecurityConfig {
 
     @Bean
     AuthenticationManager authenticationManager(UserDetailsService users, PasswordEncoder encoder) {
-        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-        provider.setUserDetailsService(users);
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider(users);
         provider.setPasswordEncoder(encoder);
         return new ProviderManager(provider);
     }

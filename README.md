@@ -1,15 +1,15 @@
 # Provenant demos: Java EE to Spring Boot
 
-Provenant now targets **Spring Boot 4.1 on Java 25** (the DayTrader 7 demo below). The Taskboard demo in this section was generated earlier, when the target line was Spring Boot 3; its `generated/` folder is kept as it was emitted then.
+Provenant targets **Spring Boot 4.1 on Java 25**. The `generated/` folder of the Taskboard below is the current emission (Spring Boot 4.1.2, Java 25), produced by Provenant `0.1.0+c8357d8803ba166d`. The Taskboard video was recorded earlier, on the Spring Boot 3 emission, and has not been re-recorded; the DayTrader 7 demo below was recorded on the current line.
 
-## First demo: Java EE 8 / JSF Taskboard → Spring Boot 3 + Angular
+## First demo: Java EE 8 / JSF Taskboard → Spring Boot 4.1 + Angular
 
 This repository holds both sides of a modernization so you can inspect them yourself:
 
 | Folder | What it is |
 |---|---|
 | [`legacy/`](legacy) | The original application, **unchanged**: [hantsy/javaee8-jsf-sample](https://github.com/hantsy/javaee8-jsf-sample) at commit `f83d7c6`. It uses JSF 2.3, CDI 2, EJB, JPA 2.2 and Java EE Security, and runs on GlassFish 5.1. |
-| [`generated/`](generated) | What **Provenant** emitted from it: a Spring Boot 3 backend, an Angular frontend and a Maven build. Nothing was edited by hand. |
+| [`generated/`](generated) | What **Provenant** emitted from it: a Spring Boot 4.1 backend, an Angular frontend and a Maven build. Nothing was edited by hand. |
 | [`demo/`](demo) | The demo video and the SQL for the demo login. |
 
 Provenant is a deterministic modernization compiler (no LLM in the pipeline):
@@ -43,7 +43,7 @@ Then open <http://localhost:8080/javaee8-jsf-sample/>.
 
 To log in, add the demo user to the legacy Derby database. Use Derby `ij` against `jdbc:derby://localhost:1527/sun-appserv-samples;user=APP;password=APP` and run [`demo/demo-user.sql`](demo/demo-user.sql). Redeploying resets that database, because the app drops and recreates its schema.
 
-## Run the generated app (JDK 21, Maven 3.9, Node 20+)
+## Run the generated app (JDK 25, Maven 3.9, Node 20+)
 
 ```sh
 cd generated

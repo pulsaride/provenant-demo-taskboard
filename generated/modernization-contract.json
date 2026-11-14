@@ -183,102 +183,9 @@
   },
   "endpoint_security": {
     "attestation": {
-      "digest": "bb9a5bc39cbb2308d0e94b3c06d4ab823a611267f527331024a86d7e98485e93",
-      "path": ".provenant/public-endpoints.json",
-      "records": [
-        {
-          "access": "public",
-          "acknowledged_evidence": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
-          "applied": true,
-          "basis": {
-            "kind": "legacy_observed",
-            "legacy_status": 200,
-            "report_artifact_digest": "b377546aa052fb54150b1a405dbac6a291f3dc894cee9f96f21f72c8c28c0b30",
-            "scenario": "S2_task_details"
-          },
-          "decided_by": "Architecture advisor, delegated by the product owner",
-          "decided_on": "2026-11-05",
-          "decision": "accepted",
-          "entry_point": "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a",
-          "id": "pub-0001",
-          "justification": "web.xml declares one security-constraint, for /form.xhtml (ROLE_ADMIN, ROLE_USER); no constraint, filter, listener or annotation restricts details.xhtml?id=1. Harness run of 2026-11-05 on the unattested emission: the legacy answered an anonymous GET of the page with 200 and its content (S2_task_details); the generated application answered 401, so the scenario was 'differs'. The legacy page is public by that observation and by the absent constraint; this record opens exactly this endpoint.",
-          "method": "GET",
-          "path": "/api/viewTaskAction/task",
-          "reference": "docs/autopilot/DECISIONS.md 2026-11-05 (RFC-034 U1 to U4); RFC-034 section 7.1",
-          "refusal": null,
-          "roles": null,
-          "scope": null
-        },
-        {
-          "access": "public",
-          "acknowledged_evidence": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
-          "applied": true,
-          "basis": {
-            "kind": "legacy_observed",
-            "legacy_status": 200,
-            "report_artifact_digest": "b377546aa052fb54150b1a405dbac6a291f3dc894cee9f96f21f72c8c28c0b30",
-            "scenario": "S1_list_tasks_by_status"
-          },
-          "decided_by": "Architecture advisor, delegated by the product owner",
-          "decided_on": "2026-11-05",
-          "decision": "accepted",
-          "entry_point": "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd",
-          "id": "pub-0002",
-          "justification": "web.xml declares one security-constraint, for /form.xhtml (ROLE_ADMIN, ROLE_USER); no constraint, filter, listener or annotation restricts tasks.xhtml. Harness run of 2026-11-05 on the unattested emission: the legacy answered an anonymous GET of the page with 200 and its content (S1_list_tasks_by_status); the generated application answered 401, so the scenario was 'differs'. The legacy page is public by that observation and by the absent constraint; this record opens exactly this endpoint.",
-          "method": "GET",
-          "path": "/api/taskHome/donetasks",
-          "reference": "docs/autopilot/DECISIONS.md 2026-11-05 (RFC-034 U1 to U4); RFC-034 section 7.1",
-          "refusal": null,
-          "roles": null,
-          "scope": null
-        },
-        {
-          "access": "public",
-          "acknowledged_evidence": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
-          "applied": true,
-          "basis": {
-            "kind": "legacy_observed",
-            "legacy_status": 200,
-            "report_artifact_digest": "b377546aa052fb54150b1a405dbac6a291f3dc894cee9f96f21f72c8c28c0b30",
-            "scenario": "S1_list_tasks_by_status"
-          },
-          "decided_by": "Architecture advisor, delegated by the product owner",
-          "decided_on": "2026-11-05",
-          "decision": "accepted",
-          "entry_point": "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e",
-          "id": "pub-0003",
-          "justification": "web.xml declares one security-constraint, for /form.xhtml (ROLE_ADMIN, ROLE_USER); no constraint, filter, listener or annotation restricts tasks.xhtml. Harness run of 2026-11-05 on the unattested emission: the legacy answered an anonymous GET of the page with 200 and its content (S1_list_tasks_by_status); the generated application answered 401, so the scenario was 'differs'. The legacy page is public by that observation and by the absent constraint; this record opens exactly this endpoint.",
-          "method": "GET",
-          "path": "/api/taskHome/doingtasks",
-          "reference": "docs/autopilot/DECISIONS.md 2026-11-05 (RFC-034 U1 to U4); RFC-034 section 7.1",
-          "refusal": null,
-          "roles": null,
-          "scope": null
-        },
-        {
-          "access": "public",
-          "acknowledged_evidence": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
-          "applied": true,
-          "basis": {
-            "kind": "legacy_observed",
-            "legacy_status": 200,
-            "report_artifact_digest": "b377546aa052fb54150b1a405dbac6a291f3dc894cee9f96f21f72c8c28c0b30",
-            "scenario": "S1_list_tasks_by_status"
-          },
-          "decided_by": "Architecture advisor, delegated by the product owner",
-          "decided_on": "2026-11-05",
-          "decision": "accepted",
-          "entry_point": "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee",
-          "id": "pub-0004",
-          "justification": "web.xml declares one security-constraint, for /form.xhtml (ROLE_ADMIN, ROLE_USER); no constraint, filter, listener or annotation restricts tasks.xhtml. Harness run of 2026-11-05 on the unattested emission: the legacy answered an anonymous GET of the page with 200 and its content (S1_list_tasks_by_status); the generated application answered 401, so the scenario was 'differs'. The legacy page is public by that observation and by the absent constraint; this record opens exactly this endpoint.",
-          "method": "GET",
-          "path": "/api/taskHome/todotasks",
-          "reference": "docs/autopilot/DECISIONS.md 2026-11-05 (RFC-034 U1 to U4); RFC-034 section 7.1",
-          "refusal": null,
-          "roles": null,
-          "scope": null
-        }
-      ]
+      "digest": null,
+      "path": null,
+      "records": []
     },
     "basis": {
       "open_application": {
@@ -403,12 +310,12 @@
       "policy": "public_requires_proof"
     },
     "counts": {
-      "authenticated_default": 3,
+      "authenticated_default": 7,
       "endpoints": 9,
-      "public_attested": 4,
+      "public_attested": 0,
       "public_declared": 0,
       "public_open_application": 0,
-      "records_accepted": 4,
+      "records_accepted": 0,
       "records_pending": 0,
       "records_refused": 0,
       "records_rejected": 0,
@@ -432,11 +339,9 @@
         ],
         "path": "/api/viewTaskAction/task",
         "security": {
-          "kind": "public",
-          "proof": {
-            "kind": "attested",
-            "record": "pub-0001"
-          }
+          "decided": false,
+          "kind": "authenticated_default",
+          "reason": "no_declaration"
         },
         "tier": null
       },
@@ -450,11 +355,9 @@
         "params": [],
         "path": "/api/taskHome/donetasks",
         "security": {
-          "kind": "public",
-          "proof": {
-            "kind": "attested",
-            "record": "pub-0002"
-          }
+          "decided": false,
+          "kind": "authenticated_default",
+          "reason": "no_declaration"
         },
         "tier": null
       },
@@ -468,11 +371,9 @@
         "params": [],
         "path": "/api/taskHome/doingtasks",
         "security": {
-          "kind": "public",
-          "proof": {
-            "kind": "attested",
-            "record": "pub-0003"
-          }
+          "decided": false,
+          "kind": "authenticated_default",
+          "reason": "no_declaration"
         },
         "tier": null
       },
@@ -528,11 +429,9 @@
         "params": [],
         "path": "/api/taskHome/todotasks",
         "security": {
-          "kind": "public",
-          "proof": {
-            "kind": "attested",
-            "record": "pub-0004"
-          }
+          "decided": false,
+          "kind": "authenticated_default",
+          "reason": "no_declaration"
         },
         "tier": null
       },
@@ -756,7 +655,7 @@
       }
     },
     {
-      "bytes": 1065,
+      "bytes": 1153,
       "fragments": [
         {
           "line_end": 19,
@@ -771,7 +670,7 @@
       "kind": "text",
       "path": "Dockerfile",
       "retained_regions": [],
-      "sha256": "63ba63e34c323e80c55de96905731340394ea0f267a0bcd44ee9bd6b9840f39e",
+      "sha256": "b4a33bdac6fe219f482131b08187d236e2d18304b01fbfa0124535f2e9bd75a1",
       "tiers": {
         "Isolated": 1
       }
@@ -1842,10 +1741,10 @@
       }
     },
     {
-      "bytes": 8110,
+      "bytes": 8254,
       "fragments": [
         {
-          "line_end": 301,
+          "line_end": 305,
           "line_start": 1,
           "node_sigs": [],
           "rule_id": "openapi-document",
@@ -1855,18 +1754,18 @@
       "kind": "text",
       "path": "openapi.yaml",
       "retained_regions": [],
-      "sha256": "81e0a0e494112811b4812370d6529f82c4e13cbbf9dd13aad1f49be8872ac4aa",
+      "sha256": "4aace454ff679255edfe089ff6f49d043528efa87b43bfb848535e305bb3ff4a",
       "tiers": {
         "Isolated": 1
       }
     },
     {
-      "bytes": 6835,
+      "bytes": 6733,
       "fragments": [],
       "kind": "text",
       "path": "pom.xml",
       "retained_regions": [],
-      "sha256": "421193916a5a94865b2b47c12642915dae8db545412929d6ec7469245102df04",
+      "sha256": "2c04d9da4c5e9da68f2e211cdc4f92db64166ec3ccf2477867200cff0295cbf8",
       "tiers": {}
     },
     {
@@ -2034,6 +1933,27 @@
       }
     },
     {
+      "bytes": 2438,
+      "fragments": [
+        {
+          "line_end": 96,
+          "line_start": 1,
+          "node_sigs": [
+            "1c7e07d8e5de8b4f8b9ca5e32b7f1defd55264d9cf53b8eeba05acfa5255b6b5"
+          ],
+          "rule_id": "engine-eclipselink-version-type",
+          "tier": "Isolated"
+        }
+      ],
+      "kind": "text",
+      "path": "src/main/java/com/github/hantsy/ee8sample/EclipseLinkLongVersionType.java",
+      "retained_regions": [],
+      "sha256": "3237455abbfa226519f957c1ae031e87bd0480292bdd7900503a5aa7a06494ea",
+      "tiers": {
+        "Isolated": 1
+      }
+    },
+    {
       "bytes": 1359,
       "fragments": [
         {
@@ -2094,7 +2014,7 @@
       }
     },
     {
-      "bytes": 554,
+      "bytes": 559,
       "fragments": [
         {
           "line_end": 14,
@@ -2109,16 +2029,16 @@
       "kind": "text",
       "path": "src/main/java/com/github/hantsy/ee8sample/TaskboardApplication.java",
       "retained_regions": [],
-      "sha256": "ac24f2e9b06ef44ddc6b8c654a5eb6dfcd673d3043b05eb6e9b4cc25c3344a3c",
+      "sha256": "8f5f29fb8b80b6186a1179105d4cf76c1aa9429eff4c51c4db4cb4c8a135dbdd",
       "tiers": {
         "Isolated": 1
       }
     },
     {
-      "bytes": 8960,
+      "bytes": 9082,
       "fragments": [
         {
-          "line_end": 33,
+          "line_end": 32,
           "line_start": 1,
           "node_sigs": [
             "e032ebe151f831c121643805267d60586f5bd974e22c51bbf8451ec8b23802c1"
@@ -2127,8 +2047,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 51,
-          "line_start": 34,
+          "line_end": 50,
+          "line_start": 33,
           "node_sigs": [
             "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a"
           ],
@@ -2136,8 +2056,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 69,
-          "line_start": 52,
+          "line_end": 68,
+          "line_start": 51,
           "node_sigs": [
             "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd"
           ],
@@ -2145,8 +2065,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 87,
-          "line_start": 70,
+          "line_end": 86,
+          "line_start": 69,
           "node_sigs": [
             "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e"
           ],
@@ -2154,8 +2074,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 97,
-          "line_start": 88,
+          "line_end": 96,
+          "line_start": 87,
           "node_sigs": [
             "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae"
           ],
@@ -2163,8 +2083,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 107,
-          "line_start": 98,
+          "line_end": 106,
+          "line_start": 97,
           "node_sigs": [
             "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d"
           ],
@@ -2172,8 +2092,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 125,
-          "line_start": 108,
+          "line_end": 124,
+          "line_start": 107,
           "node_sigs": [
             "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee"
           ],
@@ -2181,8 +2101,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 138,
-          "line_start": 126,
+          "line_end": 137,
+          "line_start": 125,
           "node_sigs": [
             "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918"
           ],
@@ -2190,8 +2110,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 148,
-          "line_start": 139,
+          "line_end": 147,
+          "line_start": 138,
           "node_sigs": [
             "c5303f432ea0b0018cfc68b8a3a24f23c36d0cf5319ca87bd5b5a69d7dcc1b9d"
           ],
@@ -2199,8 +2119,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 159,
-          "line_start": 149,
+          "line_end": 158,
+          "line_start": 148,
           "node_sigs": [
             "e2c79e9d482fd4373489ac7064e1309699eb82cbc553565214c4f76cb4775d72"
           ],
@@ -2208,8 +2128,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 160,
-          "line_start": 160,
+          "line_end": 159,
+          "line_start": 159,
           "node_sigs": [
             "e032ebe151f831c121643805267d60586f5bd974e22c51bbf8451ec8b23802c1"
           ],
@@ -2220,7 +2140,7 @@
       "kind": "text",
       "path": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
       "retained_regions": [],
-      "sha256": "03ddcff39fbd9f6e8802135a8a16f5c992cbc65c4c3372688c4eed948a6a4658",
+      "sha256": "90174bffd8e9a8b41538f9c621896b9a7550c721519854fcb39fe604653adce1",
       "tiers": {
         "Isolated": 11
       }
@@ -2632,10 +2552,10 @@
       }
     },
     {
-      "bytes": 725,
+      "bytes": 1120,
       "fragments": [
         {
-          "line_end": 18,
+          "line_end": 21,
           "line_start": 1,
           "node_sigs": [
             "42eb80622ccb348dd03e2f5995d734e907016297d9fcca8abd61f1d1d198a387"
@@ -2644,8 +2564,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 20,
-          "line_start": 19,
+          "line_end": 23,
+          "line_start": 22,
           "node_sigs": [
             "27718c037b704d7d4698db13aa36e9e043be7d86417a2b9f7b5cf3511ea7edec"
           ],
@@ -2653,8 +2573,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 25,
-          "line_start": 21,
+          "line_end": 29,
+          "line_start": 24,
           "node_sigs": [
             "f7354a5626baf4f469617555dc104313d751d9dbe08f6fc999708bfe7d8396bd"
           ],
@@ -2662,8 +2582,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 29,
-          "line_start": 26,
+          "line_end": 34,
+          "line_start": 30,
           "node_sigs": [
             "bc97057ffb5173537caa3c928350e9d7aa1045a5d77cc5e1ff4d98d07bc2645c"
           ],
@@ -2671,8 +2591,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 30,
-          "line_start": 30,
+          "line_end": 35,
+          "line_start": 35,
           "node_sigs": [
             "42eb80622ccb348dd03e2f5995d734e907016297d9fcca8abd61f1d1d198a387"
           ],
@@ -2683,7 +2603,7 @@
       "kind": "text",
       "path": "src/main/java/com/github/hantsy/ee8sample/domain/support/AbstractEntity.java",
       "retained_regions": [],
-      "sha256": "7d01279427a201945ba5265531c43dab757239713334580b356364fc59034049",
+      "sha256": "4b25e27d1b2e6e47bc203916ef7183043c90a4ee6a96949175dd68e076388880",
       "tiers": {
         "Isolated": 5
       }
@@ -3244,10 +3164,10 @@
       }
     },
     {
-      "bytes": 7357,
+      "bytes": 7035,
       "fragments": [
         {
-          "line_end": 131,
+          "line_end": 127,
           "line_start": 1,
           "node_sigs": [
             "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
@@ -3259,7 +3179,7 @@
       "kind": "text",
       "path": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
       "retained_regions": [],
-      "sha256": "7669ae49b3d9174240b2da4ad2eb2a1a724a9dd447cd88e460ed2ec1306f4edd",
+      "sha256": "e702b3e4c18fd5fe36f006e9437b4b50bbd836331196122ef043625b8c2b9831",
       "tiers": {
         "Isolated": 1
       }
@@ -4302,25 +4222,6 @@
       }
     },
     {
-      "bytes": 1322,
-      "fragments": [
-        {
-          "line_end": 16,
-          "line_start": 1,
-          "node_sigs": [],
-          "rule_id": "spring-boot-legacydb-profile",
-          "tier": "Isolated"
-        }
-      ],
-      "kind": "text",
-      "path": "src/main/resources/application-legacydb.properties",
-      "retained_regions": [],
-      "sha256": "f162f5324ab93c201cd3cf5eb0211757be27d4b4811c708da8723f995497f33f",
-      "tiers": {
-        "Isolated": 1
-      }
-    },
-    {
       "bytes": 585,
       "fragments": [
         {
@@ -4340,10 +4241,10 @@
       }
     },
     {
-      "bytes": 521,
+      "bytes": 1417,
       "fragments": [
         {
-          "line_end": 8,
+          "line_end": 18,
           "line_start": 1,
           "node_sigs": [],
           "rule_id": "spring-boot-application-properties",
@@ -4353,7 +4254,7 @@
       "kind": "text",
       "path": "src/main/resources/application.properties",
       "retained_regions": [],
-      "sha256": "f0edd8fd901e1017b1bc45ac8801db42b218641190a6b05d3afccf8bb006dea9",
+      "sha256": "9bffe8667dd978ff677fc8c59b33c19a54702577ef557b9f61dc56b87145340d",
       "tiers": {
         "Isolated": 1
       }
@@ -4399,10 +4300,10 @@
       }
     },
     {
-      "bytes": 1118,
+      "bytes": 1109,
       "fragments": [
         {
-          "line_end": 1,
+          "line_end": 2,
           "line_start": 1,
           "node_sigs": [
             "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
@@ -4411,21 +4312,12 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 2,
-          "line_start": 2,
-          "node_sigs": [
-            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
-          ],
-          "rule_id": "jpa-id-generation-to-postgres-sequence",
-          "tier": "Isolated"
-        },
-        {
           "line_end": 3,
           "line_start": 3,
           "node_sigs": [
-            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
+            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
           ],
-          "rule_id": "jpa-id-generation-to-postgres-sequence",
+          "rule_id": "jpa-mapping-to-postgres-ddl",
           "tier": "Isolated"
         },
         {
@@ -4519,7 +4411,7 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 14,
+          "line_end": 15,
           "line_start": 14,
           "node_sigs": [
             "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
@@ -4529,9 +4421,9 @@
         },
         {
           "line_end": 16,
-          "line_start": 15,
+          "line_start": 16,
           "node_sigs": [
-            "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
+            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
           ],
           "rule_id": "jpa-mapping-to-postgres-ddl",
           "tier": "Isolated"
@@ -4627,7 +4519,7 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 27,
+          "line_end": 28,
           "line_start": 27,
           "node_sigs": [
             "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
@@ -4637,9 +4529,9 @@
         },
         {
           "line_end": 29,
-          "line_start": 28,
+          "line_start": 29,
           "node_sigs": [
-            "6d2ff0d368820cb1e06c437edf12e285a9765c328ed4079d038c3b4bfdbd1f37"
+            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
           ],
           "rule_id": "jpa-mapping-to-postgres-ddl",
           "tier": "Isolated"
@@ -4663,7 +4555,7 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 32,
+          "line_end": 33,
           "line_start": 32,
           "node_sigs": [
             "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
@@ -4673,7 +4565,7 @@
         },
         {
           "line_end": 34,
-          "line_start": 33,
+          "line_start": 34,
           "node_sigs": [
             "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
           ],
@@ -4726,7 +4618,7 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 40,
+          "line_end": 41,
           "line_start": 40,
           "node_sigs": [
             "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
@@ -4736,16 +4628,7 @@
         },
         {
           "line_end": 42,
-          "line_start": 41,
-          "node_sigs": [
-            "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
-          ],
-          "rule_id": "jpa-mapping-to-postgres-ddl",
-          "tier": "Isolated"
-        },
-        {
-          "line_end": 43,
-          "line_start": 43,
+          "line_start": 42,
           "node_sigs": [
             "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5",
             "ebece4d437d387a9d36fa27f81447563c412e1b95788fa2b78d4839f0923d41a"
@@ -4754,8 +4637,8 @@
           "tier": "Isolated"
         },
         {
-          "line_end": 44,
-          "line_start": 44,
+          "line_end": 43,
+          "line_start": 43,
           "node_sigs": [
             "9d00669773691ba55c2483b3e30d8a5d10169ba4aa98b25673df0e8915a11df5"
           ],
@@ -4766,13 +4649,13 @@
       "kind": "text",
       "path": "src/main/resources/db/schema-postgresql.sql",
       "retained_regions": [],
-      "sha256": "067cf9c18374517e6c4eabb81d274b40b47a012118f690c86fba9480b245085d",
+      "sha256": "f508a188a91f20f1c7f58d866be47b24be47efa4a6cbf9275b4dcb8a044614f7",
       "tiers": {
-        "Isolated": 40
+        "Isolated": 38
       }
     },
     {
-      "bytes": 8722,
+      "bytes": 8717,
       "fragments": [
         {
           "line_end": 173,
@@ -4787,7 +4670,7 @@
       "kind": "text",
       "path": "src/test/java/com/github/hantsy/ee8sample/endpoints/EndpointAnswersTest.java",
       "retained_regions": [],
-      "sha256": "3a39e9cc8c24fe814dff896266a5d4f7500290ab47497cf2878424c6b55a305c",
+      "sha256": "ba1ad1ed9e5678322a39d3d6a374945231acd844d827936aced67a721b730782",
       "tiers": {
         "Isolated": 1
       }
@@ -5589,6 +5472,9 @@
       "engine-dockerfile": {
         "Isolated": 2
       },
+      "engine-eclipselink-version-type": {
+        "Isolated": 1
+      },
       "engine-endpoint-answers": {
         "Isolated": 1
       },
@@ -5596,7 +5482,7 @@
         "Retained": 4
       },
       "jpa-id-generation-to-postgres-sequence": {
-        "Isolated": 3
+        "Isolated": 1
       },
       "jpa-mapping-to-postgres-ddl": {
         "Isolated": 35
@@ -5638,9 +5524,6 @@
         "Isolated": 1
       },
       "spring-boot-application-properties": {
-        "Isolated": 1
-      },
-      "spring-boot-legacydb-profile": {
         "Isolated": 1
       },
       "spring-boot-postgresql-profile": {
@@ -5688,7 +5571,7 @@
       },
       "Isolated": {
         "files": 81,
-        "records": 298
+        "records": 296
       },
       "Proven": {
         "files": 0,
@@ -5712,7 +5595,7 @@
       "source_set_scoping"
     ],
     "engine_files": {
-      "count": 6,
+      "count": 7,
       "files": [
         {
           "node_sig": "1242679b30f9e46571d80e3d233048da4d75441e4234d4020577bd584628a5be",
@@ -5736,6 +5619,12 @@
           "node_sig": "23e684c07c4a404481744c7633082f59d7e93cebcf324f18e31684b0defee612",
           "path": "src/main/java/com/github/hantsy/ee8sample/ActuatorSecurityConfig.java",
           "rule_id": "engine-actuator-security",
+          "tier": "Isolated"
+        },
+        {
+          "node_sig": "1c7e07d8e5de8b4f8b9ca5e32b7f1defd55264d9cf53b8eeba05acfa5255b6b5",
+          "path": "src/main/java/com/github/hantsy/ee8sample/EclipseLinkLongVersionType.java",
+          "rule_id": "engine-eclipselink-version-type",
           "tier": "Isolated"
         },
         {
@@ -5906,7 +5795,7 @@
         "unlocated": 0
       },
       {
-        "count": 3,
+        "count": 7,
         "decision_ref": null,
         "deliberate_refusal": false,
         "kind": "endpoint_security_unproven",
@@ -5914,21 +5803,49 @@
         "locations": [
           {
             "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
-            "line": 90,
+            "line": 35,
+            "node_sigs": [
+              "1fc1492c3cbf792219d9529771db07295995b3dd5b3be279921344318a6bb59a"
+            ]
+          },
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
+            "line": 53,
+            "node_sigs": [
+              "231667a94db77a823b898d4ea47ce855061f3926f4a6ae4c1ac3a6b47960a6bd"
+            ]
+          },
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
+            "line": 71,
+            "node_sigs": [
+              "2c2949141b7cdfe39d5762aeafa212e15247f23ce759af1351d516f8a74a9f1e"
+            ]
+          },
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
+            "line": 89,
             "node_sigs": [
               "2f89b7a591e42dd32287d4085d4815985b63d4a251669de047d81e4bcb2a14ae"
             ]
           },
           {
             "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
-            "line": 100,
+            "line": 99,
             "node_sigs": [
               "4fa2d663c10205c36b59e0296a2fa521fbf97c0deb6a596368362e011903db4d"
             ]
           },
           {
             "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
-            "line": 128,
+            "line": 109,
+            "node_sigs": [
+              "8144f2807f295cc1aabc1a3dbdbd7924a2572a27e3978f07741f97337c1397ee"
+            ]
+          },
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/TaskboardController.java",
+            "line": 127,
             "node_sigs": [
               "c518fa09531d9d4a7b149646e619bb3706871cd7c8d35aee062b295389ef1918"
             ]
@@ -5936,6 +5853,16 @@
         ],
         "reason": "no_declaration",
         "unlocated": 0
+      },
+      {
+        "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "id_block_per_entity_not_shared",
+        "legacy_state": null,
+        "locations": [],
+        "reason": "SEQ_GEN (LoginToken, Task, User)",
+        "unlocated": 1
       },
       {
         "count": 1,
@@ -5955,16 +5882,6 @@
         "legacy_state": null,
         "locations": [],
         "reason": "a layout fragment is emitted as a component but no emitted file mounts it; the legacy template included it on its pages",
-        "unlocated": 1
-      },
-      {
-        "count": 1,
-        "decision_ref": "pilot/db-open-in-view",
-        "deliberate_refusal": true,
-        "kind": "lazy_load_outside_request_not_carried",
-        "legacy_state": "accepted_residual",
-        "locations": [],
-        "reason": "com.github.hantsy.ee8sample.domain.User",
         "unlocated": 1
       },
       {
@@ -6058,6 +5975,24 @@
       },
       {
         "count": 1,
+        "decision_ref": null,
+        "deliberate_refusal": false,
+        "kind": "remember_me_issuance_not_proven",
+        "legacy_state": null,
+        "locations": [
+          {
+            "file": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
+            "line": 42,
+            "node_sigs": [
+              "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
+            ]
+          }
+        ],
+        "reason": "runtime_not_attested: the legacy login token row is not carried",
+        "unlocated": 0
+      },
+      {
+        "count": 1,
         "decision_ref": "pilot/tb-precise-losses",
         "deliberate_refusal": true,
         "kind": "remember_me_lookup_inconsistent",
@@ -6065,7 +6000,7 @@
         "locations": [
           {
             "file": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
-            "line": 42,
+            "line": 43,
             "node_sigs": [
               "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
             ]
@@ -6083,7 +6018,7 @@
         "locations": [
           {
             "file": "src/main/java/com/github/hantsy/ee8sample/security/SecurityConfig.java",
-            "line": 43,
+            "line": 44,
             "node_sigs": [
               "30a010f6985dead6f505d0da17b6030c8daaa73992da7a6cc6c2db22f1304a6d"
             ]
@@ -6278,22 +6213,57 @@
     "angular_version": "22.2.5",
     "database": {
       "default": "h2",
+      "id_generation": {
+        "basis": "pom_eclipselink_dependency",
+        "generators": [
+          {
+            "allocation": 50,
+            "entities": [
+              "LoginToken",
+              "Task",
+              "User"
+            ],
+            "name": "SEQ_GEN",
+            "sequence": null,
+            "strategy": "TABLE",
+            "table": "SEQUENCE"
+          }
+        ],
+        "provider": "eclipselink",
+        "residuals": [
+          "id_block_per_entity_not_shared: SEQ_GEN (LoginToken, Task, User)"
+        ],
+        "version": null
+      },
       "open_in_view": {
         "evidence_ref": "rfc/RFC-033-open-in-view.md",
-        "lazy_load_outside_request_not_carried": [
-          "com.github.hantsy.ee8sample.domain.User"
-        ],
+        "lazy_load_outside_request": {
+          "carried": true,
+          "entities": [
+            "com.github.hantsy.ee8sample.domain.User"
+          ],
+          "property": "spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true"
+        },
         "legacy_provider": "eclipselink",
         "provider_basis": "pom_eclipselink_dependency",
         "value": true
       },
       "profiles": [
-        "legacydb",
         "postgresql"
-      ]
+      ],
+      "version_seed": {
+        "annotated_files": [
+          "com/github/hantsy/ee8sample/domain/support/AbstractEntity.java"
+        ],
+        "rule_id": "engine-eclipselink-version-type",
+        "types": [
+          "Long"
+        ],
+        "unsupported": []
+      }
     },
-    "java_release": "21",
+    "java_release": "25",
     "profile": "layered",
-    "spring_boot_version": "3.5.16"
+    "spring_boot_version": "4.1.2"
   }
 }
