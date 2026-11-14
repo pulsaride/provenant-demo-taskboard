@@ -1,4 +1,8 @@
-# Provenant demo: Java EE 8 / JSF Taskboard → Spring Boot 3 + Angular
+# Provenant demos: Java EE to Spring Boot
+
+Provenant now targets **Spring Boot 4.1 on Java 25** (the DayTrader 7 demo below). The Taskboard demo in this section was generated earlier, when the target line was Spring Boot 3; its `generated/` folder is kept as it was emitted then.
+
+## First demo: Java EE 8 / JSF Taskboard → Spring Boot 3 + Angular
 
 This repository holds both sides of a modernization so you can inspect them yourself:
 
